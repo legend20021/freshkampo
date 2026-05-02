@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prácticas Agrícolas — FreshKampo | Nuestro proceso de producción</title>
+  <meta name="description" content="Conoce el proceso de producción de FreshKampo: convenio con productor, validación de campos, cultivo, cosecha, empaque y transporte." />
+  <link rel="canonical" href="https://freshkampo.com/practicas-agricolas" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* HERO */
+    .pa-hero{position:relative;background-image:url('assets/img/wrapper-practicas-min.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+    .pa-hero-overlay{position:absolute;inset:0;background:linear-gradient(155deg,rgba(8,30,18,.95) 0%,rgba(13,61,36,.85) 45%,rgba(6,22,12,.93) 100%);z-index:0}
+    .pa-hero-overlay::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 30%,rgba(200,169,81,.08) 0%,transparent 65%);pointer-events:none}
+    .pa-hero .container{position:relative;z-index:1}
+
+    /* INTRO */
+    .pa-intro{padding:var(--space-16) 0 var(--space-10);background:var(--c-white);text-align:center}
+    .pa-intro h2{color:var(--c-gray-900);margin:.75rem 0 1rem}
+    .pa-intro p{color:var(--c-gray-500);font-size:1.05rem;max-width:640px;margin:0 auto;line-height:1.8}
+
+    /* STEPS TIMELINE */
+    .pa-steps{padding:0 0 var(--space-20);background:var(--c-white)}
+    .pa-steps-inner{max-width:900px;margin:0 auto;position:relative}
+    /* vertical line */
+    .pa-steps-inner::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary-100),var(--c-primary-50),transparent);z-index:0}
+
+    .pa-step{display:flex;gap:2rem;align-items:flex-start;margin-bottom:3rem;position:relative;z-index:1}
+    .pa-step:last-child{margin-bottom:0}
+
+    .pa-step-num{width:58px;height:58px;border-radius:50%;background:var(--c-white);border:2px solid var(--c-primary-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:2;box-shadow:0 4px 16px rgba(26,92,56,.12)}
+    .pa-step-num span{font-size:.72rem;font-weight:800;color:var(--c-primary);letter-spacing:.06em}
+    .pa-step.active .pa-step-num{background:var(--c-primary);border-color:var(--c-primary)}
+    .pa-step.active .pa-step-num span{color:#fff}
+
+    .pa-step-body{background:var(--c-gray-50);border:1px solid var(--c-gray-100);border-radius:20px;padding:1.5rem 1.75rem;flex:1;transition:box-shadow .3s,transform .3s}
+    .pa-step-body:hover{box-shadow:0 12px 40px rgba(13,61,36,.10);transform:translateY(-3px)}
+    .pa-step-icon{font-size:1.6rem;margin-bottom:.75rem;line-height:1}
+    .pa-step-body h3{font-size:1.05rem;font-weight:700;color:var(--c-gray-900);margin-bottom:.6rem}
+    .pa-step-body p{font-size:.92rem;color:var(--c-gray-500);line-height:1.8;margin:0}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:640px){
+      .pa-steps-inner::before{left:22px}
+      .pa-step{gap:1.25rem}
+      .pa-step-num{width:46px;height:46px}
+      .pa-step-body{padding:1.1rem 1.25rem;border-radius:14px}
+    }
+  </style>
+</head>
+<body>
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<!-- ══ HERO ══ -->
+<section class="page-hero pa-hero">
+  <div class="pa-hero-overlay"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Inicio</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="integracion-vertical.html">Integración Vertical</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Prácticas Agrícolas</span>
+    </nav>
+    <span class="badge badge-accent">Proceso</span>
+    <h1 style="margin-top:.75rem">Nuestras prácticas<br>de producción</h1>
+    <p>Cada etapa del proceso, bajo nuestro control directo para garantizar la más alta calidad.</p>
+  </div>
+</section>
+
+<!-- ══ INTRO ══ -->
+<section class="pa-intro">
+  <div class="container">
+    <span class="badge reveal">Nuestro proceso</span>
+    <h2 class="reveal">Del campo a tu mesa</h2>
+    <p class="reveal">Para descubrir por qué las frutas que cultivamos son las más frescas y deliciosas, te invitamos a dar un recorrido por cada una de las etapas de nuestro proceso de producción.</p>
+  </div>
+</section>
+
+<!-- ══ STEPS TIMELINE ══ -->
+<section class="pa-steps">
+  <div class="container">
+    <div class="pa-steps-inner">
+
+      <div class="pa-step reveal">
+        <div class="pa-step-num active"><span>01</span></div>
+        <div class="pa-step-body">
+          <div class="pa-step-icon">🤝</div>
+          <h3>Convenio con el productor</h3>
+          <p>El primer paso es buscar personas que tengan conocimiento, experiencia y sobre todo, pasión por cultivar la tierra.</p>
+        </div>
+      </div>
+
+      <div class="pa-step reveal">
+        <div class="pa-step-num"><span>02</span></div>
+        <div class="pa-step-body">
+          <div class="pa-step-icon">🗺️</div>
+          <h3>Validación de los campos</h3>
+          <p>La dedicación y el cuidado son de vital importancia para que la tierra cumpla con las condiciones y parámetros ideales para la producción. Junto a un clima cálido, tierra fértil y el agua más pura para el riego, se conjugan los elementos primordiales para producir frutas de calidad.</p>
+        </div>
+      </div>
+
+      <div class="pa-step reveal">
+        <div class="pa-step-num"><span>03</span></div>
+        <div class="pa-step-body">
+          <div class="pa-step-icon">🌱</div>
+          <h3>Cultivo</h3>
+          <p>Preparamos la tierra aplicando las mejores prácticas agrícolas. Capacitamos a nuestro personal para cuidar que las semillas que siembran tengan todo lo necesario para crecer y madurar.</p>
+        </div>
+      </div>
+
+      <div class="pa-step reveal">
+        <div class="pa-step-num"><span>04</span></div>
+        <div class="pa-step-body">
+          <div class="pa-step-icon">🔬</div>
+          <h3>Cuidado y desarrollo</h3>
+          <p>Observamos, medimos y vigilamos meticulosamente el crecimiento de nuestras frutas hasta que llega el momento de la cosecha. Alimentamos nuestros cultivos con los nutrientes necesarios y los protegemos para que las condiciones climáticas sean perfectas durante su desarrollo.</p>
+        </div>
+      </div>
+
+      <div class="pa-step reveal">
+        <div class="pa-step-num"><span>05</span></div>
+        <div class="pa-step-body">
+          <div class="pa-step-icon">📦</div>
+          <h3>Cosecha y empaque</h3>
+          <p>Capacitamos a las personas que cosecharán y empacarán las frutas en las mejores condiciones. Validamos que nuestras frutas estén sanas e inocuas y que posean el color, el peso y la textura ideal para ser cosechadas.</p>
+        </div>
+      </div>
+
+      <div class="pa-step reveal">
+        <div class="pa-step-num"><span>06</span></div>
+        <div class="pa-step-body">
+          <div class="pa-step-icon">🚛</div>
+          <h3>Transporte</h3>
+          <p>Una vez que hemos cosechado y empacado nuestras frutas, inicia el último paso del proceso que es enviarlas bajo las condiciones correctas para que lleguen frescas hasta tu centro de distribución.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>¿Quieres saber más sobre nuestra calidad?</h2>
+    <p>Contáctanos y descubre cómo FreshKampo garantiza la más alta calidad en cada fruto.</p>
+    <div class="cta-actions">
+      <a href="calidad-inocuidad.html" class="btn btn-white btn-lg">Calidad e Inocuidad</a>
+      <a href="integracion-vertical.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);border-radius:9999px;">Ver integración vertical</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/app.js"></script>
+<script>
+(function(){
+  if('IntersectionObserver' in window){
+    var els=document.querySelectorAll('.reveal');
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+    },{threshold:0.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
+  }
+})();
+</script>
+</body>
+</html>

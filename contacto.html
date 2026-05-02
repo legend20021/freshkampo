@@ -1,0 +1,1054 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — FreshKampo | México, EE.UU., Europa, Marruecos</title>
+  <meta name="description" content="Contáctanos en nuestras oficinas en México, Fresno CA, Breda y Casablanca. Envíanos un mensaje y te responderemos en 24 horas." />
+  <link rel="canonical" href="https://freshkampo.com/contacto" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ═══════════════════════════════════════════════
+       CONTACTO v3 — Cinematic hero · Stats bar · Office selector
+    ═══════════════════════════════════════════════ */
+
+    /* ── HERO ── */
+    .c2-hero {
+      position: relative;
+      min-height: calc(100vh - var(--nav-h));
+      display: flex;
+      flex-direction: column;
+      isolation: isolate;
+      background: #040f08;
+    }
+    .c2-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/img/wrapper-productores-03.jpg') center 28% / cover no-repeat;
+      opacity: .3;
+      transform: scale(1.04);
+      animation: c2BgDrift 26s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    .c2-hero-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(130deg, rgba(4,18,11,.96) 0%, rgba(10,44,26,.82) 44%, rgba(6,28,16,.6) 100%),
+        radial-gradient(ellipse 80% 60% at 68% 50%, rgba(26,92,56,.22) 0%, transparent 72%);
+      pointer-events: none;
+    }
+    .c2-hero-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 80% 90% at 70% 44%, black, transparent);
+      -webkit-mask-image: radial-gradient(ellipse 80% 90% at 70% 44%, black, transparent);
+    }
+    .c2-hero-content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: .85rem 0 1.15rem;
+    }
+    .c2-hero-body {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,520px);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    /* ── Text column ── */
+    .c2-hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .48rem;
+      font-size: .72rem;
+      color: rgba(255,255,255,.36);
+      margin-bottom: .95rem;
+    }
+    .c2-hero-breadcrumb a {
+      color: rgba(255,255,255,.36);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .c2-hero-breadcrumb a:hover { color: rgba(255,255,255,.7); }
+    .c2-hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      font-size: .64rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: .8rem;
+    }
+    .c2-hero-kicker::before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--c-accent);
+      flex-shrink: 0;
+    }
+    .c2-hero-h1 {
+      font-size: clamp(2.4rem, 4.8vw, 4.3rem);
+      font-weight: 900;
+      line-height: .94;
+      color: #fff;
+      letter-spacing: -.03em;
+      margin: 0 0 .9rem;
+      animation: c2FadeUp .72s ease both;
+    }
+    .c2-h1-accent {
+      display: block;
+      color: var(--c-accent);
+    }
+    .c2-hero-sub {
+      font-size: .92rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.62;
+      max-width: 450px;
+      margin-bottom: 1.35rem;
+      animation: c2FadeUp .72s .1s ease both;
+    }
+    .c2-hero-cta {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      animation: c2FadeUp .72s .18s ease both;
+    }
+    .c2-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .8rem 1.5rem;
+      border-radius: 999px;
+      font-size: .86rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+    .c2-btn:hover { transform: translateY(-2px); }
+    .c2-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .c2-btn--primary {
+      background: var(--c-primary);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(26,92,56,.44);
+    }
+    .c2-btn--primary:hover {
+      background: #0c3d1e;
+      box-shadow: 0 18px 38px rgba(26,92,56,.52);
+    }
+    .c2-btn--ghost {
+      background: rgba(255,255,255,.09);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,.26);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .c2-btn--ghost:hover {
+      background: rgba(255,255,255,.15);
+      border-color: rgba(255,255,255,.5);
+    }
+
+    /* ── Map column ── */
+    .c2-hero-map {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,.52), 0 0 0 1px rgba(255,255,255,.1);
+      animation: c2FadeUp .72s .06s ease both;
+    }
+    .c2-hero-map img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 260px;
+      object-fit: cover;
+    }
+    .c2-hero-map::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(4,18,11,.08) 0%, rgba(4,18,11,.44) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .c2-map-label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      gap: .38rem;
+      padding: .3rem .6rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.8);
+    }
+    .c2-map-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      box-shadow: 0 0 8px rgba(200,169,81,.8);
+      animation: c2Blink 1.8s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    /* Map pins — .ctc-map-pin keeps JS compatibility */
+    .c2-pins {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .ctc-map-pin {
+      position: absolute;
+      pointer-events: auto;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .78rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, var(--c-primary), #2a8a56);
+      box-shadow: 0 6px 20px rgba(26,92,56,.52);
+      cursor: pointer;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+    .ctc-map-pin::after {
+      content: '';
+      position: absolute;
+      inset: -7px;
+      border: 2px solid rgba(26,92,56,.3);
+      border-radius: 50%;
+      animation: c2Ping 2.4s ease-out infinite;
+    }
+    .ctc-map-pin:hover { transform: scale(1.1); }
+    .ctc-map-pin.is-active {
+      background: linear-gradient(135deg, #a87a2a, var(--c-accent));
+      box-shadow: 0 10px 26px rgba(168,137,58,.56);
+      transform: scale(1.14);
+    }
+    .ctc-map-pin.is-active::after { border-color: rgba(200,169,81,.4); }
+    .ctc-map-pin--1 { left: 21%;   top: 35% }
+    .ctc-map-pin--2 { left: 24%;   top: 49% }
+    .ctc-map-pin--3 { left: 49.5%; top: 34% }
+    .ctc-map-pin--4 { left: 46%;   top: 43% }
+    .ctc-map-pin--5 { left: 64%;   top: 42% }
+
+    /* ── Stats bar ── */
+    .c2-stats-bar {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(255,255,255,.1);
+      background: rgba(0,0,0,.34);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .c2-stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+    .c2-stat {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      border-right: 1px solid rgba(255,255,255,.08);
+    }
+    .c2-stat:last-child { border-right: none; }
+    .c2-stat-num {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -.025em;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .c2-stat-num.is-counting {
+      animation: c2DigitPulse .22s ease-in-out infinite alternate;
+    }
+    .c2-stat-label {
+      font-size: .66rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.46);
+      line-height: 1.5;
+    }
+
+    /* ── OFFICES SECTION ── */
+    .c2-offices {
+      padding: 6rem 0 5.5rem;
+      background: linear-gradient(180deg, #f5f8f5 0%, #eff4ef 100%);
+    }
+    .c2-offices-head {
+      margin-bottom: 2.3rem;
+      display: grid;
+      grid-template-columns: minmax(0,1.18fr) minmax(260px,.82fr);
+      gap: .5rem 1.4rem;
+      align-items: end;
+    }
+    .c2-offices-head .badge {
+      grid-column: 1 / -1;
+      margin-bottom: .35rem;
+    }
+    .c2-offices-head h2 {
+      font-size: clamp(1.65rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      color: var(--c-gray-900);
+      margin: 0 0 .7rem;
+      max-width: none;
+    }
+    .c2-offices-head p {
+      font-size: .96rem;
+      color: var(--c-gray-500);
+      line-height: 1.66;
+      max-width: none;
+      margin: .2rem 0 0;
+    }
+    .c2-offices-layout {
+      display: grid;
+      grid-template-columns: 340px minmax(0,1fr);
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    /* ── Left selector list ── */
+    .c2-office-list {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+      padding: .6rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(15,23,42,.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.85);
+    }
+    /* .ctc-card--office is used by JS */
+    .c2-office-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      padding: 1rem 1.1rem;
+      border-radius: 14px;
+      background: #fff;
+      border: 1.5px solid transparent;
+      box-shadow: 0 2px 10px rgba(15,23,42,.06);
+      cursor: pointer;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      user-select: none;
+      overflow: hidden;
+    }
+    .c2-office-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--c-primary);
+      border-radius: 3px 0 0 3px;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: transform .22s ease;
+    }
+    .c2-office-item:hover {
+      border-color: rgba(26,92,56,.16);
+      box-shadow: 0 8px 24px rgba(15,23,42,.1);
+      transform: translateX(4px);
+    }
+    .c2-office-item.is-active {
+      border-color: rgba(26,92,56,.28);
+      box-shadow: 0 10px 30px rgba(26,92,56,.14);
+      transform: translateX(4px);
+    }
+    .c2-office-item.is-active::before { transform: scaleY(1); }
+    .c2-item-pin {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--c-primary), #2e8d5a);
+      color: #fff;
+      font-size: .86rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: none;
+      cursor: pointer;
+      transition: background .22s ease;
+      box-shadow: 0 4px 12px rgba(26,92,56,.3);
+    }
+    .c2-office-item.is-active .c2-item-pin {
+      background: linear-gradient(135deg, #a87a2a, var(--c-accent));
+      box-shadow: 0 4px 14px rgba(168,137,58,.4);
+    }
+    .c2-item-info { flex: 1; min-width: 0; }
+    .c2-item-type {
+      font-size: .56rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--c-primary);
+      margin-bottom: .18rem;
+    }
+    .c2-item-region {
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--c-gray-900);
+      line-height: 1.25;
+      margin-bottom: .22rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .c2-item-phone {
+      font-size: .72rem;
+      color: var(--c-gray-500);
+      font-variant-numeric: tabular-nums;
+    }
+    .c2-item-arrow {
+      width: 18px;
+      height: 18px;
+      color: var(--c-gray-300);
+      flex-shrink: 0;
+      transition: color .22s ease, transform .22s ease;
+    }
+    .c2-office-item.is-active .c2-item-arrow,
+    .c2-office-item:hover .c2-item-arrow {
+      color: var(--c-primary);
+      transform: translateX(3px);
+    }
+    .c2-addr-hidden { display: none; }
+
+    /* ── Right showcase panel ── */
+    .c2-showcase {
+      position: relative;
+      border-radius: 20px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 24px 72px rgba(15,23,42,.13);
+      border: 1px solid rgba(15,23,42,.08);
+    }
+    .c2-showcase.is-updated {
+      animation: c2ShowcaseIn .38s ease;
+    }
+    .c2-showcase-img {
+      position: relative;
+      height: 290px;
+      overflow: hidden;
+      background: #1a3a26;
+    }
+    .c2-showcase-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity .32s ease, transform .55s ease;
+    }
+    .c2-showcase-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(4,14,9,.08) 0%, rgba(4,14,9,.76) 100%);
+      pointer-events: none;
+    }
+    .c2-showcase-badge {
+      position: absolute;
+      left: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .36rem .7rem .36rem .42rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #0a3d1e;
+      font-size: .64rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      box-shadow: 0 4px 14px rgba(0,0,0,.14);
+    }
+    .c2-showcase-badge-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--c-primary);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 900;
+    }
+    .c2-showcase-body {
+      padding: 1.7rem 1.9rem 1.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+    .c2-showcase-region {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--c-gray-900);
+      line-height: 1.15;
+      margin: 0;
+    }
+    .c2-showcase-address {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .88rem;
+      color: var(--c-gray-600);
+      line-height: 1.62;
+      margin: 0;
+    }
+    .c2-showcase-address svg {
+      width: 14px; height: 14px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--c-primary);
+    }
+    .c2-showcase-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      padding: .65rem .9rem;
+      border-radius: 10px;
+      background: #eef6f1;
+      width: fit-content;
+    }
+    .c2-showcase-phone svg {
+      width: 14px; height: 14px;
+      color: var(--c-primary);
+      flex-shrink: 0;
+    }
+    .c2-showcase-phone span {
+      font-size: .94rem;
+      font-weight: 800;
+      color: #0a3d1e;
+      font-variant-numeric: tabular-nums;
+    }
+    .c2-showcase-actions { display: flex; gap: .55rem; }
+    .c2-showcase-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      flex: 1;
+      padding: .78rem 1rem;
+      border-radius: 999px;
+      font-size: .8rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .c2-showcase-btn:hover { transform: translateY(-2px); }
+    .c2-showcase-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .c2-showcase-btn--copy {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid #e2e8f0;
+    }
+    .c2-showcase-btn--copy:hover {
+      background: #e2e8f0;
+      box-shadow: 0 6px 18px rgba(15,23,42,.1);
+    }
+    .c2-showcase-btn--careers {
+      background: #fff;
+      color: #0a3d1e;
+      border: 1px solid rgba(10,61,30,.24);
+      box-shadow: 0 6px 18px rgba(10,61,30,.08);
+    }
+    .c2-showcase-btn--careers:hover {
+      background: #f4faf6;
+      box-shadow: 0 10px 24px rgba(10,61,30,.14);
+    }
+    .c2-showcase-btn--wa {
+      background: linear-gradient(135deg, #0d8a4f, #18aa61);
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(14,169,89,.28);
+    }
+    .c2-showcase-btn--wa:hover {
+      box-shadow: 0 14px 30px rgba(14,169,89,.42);
+    }
+
+    /* ── Toast ── */
+    .c2-toast {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      z-index: 1200;
+      min-width: 220px;
+      max-width: 300px;
+      padding: .85rem 1.05rem;
+      border-radius: 14px;
+      background: rgba(6,18,10,.93);
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 600;
+      line-height: 1.5;
+      box-shadow: 0 18px 38px rgba(0,0,0,.28);
+      opacity: 0;
+      transform: translateY(18px) scale(.97);
+      pointer-events: none;
+      transition: opacity .22s ease, transform .22s ease;
+    }
+    .c2-toast.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+
+    /* ── Keyframes ── */
+    @keyframes c2BgDrift {
+      from { transform: scale(1.04) translateX(0); }
+      to   { transform: scale(1.07) translateX(-1.2%); }
+    }
+    @keyframes c2FadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes c2Ping {
+      0%   { transform: scale(.75); opacity: .7; }
+      100% { transform: scale(1.55); opacity: 0; }
+    }
+    @keyframes c2Blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .28; }
+    }
+    @keyframes c2DigitPulse {
+      from { transform: translateY(2px); }
+      to   { transform: translateY(-1px); }
+    }
+    @keyframes c2ShowcaseIn {
+      0%   { transform: translateY(8px); opacity: .82; }
+      100% { transform: translateY(0);   opacity: 1; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .c2-hero-bg, .c2-hero-h1, .c2-hero-sub, .c2-hero-cta, .c2-hero-map,
+      .ctc-map-pin::after, .c2-map-dot, .c2-stat-num { animation: none !important; }
+      .c2-btn, .c2-office-item, .c2-item-pin, .c2-showcase-btn,
+      .c2-showcase, .ctc-map-pin, .c2-item-arrow { transition: none !important; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1120px) {
+      .c2-offices-layout { grid-template-columns: 300px minmax(0,1fr); gap: 1.4rem; }
+    }
+    @media (max-width: 980px) {
+      .c2-hero-body { grid-template-columns: 1fr; gap: 1.35rem; padding-top: .2rem; }
+      .c2-hero-map { max-width: 560px; }
+      .c2-stats-inner { grid-template-columns: repeat(2,1fr); }
+      .c2-stat:nth-child(2) { border-right: none; }
+      .c2-stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,.08); }
+      .c2-stat:nth-child(4) { border-top: 1px solid rgba(255,255,255,.08); border-right: none; }
+      .c2-offices-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .c2-hero-h1 { font-size: 2.8rem; }
+      .c2-stats-inner { grid-template-columns: repeat(2,1fr); }
+      .c2-stat { padding: .72rem .68rem; gap: .42rem; align-items: flex-start; }
+      .c2-stat-num { font-size: 1.34rem; }
+      .c2-stat-label { font-size: .54rem; letter-spacing: .06em; line-height: 1.28; }
+      .c2-offices { padding: 4rem 0 3.5rem; }
+      .c2-showcase-img { height: 230px; }
+    }
+    @media (max-width: 480px) {
+      .c2-hero-h1 { font-size: 2.3rem; letter-spacing: -.02em; }
+      .c2-stats-inner { grid-template-columns: repeat(2,1fr); }
+      .c2-stat { padding: .62rem .58rem; gap: .34rem; }
+      .c2-stat-num { font-size: 1.18rem; }
+      .c2-stat-label { font-size: .49rem; letter-spacing: .05em; }
+      .c2-showcase-actions { flex-direction: column; }
+      .c2-showcase-body { padding: 1.3rem 1.4rem 1.5rem; }
+      .c2-toast { left: 1rem; right: 1rem; min-width: 0; max-width: none; }
+    }
+
+    /* ── Mobile offices: all items visible and easier to use ── */
+    @media (max-width: 768px) {
+      .c2-offices { padding: 3.25rem 0 3rem; }
+      .c2-offices-head {
+        margin-bottom: 1.35rem;
+        grid-template-columns: 1fr;
+        gap: .35rem;
+      }
+      .c2-offices-head .badge { margin-bottom: .25rem; }
+      .c2-offices-head h2 { font-size: 1.34rem; line-height: 1.22; }
+      .c2-offices-head p { font-size: .88rem; line-height: 1.62; }
+
+      .c2-offices-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .c2-office-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: .6rem;
+        padding: .4rem;
+      }
+
+      .c2-office-item {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-width: 0;
+        padding: .8rem;
+        gap: .5rem;
+        border-radius: 12px;
+        transform: none !important;
+        box-shadow: 0 2px 10px rgba(15,23,42,.08);
+      }
+      .c2-office-item:hover,
+      .c2-office-item.is-active {
+        transform: none !important;
+      }
+
+      .c2-item-pin {
+        width: 30px;
+        height: 30px;
+        font-size: .74rem;
+        box-shadow: 0 2px 8px rgba(26,92,56,.28);
+      }
+
+      .c2-item-info { width: 100%; }
+      .c2-item-type {
+        display: block;
+        font-size: .5rem;
+        letter-spacing: .11em;
+        margin-bottom: .14rem;
+      }
+      .c2-item-region {
+        font-size: .74rem;
+        line-height: 1.28;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        margin-bottom: .2rem;
+      }
+      .c2-item-phone {
+        display: block;
+        font-size: .68rem;
+      }
+      .c2-item-arrow { display: none; }
+
+      .c2-showcase {
+        border-radius: 14px;
+        box-shadow: 0 10px 34px rgba(15,23,42,.11);
+      }
+      .c2-showcase-img { height: 210px; }
+      .c2-showcase-body { padding: 1.2rem 1.2rem 1.35rem; gap: .75rem; }
+      .c2-showcase-region { font-size: 1.14rem; }
+      .c2-showcase-address { font-size: .82rem; line-height: 1.55; }
+      .c2-showcase-phone {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .c2-showcase-phone span { font-size: .9rem; }
+      .c2-showcase-btn { padding: .62rem .9rem; font-size: .77rem; }
+    }
+
+    @media (max-width: 520px) {
+      .c2-office-list { grid-template-columns: 1fr; }
+      .c2-office-item {
+        flex-direction: row;
+        align-items: center;
+        gap: .65rem;
+      }
+      .c2-item-pin { width: 32px; height: 32px; }
+      .c2-item-region { font-size: .82rem; }
+      .c2-item-phone { font-size: .72rem; }
+      .c2-showcase-img { height: 190px; }
+      .c2-showcase-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<!-- ══════════════════════════════════════
+     HERO — Cinematic full-viewport
+══════════════════════════════════════ -->
+<section class="c2-hero ctc-hero">
+  <div class="c2-hero-bg"       aria-hidden="true"></div>
+  <div class="c2-hero-gradient" aria-hidden="true"></div>
+  <div class="c2-hero-lines"    aria-hidden="true"></div>
+
+  <div class="c2-hero-content">
+    <div class="container c2-hero-body">
+
+      <!-- LEFT: Text -->
+      <div class="c2-hero-text">
+        <nav class="c2-hero-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><polyline points="9 18 15 12 9 6"/></svg>
+          <span data-i18n="nav-contact">Contáctanos</span>
+        </nav>
+
+        <p class="c2-hero-kicker" data-i18n="ctc-map-badge">Presencia global</p>
+
+        <h1 class="c2-hero-h1">
+          <span data-i18n="contact-h1">Contáctanos</span>
+          <span class="c2-h1-accent" data-i18n="contact-h1-line2">al mundo.</span>
+        </h1>
+
+        <p class="c2-hero-sub" data-i18n="contact-desc">
+          Estamos en múltiples ubicaciones alrededor del mundo para servirte mejor.
+        </p>
+
+        <div class="c2-hero-cta">
+          <a href="#oficinas" class="c2-btn c2-btn--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="ctc-cta-offices">Ver oficinas</span>
+          </a>
+          <a href="https://wa.me/15593857123" target="_blank" rel="noopener" class="c2-btn c2-btn--ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span data-i18n="ctc-whatsapp">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: World map with pins -->
+      <div class="c2-hero-map">
+        <div class="c2-map-label" aria-hidden="true">
+          <span class="c2-map-dot"></span>
+          <span data-i18n="ctc-map-badge">5 regiones activas</span>
+        </div>
+        <img src="assets/img/UBICACION.png" alt="Mapa de presencia global FreshKampo — 5 regiones comerciales" loading="eager" />
+        <div class="c2-pins" aria-label="Regiones comerciales">
+          <button type="button" class="ctc-map-pin ctc-map-pin--1 is-active" data-office-select="1" aria-label="Ver oficina Norteamérica">1</button>
+          <button type="button" class="ctc-map-pin ctc-map-pin--2" data-office-select="2" aria-label="Ver oficina México y Latinoamérica">2</button>
+          <button type="button" class="ctc-map-pin ctc-map-pin--3" data-office-select="3" aria-label="Ver oficina Europa">3</button>
+          <button type="button" class="ctc-map-pin ctc-map-pin--4" data-office-select="4" aria-label="Ver oficina Marruecos">4</button>
+          <button type="button" class="ctc-map-pin ctc-map-pin--5" data-office-select="5" aria-label="Ver oficina Medio Oriente y Asia">5</button>
+        </div>
+      </div>
+
+    </div><!-- /c2-hero-body -->
+  </div><!-- /c2-hero-content -->
+
+  <!-- Stats bar -->
+  <div class="c2-stats-bar">
+    <div class="container c2-stats-inner">
+      <div class="c2-stat">
+        <strong class="c2-stat-num" data-count="5">0</strong>
+        <span class="c2-stat-label" data-i18n="ctc-stat1">Regiones comerciales</span>
+      </div>
+      <div class="c2-stat">
+        <strong class="c2-stat-num" data-count="4">0</strong>
+        <span class="c2-stat-label" data-i18n="ctc-stat2">Continentes</span>
+      </div>
+      <div class="c2-stat">
+        <strong class="c2-stat-num" data-count="30" data-suffix="+">0+</strong>
+        <span class="c2-stat-label" data-i18n="ctc-stat3">Clientes minoristas globales</span>
+      </div>
+      <div class="c2-stat">
+        <strong class="c2-stat-num" data-count="24" data-suffix="h">0h</strong>
+        <span class="c2-stat-label" data-i18n="ctc-stat4">Tiempo de respuesta</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     OFFICES — Selector + Showcase
+══════════════════════════════════════ -->
+<section class="c2-offices" id="oficinas">
+  <div class="container">
+
+    <div class="c2-offices-head reveal">
+      <span class="badge" data-i18n="ctc-map-badge">Presencia global</span>
+      <h2 data-i18n="ctc-map-h2">Nuestros productos están disponibles en todo el mundo a través de nuestras oficinas comerciales.</h2>
+      <p data-i18n="ctc-map-subtitle">Selecciona una región para ver sus datos de contacto y comunicarte al instante.</p>
+    </div>
+
+    <div class="c2-offices-layout">
+
+      <!-- ── LEFT: Vertical selector — .ctc-card--office used by JS ── -->
+      <div class="c2-office-list reveal" role="list">
+
+        <!-- 1 · Norteamérica -->
+        <div class="c2-office-item ctc-card--office is-active"
+             data-office-id="1"
+             data-office-image="assets/img/Contactanos/contact (1).png"
+             data-office-phone-display="+1 (559) 385-7123"
+             data-office-phone-raw="+15593857123"
+             data-office-wa="15593857123"
+             tabindex="0" role="button" aria-pressed="true">
+          <button type="button" class="c2-item-pin" data-office-select="1" aria-label="Norteamérica">1</button>
+          <div class="c2-item-info">
+            <div class="c2-item-type" data-i18n="office-type">Oficina</div>
+            <div class="c2-item-region ctc-region" data-i18n="ctc-region-1">Norteamérica</div>
+            <div class="c2-item-phone">+1 (559) 385-7123</div>
+          </div>
+          <svg class="c2-item-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="ctc-address-text c2-addr-hidden">423 W. Fallbrook Ave. Ste.&nbsp;205, Fresno, CA 93711, USA</span>
+        </div>
+
+        <!-- 2 · México y Latinoamérica -->
+        <div class="c2-office-item ctc-card--office"
+             data-office-id="2"
+             data-office-image="assets/img/Contactanos/contact (2).png"
+             data-office-phone-display="+52 (354) 551-2416"
+             data-office-phone-raw="+523545512416"
+             data-office-wa="523545512416"
+             tabindex="0" role="button" aria-pressed="false">
+          <button type="button" class="c2-item-pin" data-office-select="2" aria-label="México y Latinoamérica">2</button>
+          <div class="c2-item-info">
+            <div class="c2-item-type" data-i18n="office-type">Oficina</div>
+            <div class="c2-item-region ctc-region" data-i18n="ctc-region-2">México y Latinoamérica</div>
+            <div class="c2-item-phone">+52 (354) 551-2416</div>
+          </div>
+          <svg class="c2-item-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="ctc-address-text c2-addr-hidden">Km 0.5 Carr. Peribán Los Reyes, SN, Los Camichines, 60440, Peribán, Mich., México</span>
+        </div>
+
+        <!-- 3 · Europa -->
+        <div class="c2-office-item ctc-card--office"
+             data-office-id="3"
+             data-office-image="assets/img/Contactanos/contact (3).png"
+             data-office-phone-display="+31 687 337 098"
+             data-office-phone-raw="+31687337098"
+             data-office-wa="31687337098"
+             tabindex="0" role="button" aria-pressed="false">
+          <button type="button" class="c2-item-pin" data-office-select="3" aria-label="Europa">3</button>
+          <div class="c2-item-info">
+            <div class="c2-item-type" data-i18n="office-type">Oficina</div>
+            <div class="c2-item-region ctc-region" data-i18n="ctc-region-3">Europa</div>
+            <div class="c2-item-phone">+31 687 337 098</div>
+          </div>
+          <svg class="c2-item-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="ctc-address-text c2-addr-hidden">Iabc 5102, 4814 RN Breda, Países Bajos</span>
+        </div>
+
+        <!-- 4 · Marruecos -->
+        <div class="c2-office-item ctc-card--office"
+             data-office-id="4"
+             data-office-image="assets/img/Contactanos/contact (4).png"
+             data-office-phone-display="+31 687 337 098"
+             data-office-phone-raw="+31687337098"
+             data-office-wa="31687337098"
+             tabindex="0" role="button" aria-pressed="false">
+          <button type="button" class="c2-item-pin" data-office-select="4" aria-label="Marruecos">4</button>
+          <div class="c2-item-info">
+            <div class="c2-item-type" data-i18n="office-type">Oficina</div>
+            <div class="c2-item-region ctc-region" data-i18n="ctc-region-4">Marruecos</div>
+            <div class="c2-item-phone">+31 687 337 098</div>
+          </div>
+          <svg class="c2-item-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="ctc-address-text c2-addr-hidden">11, Rue El Wahda, Résidence Imam Ali, Appt.&nbsp;n°&nbsp;2, Casablanca</span>
+        </div>
+
+        <!-- 5 · Medio Oriente y Asia -->
+        <div class="c2-office-item ctc-card--office"
+             data-office-id="5"
+             data-office-image="assets/img/Contactanos/contact (5).png"
+             data-office-phone-display="+31 687 337 098"
+             data-office-phone-raw="+31687337098"
+             data-office-wa="31687337098"
+             tabindex="0" role="button" aria-pressed="false">
+          <button type="button" class="c2-item-pin" data-office-select="5" aria-label="Medio Oriente y Asia">5</button>
+          <div class="c2-item-info">
+            <div class="c2-item-type" data-i18n="office-type">Oficina</div>
+            <div class="c2-item-region ctc-region" data-i18n="ctc-region-5">Medio Oriente y Asia</div>
+            <div class="c2-item-phone">+31 687 337 098</div>
+          </div>
+          <svg class="c2-item-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="ctc-address-text c2-addr-hidden">Labc 5102, 4814 RN Breda, Países Bajos</span>
+        </div>
+
+      </div><!-- /c2-office-list -->
+
+      <!-- ── RIGHT: Showcase panel — IDs used by JS ── -->
+      <div class="c2-showcase reveal reveal-delay-1" id="ctcOfficeWindow" aria-live="polite">
+
+        <div class="c2-showcase-img">
+          <img id="ctcOfficeImage" src="assets/img/Contactanos/contact (1).png" alt="Norteamérica" loading="lazy" />
+          <div class="c2-showcase-badge">
+            <span class="c2-showcase-badge-num" id="ctcOfficeNumber">1</span>
+            <span data-i18n="office-type">Oficina</span>
+          </div>
+        </div>
+
+        <div class="c2-showcase-body">
+          <h3 class="c2-showcase-region" id="ctcOfficeRegion" data-i18n="ctc-region-1">Norteamérica</h3>
+
+          <p class="c2-showcase-address">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="ctcOfficeAddress">423 W. Fallbrook Ave. Ste.&nbsp;205, Fresno, CA 93711, USA</span>
+          </p>
+
+          <div class="c2-showcase-phone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span id="ctcOfficePhone">+1 (559) 385-7123</span>
+          </div>
+
+          <div class="c2-showcase-actions">
+            <button type="button" class="c2-showcase-btn c2-showcase-btn--copy" id="ctcOfficeCopyBtn" data-copy-phone="+1 (559) 385-7123">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span data-i18n="ctc-copy-phone">Copiar número</span>
+            </button>
+            <a href="carreras.html" class="c2-showcase-btn c2-showcase-btn--careers">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg>
+              <span data-i18n="nav-careers">Carreras</span>
+            </a>
+            <a href="https://wa.me/15593857123" target="_blank" rel="noopener" class="c2-showcase-btn c2-showcase-btn--wa" id="ctcOfficeWaBtn" data-whatsapp-link>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <span data-i18n="ctc-whatsapp">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /c2-showcase -->
+
+    </div><!-- /c2-offices-layout -->
+  </div>
+</section>
+
+<!-- Toast — id used by JS -->
+<div class="c2-toast" id="ctcToast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
+<script src="js/i18n.js?v=20260502"></script>
+<script src="js/nav.js?v=20260502"></script>
+<script src="js/app.js?v=20260502"></script>
+</body>
+</html>

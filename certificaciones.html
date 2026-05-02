@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificaciones — FreshKampo | ISO 9001, Primus GFS, Organic, SMETA</title>
+  <meta name="description" content="FreshKampo cuenta con certificaciones internacionales de calidad e inocuidad: ISO 9001:2015, Primus GFS, IFS, NOP USDA, EU Organic, COR, LPO y SMETA." />
+  <link rel="canonical" href="https://freshkampo.com/certificaciones" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* HERO */
+    .cert-hero{position:relative;background-image:url('assets/img/wrapper-certificaciones.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+    .cert-hero-overlay{position:absolute;inset:0;z-index:0;background:linear-gradient(112deg,rgba(10,36,20,.82) 0%,rgba(13,55,32,.60) 42%,rgba(20,70,40,.30) 68%,rgba(6,16,8,.08) 100%)}
+    .cert-hero-overlay::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 45% at 18% 32%,rgba(200,169,81,.09) 0%,transparent 58%);pointer-events:none}
+    .cert-hero .container{position:relative;z-index:1}
+
+    /* CATEGORY LABEL */
+    .cert-cat-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:.35rem 1rem;border-radius:9999px;margin-bottom:1.25rem}
+    .cert-cat-label.calidad{background:var(--c-primary-50);color:var(--c-primary);border:1px solid rgba(26,92,56,.18)}
+    .cert-cat-label.inocuidad{background:#FEF3C7;color:#92400E;border:1px solid rgba(217,119,6,.18)}
+    .cert-cat-label.organico{background:#F0FDF4;color:#166534;border:1px solid rgba(22,101,52,.18)}
+    .cert-cat-label.etico{background:#EDE9FE;color:#5B21B6;border:1px solid rgba(91,33,182,.16)}
+
+    /* FEATURE SPLIT (ISO 9001, SMETA) */
+    .cert-feature{padding:var(--space-20) 0}
+    .cert-feature.bg-light{background:var(--c-gray-50)}
+    .cert-feature-inner{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;max-width:1100px;margin:0 auto}
+    .cert-feature-inner.reverse{direction:rtl}
+    .cert-feature-inner.reverse > *{direction:ltr}
+    .cert-feature-text h2{font-size:1.75rem;color:var(--c-gray-900);margin:.25rem 0 1rem;line-height:1.3}
+    .cert-feature-text p{color:var(--c-gray-500);font-size:1rem;line-height:1.85;margin-bottom:1rem}
+    .cert-feature-text p:last-child{margin-bottom:0}
+    .cert-logo-box{background:#fff;border:1px solid var(--c-gray-100);border-radius:24px;padding:2.5rem;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 48px rgba(13,61,36,.10),0 0 0 1px rgba(26,92,56,.06)}
+    .cert-logo-box img{max-height:140px;width:auto;max-width:100%;object-fit:contain;display:block}
+    /* ISO cert elegant frame */
+    .cert-doc-frame{background:#fff;border-radius:24px;box-shadow:0 20px 60px rgba(13,61,36,.13),0 0 0 1px rgba(26,92,56,.07);overflow:hidden;max-width:400px;margin:0 auto}
+    .cert-doc-frame-top{background:linear-gradient(90deg,var(--c-primary-50),var(--c-primary-100));padding:.85rem 1.5rem;display:flex;align-items:center;gap:.75rem}
+    .cert-doc-frame-top span{font-size:.72rem;font-weight:800;color:var(--c-primary);text-transform:uppercase;letter-spacing:.08em}
+    .cert-doc-frame img{width:100%;height:auto;display:block;max-height:340px;object-fit:contain;padding:1.25rem;background:#fff}
+    /* SMETA pillars */
+    .cert-smeta-wrap{background:#fff;border:1px solid var(--c-gray-100);border-radius:24px;padding:2rem;box-shadow:0 16px 48px rgba(13,61,36,.08),0 0 0 1px rgba(26,92,56,.05)}
+    .cert-smeta-pillars{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.5rem}
+    .cert-smeta-pillar{background:var(--c-primary-50);border:1px solid rgba(26,92,56,.10);border-radius:14px;padding:.9rem 1rem;display:flex;align-items:flex-start;gap:.65rem}
+    .cert-smeta-icon{width:32px;height:32px;border-radius:9px;background:var(--c-white);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(13,61,36,.10)}
+    .cert-smeta-pillar h4{font-size:.78rem;font-weight:700;color:var(--c-primary-dark);margin:0 0 .18rem;line-height:1.3}
+    .cert-smeta-pillar p{font-size:.72rem;color:var(--c-gray-500);margin:0;line-height:1.4}
+    .cert-smeta-logos{display:flex;align-items:center;justify-content:center;gap:2.5rem;padding-top:1.5rem;border-top:1px solid var(--c-gray-100)}
+    .cert-smeta-logos img{max-height:64px;width:auto;max-width:160px;object-fit:contain;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.10))}
+
+    /* GRID CARDS (Inocuidad, Orgánico) */
+    .cert-cards-section{padding:var(--space-20) 0}
+    .cert-cards-section.bg-light{background:var(--c-gray-50)}
+    .cert-section-head{max-width:620px;margin-bottom:3rem}
+    .cert-section-head h2{color:var(--c-gray-900);font-size:1.75rem;margin:.25rem 0 .75rem;line-height:1.3}
+    .cert-section-head p{color:var(--c-gray-500);font-size:1rem;line-height:1.8;margin:0}
+    .cert-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
+    .cert-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+    .cert-card{background:#fff;border:1px solid var(--c-gray-100);border-radius:20px;padding:2rem 1.75rem;display:flex;flex-direction:column;transition:box-shadow .28s,transform .28s}
+    .cert-card:hover{box-shadow:0 16px 48px rgba(13,61,36,.11);transform:translateY(-4px)}
+    .cert-card-logo{height:88px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:1.25rem}
+    .cert-card-logo img{max-height:80px;width:auto;max-width:200px;object-fit:contain;display:block}
+    .cert-card h3{font-size:1rem;font-weight:700;color:var(--c-gray-900);margin:0 0 .5rem}
+    .cert-card p{font-size:.88rem;color:var(--c-gray-500);line-height:1.8;margin:0;flex:1}
+
+    /* SMETA logos pair */
+    .cert-logos-pair{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+    .cert-logos-pair img{max-height:80px;width:auto;object-fit:contain;display:block;filter:grayscale(10%)}
+
+    /* BANNER */
+    .cert-banner{padding:0;line-height:0}
+    .cert-banner img{width:100%;max-height:360px;object-fit:cover;object-position:center;display:block}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .65s ease,transform .7s cubic-bezier(.22,.61,.36,1)}
+    .reveal-left.visible{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .65s ease,transform .7s cubic-bezier(.22,.61,.36,1)}
+    .reveal-right.visible{opacity:1;transform:translateX(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .cert-grid-4{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:900px){
+      .cert-feature-inner,.cert-feature-inner.reverse{grid-template-columns:1fr;direction:ltr;gap:2.5rem}
+      .cert-grid-2{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .cert-feature{padding:var(--space-12) 0}
+      .cert-cards-section{padding:var(--space-12) 0}
+      .cert-feature-text h2{font-size:1.4rem}
+      .cert-grid-4{grid-template-columns:1fr 1fr}
+      .cert-card{padding:1.5rem 1.25rem}
+    }
+    @media(max-width:420px){
+      .cert-grid-4{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<section class="page-hero cert-hero">
+  <div class="cert-hero-overlay"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Inicio</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+      <span data-i18n="nav-certifications">Certificaciones</span>
+    </nav>
+    <span class="badge badge-accent">Calidad certificada</span>
+    <h1 style="margin-top:.75rem">Aseguramos<br>nuestra calidad</h1>
+    <p>Contamos con certificaciones internacionales de calidad, inocuidad, orgánico y comercio ético reconocidas en todo el mundo.</p>
+  </div>
+</section>
+
+<!-- ══ ISO 9001 — CALIDAD ══ -->
+<section class="cert-feature">
+  <div class="container">
+    <div class="cert-feature-inner">
+      <div class="cert-feature-text reveal-left">
+        <span class="cert-cat-label calidad">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Calidad
+        </span>
+        <h2>ISO 9001:2015</h2>
+        <p>Estándar internacional de gestión de calidad que garantiza que nuestros productos y servicios cumplen consistentemente con los requisitos del cliente y las regulaciones aplicables.</p>
+        <p>Con este certificado demostramos nuestro enfoque en la mejora continua, la eficiencia operativa y la satisfacción del cliente en cada eslabón de nuestra cadena de suministro.</p>
+      </div>
+      <div class="reveal-right">
+        <div class="cert-doc-frame">
+          <div class="cert-doc-frame-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>ISO 9001:2015 &mdash; Certificado oficial</span>
+          </div>
+          <img src="assets/img/certificado-calidad-01-min_ISO 9001.png" alt="Certificado ISO 9001:2015 FreshKampo" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INOCUIDAD ══ -->
+<section class="cert-cards-section bg-light">
+  <div class="container">
+    <div class="cert-section-head reveal">
+      <span class="cert-cat-label inocuidad">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        Inocuidad Alimentaria
+      </span>
+      <h2>Seguridad en cada etapa</h2>
+      <p>Contamos con certificaciones de inocuidad que garantizan que hemos sido auditados y cumplimos con las normas establecidas nacional e internacionalmente.</p>
+    </div>
+    <div class="cert-grid-2">
+      <div class="cert-card reveal">
+        <div class="cert-card-logo">
+          <img src="assets/img/logo-cert-primus.png" alt="Primus GFS" loading="lazy" />
+        </div>
+        <h3>Primus GFS</h3>
+        <p>Auditoría de inocuidad alimentaria de terceros reconocida por GFSI. Cubre desde producción primaria hasta instalaciones de procesamiento, garantizando las mejores prácticas agrícolas y de manufactura.</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-card-logo">
+          <img src="assets/img/logo-cert-ifs.png" alt="International Featured Standards Broker" loading="lazy" />
+        </div>
+        <h3>International Featured Standards Broker</h3>
+        <p>Acreditación para brokers y distribuidores de alimentos. Certifica que FreshKampo gestiona correctamente todos los productos que comercializa, con los más altos estándares de inocuidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ORGÁNICO ══ -->
+<section class="cert-cards-section">
+  <div class="container">
+    <div class="cert-section-head reveal">
+      <span class="cert-cat-label organico">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M2 22 C6 16 14 8 22 2 M8 22 C10 16 16 8 22 4"/></svg>
+        Producto Orgánico
+      </span>
+      <h2>Certificaciones orgánicas internacionales</h2>
+      <p>Nuestros productos orgánicos cuentan con las certificaciones para comercializarlos en México, Estados Unidos, Canadá, la Unión Europea y el Medio Oriente.</p>
+    </div>
+    <div class="cert-grid-4">
+      <div class="cert-card reveal">
+        <div class="cert-card-logo">
+          <img src="assets/img/logo-cert-eu.jpg" alt="EU Organic equivalencia europea" loading="lazy" />
+        </div>
+        <h3>Certificado de Equivalencia EU</h3>
+        <p>UE Reg. n. 834/07 · EU Reg. 889/08. Permite la exportación de productos orgánicos a toda la Unión Europea.</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-card-logo">
+          <img src="assets/img/logo-cert-usda.jpg" alt="USDA NOP Organic" loading="lazy" />
+        </div>
+        <h3>Certificación NOP</h3>
+        <p>National Organic Program — CFR 205 obligatoria en EE.UU. Autoriza la etiqueta "USDA Organic" en el mercado estadounidense.</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-card-logo">
+          <img src="assets/img/logo-certificado-06.jpg" alt="COR Canada Organic" loading="lazy" />
+        </div>
+        <h3>Certificación COR</h3>
+        <p>Canadian Organic Regime. Cumplimiento de los estándares orgánicos canadienses para comercializar como "Canada Organic".</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-card-logo">
+          <img src="assets/img/logo-certificado-07.jpg" alt="LPO Ley de Productos Orgánicos México" loading="lazy" />
+        </div>
+        <h3>Certificación LPO</h3>
+        <p>Ley de Productos Orgánicos — obligatoria en México. Regula la producción, procesamiento y comercialización de productos orgánicos en México.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SMETA / COMERCIO ÉTICO ══ -->
+<section class="cert-feature bg-light">
+  <div class="container">
+    <div class="cert-feature-inner reverse">
+      <div class="cert-feature-text reveal-right">
+        <span class="cert-cat-label etico">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Auditoría de Comercio Ético · Desde 2016
+        </span>
+        <h2>Sedex Members<br>Ethical Trade Audit</h2>
+        <p>Nos auditamos con SMETA desde el 2016. Realizamos las actividades de nuestra cadena de suministro de manera responsable, actuando bajo altos estándares de ética empresarial.</p>
+      </div>
+      <div class="cert-smeta-wrap reveal-left">
+        <div class="cert-smeta-pillars">
+          <div class="cert-smeta-pillar">
+            <div class="cert-smeta-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div><h4>Trabajo</h4><p>Condiciones laborales dignas y justas</p></div>
+          </div>
+          <div class="cert-smeta-pillar">
+            <div class="cert-smeta-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>Salud &amp; Seguridad</h4><p>Entorno de trabajo seguro</p></div>
+          </div>
+          <div class="cert-smeta-pillar">
+            <div class="cert-smeta-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><h4>Medio Ambiente</h4><p>Operaciones sostenibles</p></div>
+          </div>
+          <div class="cert-smeta-pillar">
+            <div class="cert-smeta-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>Ética Empresarial</h4><p>Altos estándares de conducta</p></div>
+          </div>
+        </div>
+        <div class="cert-smeta-logos">
+          <img src="assets/img/logo-cert-smeta.png" alt="SMETA" loading="lazy" />
+          <img src="assets/img/logo-cert-sedex.png" alt="Sedex" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>¿Preguntas sobre nuestras certificaciones?</h2>
+    <p>Nuestro equipo de calidad e inocuidad está disponible para responder cualquier duda sobre nuestros estándares y procesos.</p>
+    <div class="cta-actions">
+      <a href="contacto.html" class="btn btn-white btn-lg">Contáctanos</a>
+      <a href="calidad-inocuidad.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);border-radius:9999px;">Calidad e Inocuidad</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/app.js"></script>
+<script src="js/page-i18n-overrides.js"></script>
+<script>
+(function(){
+  if('IntersectionObserver' in window){
+    var els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+    },{threshold:0.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){el.classList.add('visible');});
+  }
+})();
+</script>
+</body>
+</html>

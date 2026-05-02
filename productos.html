@@ -1,0 +1,943 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos — FreshKampo | Berries y Frutas Frescas</title>
+  <meta name="description" content="Fresa, frambuesa, zarzamora, arándano, higo, aguacate y espárrago. Productos frescos convencionales y orgánicos de FreshKampo." />
+  <link rel="canonical" href="https://freshkampo.com/productos" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ═══════════════════════════════════════
+       PRODUCTS HERO — VIDEO BACKGROUND
+    ═══════════════════════════════════════ */
+    .products-hero {
+      position: relative; overflow: hidden;
+      min-height: 500px; display: flex; align-items: flex-end;
+      line-height: 1.4;
+    }
+    .products-hero-video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; z-index: 0;
+    }
+    .products-hero-yt-fallback {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0; z-index: 0;
+      pointer-events: none;
+    }
+    .products-hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        160deg,
+        rgba(2,10,5,.75) 0%,
+        rgba(4,18,9,.55) 38%,
+        rgba(4,18,9,.25) 68%,
+        rgba(4,18,9,.08) 100%
+      );
+    }
+    .products-hero-content {
+      position: relative; z-index: 2;
+      padding: 4.5rem 0 3.5rem; width: 100%;
+    }
+    .products-hero-content .breadcrumb {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .78rem; color: rgba(255,255,255,.45);
+      margin-bottom: 1.25rem;
+    }
+    .products-hero-content .breadcrumb a {
+      color: rgba(255,255,255,.45); transition: color .2s;
+    }
+    .products-hero-content .breadcrumb a:hover { color: #fff; }
+    .products-hero-content .breadcrumb svg { width: 12px; height: 12px; }
+    .products-hero-content h1 {
+      color: #fff; margin: .75rem 0 .875rem; max-width: 640px;
+    }
+    .products-hero-content > .container > p {
+      color: rgba(255,255,255,.72);
+      font-size: 1.05rem; max-width: 560px; margin-bottom: 0;
+    }
+
+    /* ═══════════════════════════════════════
+       PRODUCT QUICK NAV
+    ═══════════════════════════════════════ */
+    .products-subnav {
+      background: #fff;
+      border-bottom: 1px solid var(--c-gray-100);
+      overflow-x: auto;
+      position: sticky; top: var(--nav-h); z-index: 100;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .products-subnav::-webkit-scrollbar { display: none; }
+    .products-subnav-inner {
+      display: flex; align-items: center; gap: 2px;
+      padding: .5rem 1.25rem; width: max-content; margin: 0 auto;
+    }
+    .pnav-item {
+      display: flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 9999px;
+      font-size: .8rem; font-weight: 600;
+      color: var(--c-gray-600); text-decoration: none;
+      white-space: nowrap; transition: all .18s;
+      border: 1px solid transparent;
+    }
+    .pnav-item:hover {
+      background: var(--c-primary-50); color: var(--c-primary);
+      border-color: var(--c-primary-100);
+    }
+    /* etiqueta de texto: visible en desktop, oculta en mobile */
+    .pnav-label { display: inline; }
+
+    /* ═══════════════════════════════════════
+       PRODUCT SECTIONS
+    ═══════════════════════════════════════ */
+    .product-section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--c-gray-100);
+      scroll-margin-top: calc(var(--nav-h) + 50px);
+    }
+    .product-section:nth-child(odd)  { background: var(--c-gray-50); }
+    .product-section:nth-child(even) { background: #fff; }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: minmax(380px, 460px) 1fr;
+      gap: clamp(1rem, 2.5vw, 2rem); align-items: start;
+    }
+    .product-layout.reverse { grid-template-columns: 1fr minmax(380px, 460px); }
+    .product-layout.reverse .product-visual { order: 2; }
+    .product-layout.reverse .product-info  { order: 1; }
+
+    .product-layout.reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .6s ease, transform .65s cubic-bezier(.22,.61,.36,1);
+    }
+    .product-layout.reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product-layout.reveal .product-visual,
+    .product-layout.reveal .product-info {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .62s cubic-bezier(.22,.61,.36,1);
+    }
+    .product-layout.reveal.visible .product-visual,
+    .product-layout.reveal.visible .product-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product-layout.reveal.visible .product-info { transition-delay: .1s; }
+
+    .product-visual {
+      border-radius: var(--r-xl); overflow: hidden;
+      aspect-ratio: 4/3; position: relative;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      background: transparent;
+      box-shadow: 0 8px 40px rgba(0,0,0,.10);
+      transition: box-shadow .3s ease;
+    }
+    .product-visual:hover {
+      box-shadow: 0 24px 64px rgba(0,0,0,.18);
+      transform: translateY(-4px);
+    }
+    .product-visual img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; padding: 0;
+      transition: transform .55s cubic-bezier(.25,.46,.45,.94);
+    }
+    .product-visual:hover img {
+      transform: scale(1.07);
+    }
+
+    .product-info {
+      min-width: 0;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(13,61,36,.08);
+      border-radius: 18px;
+      padding: 1.15rem 1.1rem;
+      box-shadow: 0 10px 28px rgba(13,61,36,.06);
+    }
+
+    .product-title-row {
+      display: flex; align-items: flex-start;
+      gap: .75rem; margin-bottom: .25rem; flex-wrap: wrap;
+    }
+    .product-title-row h2 { margin: 0; font-size: clamp(1.55rem, 2.8vw, 2rem); }
+
+    .product-type-tags {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: .875rem; margin-top: .35rem;
+    }
+    .ptype-tag {
+      font-size: .63rem; font-weight: 800;
+      letter-spacing: .09em; text-transform: uppercase;
+      padding: 3px 11px; border-radius: 9999px;
+    }
+    .ptype-conv { background: rgba(13,61,36,.09); color: var(--c-primary); }
+    .ptype-org  { background: rgba(200,169,81,.16); color: var(--c-accent-dark); }
+
+    .product-scientific {
+      font-size: .82rem; color: var(--c-gray-400);
+      font-style: italic; margin-bottom: .875rem;
+    }
+    .product-desc {
+      font-size: .95rem; color: var(--c-gray-600);
+      line-height: 1.68; margin-bottom: 1.1rem;
+    }
+
+    .product-valor {
+      background: var(--c-primary-50);
+      border-left: 3px solid var(--c-primary);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      padding: .875rem 1rem; margin-bottom: 1.5rem;
+    }
+    .product-valor-label {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .67rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--c-primary); margin-bottom: .35rem;
+    }
+    .product-valor p {
+      font-size: .875rem; color: var(--c-gray-700);
+      line-height: 1.65; margin: 0;
+    }
+
+    .product-specs {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .6rem;
+    }
+    .spec-box {
+      background: var(--c-white);
+      border: 1px solid var(--c-gray-100);
+      border-radius: 14px; padding: .875rem 1rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .spec-box:hover {
+      border-color: var(--c-primary-100);
+      box-shadow: 0 4px 18px rgba(13,61,36,.07);
+    }
+    .spec-box.full { grid-column: 1 / -1; }
+
+    .spec-label {
+      display: flex; align-items: center; gap: 7px;
+      font-size: .67rem; font-weight: 800;
+      letter-spacing: .09em; text-transform: uppercase;
+      color: var(--c-primary); margin-bottom: .5rem;
+    }
+    .spec-emoji { font-style: normal; font-size: .9rem; line-height: 1; }
+    .spec-text { font-size: .875rem; color: var(--c-gray-700); line-height: 1.6; }
+    .spec-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .sc {
+      display: inline-flex; align-items: center;
+      font-size: .75rem; font-weight: 600;
+      padding: 3px 10px; border-radius: 9999px;
+    }
+    .sc-v { background: rgba(13,61,36,.08); color: var(--c-primary); }
+    .sc-p { background: rgba(200,169,81,.12); color: var(--c-accent-dark); }
+
+    /* ═══════════════════════════════════════
+       AGUACATE — VIDEO EMBED
+    ═══════════════════════════════════════ */
+    .drive-embed-wrap {
+      margin: 1.25rem 0 1.5rem;
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 16px 56px rgba(13,61,36,.28), 0 0 0 2px rgba(200,169,81,.30);
+      background: #000;
+    }
+    .drive-embed-header {
+      background: linear-gradient(135deg, #0D3D24 0%, #1A5C38 60%, #1e6e43 100%);
+      padding: .65rem 1.1rem;
+      display: flex; align-items: center; gap: .65rem;
+      border-bottom: 1px solid rgba(200,169,81,.22);
+    }
+    .drive-embed-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #4ade80; flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(74,222,128,.2);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100% { box-shadow: 0 0 0 3px rgba(74,222,128,.2); }
+      50%      { box-shadow: 0 0 0 5px rgba(74,222,128,.0); }
+    }
+    .drive-embed-badge {
+      font-size: .56rem; font-weight: 800;
+      letter-spacing: .13em; text-transform: uppercase;
+      color: var(--c-accent);
+      background: rgba(200,169,81,.12);
+      border: 1px solid rgba(200,169,81,.30);
+      border-radius: 9999px; padding: 3px 9px;
+      white-space: nowrap;
+    }
+    .drive-embed-title {
+      font-size: .84rem; font-weight: 700; color: #fff;
+      line-height: 1.3; flex: 1; min-width: 0;
+    }
+    /* ratio wrapper — garantiza 16:9 en cualquier pantalla */
+    .drive-embed-ratio {
+      position: relative; width: 100%;
+      padding-bottom: 56.25%; height: 0;
+      min-height: 180px;
+    }
+    .drive-embed-ratio iframe {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; border: none;
+    }
+    /* ═══════════════════════════════════════
+       ORIGIN FLAGS
+    ═══════════════════════════════════════ */
+    .origin-flags {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-top: .6rem;
+    }
+    .oflag {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .72rem; font-weight: 500; color: var(--c-gray-600);
+      background: rgba(255,255,255,.9); border: 1px solid var(--c-gray-200);
+      border-radius: 9999px; padding: 2px 9px 2px 4px;
+      white-space: nowrap;
+    }
+    .oflag img {
+      width: 20px; height: 14px; object-fit: cover;
+      border-radius: 2px; flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION BANNER STRIP
+    ═══════════════════════════════════════ */
+    .products-banner-strip {
+      height: 210px; overflow: hidden; position: relative; line-height: 0;
+    }
+    .products-banner-strip img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(.78) saturate(1.12); display: block;
+    }
+
+
+    /* ═══════════════════════════════════════
+       CLIENTS STRIP
+    ═══════════════════════════════════════ */
+    .clients-strip {
+      padding: 4rem 0;
+      background: #fff;
+      border-top: 1px solid var(--c-gray-100);
+    }
+    .clients-strip-header { text-align: center; margin-bottom: 2.5rem; }
+    .clients-strip-header h2 {
+      font-family: var(--font-serif); font-size: clamp(1.4rem,2.5vw,1.9rem);
+      color: var(--c-gray-900); margin: .5rem 0 .4rem;
+    }
+    .clients-strip-header p { color: var(--c-gray-500); font-size: .93rem; margin: 0; }
+    .clients-grid {
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: center;
+      gap: 2rem 3.5rem;
+    }
+    .clients-grid img {
+      height: 36px; width: auto; max-width: 110px;
+      object-fit: contain; display: block;
+      filter: grayscale(1) opacity(.48);
+      transition: filter .22s ease, transform .22s ease;
+    }
+    .clients-grid img:hover { filter: grayscale(0) opacity(1); transform: translateY(-3px); }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .product-layout, .product-layout.reverse { grid-template-columns: 1fr; }
+      .product-layout.reverse .product-visual { order: 0; }
+      .product-layout.reverse .product-info  { order: 0; }
+      .product-visual { aspect-ratio: 4/3; }
+      .product-info { padding: 1rem .95rem; }
+    }
+    @media (max-width: 640px) {
+      .products-hero { min-height: 400px; }
+      .product-section { padding: 2rem 0; }
+      .product-specs { grid-template-columns: 1fr; }
+      .spec-box.full { grid-column: 1; }
+      /* imagen: centrada y más grande en mobile */
+      .product-visual {
+        aspect-ratio: 4 / 3;
+        border-radius: 18px;
+        border: 2px solid rgba(200,169,81,.40);
+        box-shadow: 0 0 0 5px rgba(26,92,56,.07), 0 10px 32px rgba(0,0,0,.14);
+        margin: 0 auto;
+        width: 100%;
+        max-height: none;
+      }
+      /* video: altura mínima generosa para que el reproductor no se corte */
+      .drive-embed-ratio {
+        padding-bottom: 62%;
+        min-height: 200px;
+      }
+      /* subnav: scroll horizontal en UNA fila, solo emojis en mobile */
+      .products-subnav { overflow-x: auto; }
+      .products-subnav-inner {
+        flex-wrap: nowrap; justify-content: flex-start;
+        width: max-content; gap: 3px; padding: .35rem .6rem;
+      }
+      .pnav-item { padding: 6px 9px; font-size: 1.05rem; gap: 0; }
+      .pnav-label { display: none; }
+      .product-info {
+        border-radius: 14px;
+        padding: .9rem .85rem;
+      }
+      .product-title-row h2 { font-size: 1.45rem; }
+      .product-desc { font-size: .9rem; margin-bottom: .95rem; }
+      .product-valor {
+        padding: .75rem .8rem;
+        margin-bottom: 1rem;
+      }
+      .spec-box { padding: .75rem .8rem; }
+      .spec-text { font-size: .84rem; }
+      .sc { font-size: .72rem; }
+      .drive-embed-wrap { border-radius: 13px; margin: .9rem 0 1.1rem; }
+      .drive-embed-header { padding: .45rem .7rem; gap: .4rem; flex-wrap: nowrap; }
+      .drive-embed-badge { font-size: .5rem; padding: 2px 7px; }
+      .drive-embed-dot { width: 6px; height: 6px; }
+      .drive-embed-title {
+        font-size: .7rem;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        max-width: 100%;
+      }
+      .clients-grid { gap: 1.25rem 1.75rem; }
+      .clients-grid img { height: 26px; max-width: 80px; }
+      .clients-strip { padding: 2.5rem 0; }
+      .products-banner-strip { height: 130px; }
+      .oflag { font-size: .68rem; padding: 2px 7px 2px 3px; }
+      .oflag img { width: 16px; height: 11px; }
+    }
+  </style>
+
+</head>
+<body>
+
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<!-- ══════════════════════════════════════
+     PRODUCTS HERO — VIDEO
+══════════════════════════════════════ -->
+<section class="products-hero" aria-label="Productos FreshKampo">
+  <video class="products-hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto"
+         poster="assets/img/img-integracion-01.jpg" aria-hidden="true">
+    <source src="https://rr2---sn-0opoxu-ihvr.googlevideo.com/videoplayback?expire=1777070425&ei=-ZzraeW4A8e1ir4P2NWD2Qg&ip=2806%3A101e%3A1%3Af49f%3A8dfd%3Ad7bb%3A24b4%3Abb02&id=o-AC_FJrvPsUGJTPoGSJpdR0Pu9chOpsQrOrN_YSM7a0MN&itag=137&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=407&met=1777048825%2C&mh=BW&mm=31%2C29&mn=sn-0opoxu-ihvr%2Csn-a5mlrnl6&ms=au%2Crdu&mv=m&mvi=2&pl=51&rms=au%2Cau&initcwndbps=1765000&bui=AUUZDGLuR0P-lg3pWjtqZmLj7cpg9Jtb4rIPZosRI8kIJCgUUs2ycQDOOfRioaSjJ33Ka7Yx-pOG1-Cz&spc=jlWavbJzQb2gIxQDOvdRdCWTnHaNjH7VmmDsUW5-i6PS&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=6390024&dur=19.160&lmt=1663864696842179&mt=1777048401&fvip=5&keepalive=yes&fexp=51565115%2C51565681&c=ANDROID_VR&txp=1211224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AHEqNM4wRAIfWrAw14-b0jNDWkAEjMi2r-SMHo-HtfwlVP8PZ6wMGgIhALXGz3FOsxThejHhF_JJSFsBPugZ1iJaPBnln_Yp2UV1&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgTPJc04kWX8FnwdOY6u1_K1IbARXw3idmIufiaTryG2UCIEtSMZQL9LLUTOi0hJjOeAvzssxQQDlZgpecrwHdKPeN&cpn=bhb5R9YFyEqQC047" type="video/mp4">
+    <source src="assets/video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="products-hero-overlay" aria-hidden="true"></div>
+  <div class="products-hero-content">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-i18n="nav-home">Inicio</a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span data-i18n="nav-products">Productos</span>
+      </nav>
+      <span class="badge badge-accent" data-i18n="products-badge">Nuestros productos</span>
+      <h1 data-i18n="products-h2">Frescura que se siente<br>en cada mordida</h1>
+      <p data-i18n="products-desc">Fruta certificada de las mejores zonas del mundo — convencional y orgánica, para los mercados internacionales más exigentes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     QUICK NAV
+══════════════════════════════════════ -->
+<nav class="products-subnav" aria-label="Navegar por producto">
+  <div class="products-subnav-inner">
+    <a href="#fresa"     class="pnav-item">🍓 <span class="pnav-label">Fresa</span></a>
+    <a href="#frambuesa" class="pnav-item">🍒 <span class="pnav-label">Frambuesa</span></a>
+    <a href="#zarzamora" class="pnav-item">🍇 <span class="pnav-label">Zarzamora</span></a>
+    <a href="#arandano"  class="pnav-item">🍇 <span class="pnav-label">Arándano</span></a>
+    <a href="#higo"      class="pnav-item">🍈 <span class="pnav-label">Higo</span></a>
+    <a href="#aguacate"  class="pnav-item">🥑 <span class="pnav-label">Aguacate</span></a>
+    <a href="#esparrago" class="pnav-item">🌿 <span class="pnav-label">Espárrago</span></a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     🍓 FRESA
+══════════════════════════════════════ -->
+<section id="fresa" class="product-section">
+  <div class="container">
+    <div class="product-layout reveal">
+      <div class="product-visual">
+        <img src="assets/img/fresas.png" alt="Fresa FreshKampo" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🍓 Fresa</h2></div>
+        <p class="product-scientific">Fragaria × ananassa</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+        </div>
+        <p class="product-desc">El color del fruto varía de rojo pálido a intenso; su forma puede ser cónica o de corazón. Su firmeza, jugo y dulce sabor, acompañado de una sutil acidez, la convierten en un festín para el paladar.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Por su delicadeza, cuidamos que durante el trayecto hasta su destino, nuestras fresas lleguen frescas, firmes y libres de daños.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Michoacán · Baja California · Guanajuato · Marruecos</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+              <span class="oflag"><img src="assets/img/morocco.png" alt="Marruecos" loading="lazy"> Marruecos</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips">
+              <span class="sc sc-v">Festival</span><span class="sc sc-v">Albion</span>
+              <span class="sc sc-v">San Andreas</span><span class="sc sc-v">Sayulita</span><span class="sc sc-v">Frontera</span>
+            </div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips">
+              <span class="sc sc-p">8 × 1 lb</span><span class="sc sc-p">4 × 2 lb</span><span class="sc sc-p">4 × 1 lb Cabos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     🍒 FRAMBUESA
+══════════════════════════════════════ -->
+<section id="frambuesa" class="product-section">
+  <div class="container">
+    <div class="product-layout reverse reveal">
+      <div class="product-visual">
+        <img src="assets/img/frambuesa.jpg" alt="Frambuesa FreshKampo" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🍒 Frambuesa</h2></div>
+        <p class="product-scientific">Rubus idaeus</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+        </div>
+        <p class="product-desc">Este fruto color rojo intenso y de pulpa jugosa está formado por numerosas drupas pequeñas que se agrupan formando una figura cónica — sabor dulce con un toque ligeramente ácido que tanto nos encanta.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Cada día cultivamos las frambuesas más suculentas, brillantes y firmes. Nos aseguramos de que estén en su punto de maduración ideal para comer al natural.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Jalisco · Michoacán · Baja California · Guanajuato · Nayarit · Marruecos</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+              <span class="oflag"><img src="assets/img/morocco.png" alt="Marruecos" loading="lazy"> Marruecos</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips"><span class="sc sc-v">Adelita</span></div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips">
+              <span class="sc sc-p">12 × 4.4 oz</span><span class="sc sc-p">12 × 6 oz</span><span class="sc sc-p">6 × 12 oz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     🍇 ZARZAMORA
+══════════════════════════════════════ -->
+<section id="zarzamora" class="product-section">
+  <div class="container">
+    <div class="product-layout reveal">
+      <div class="product-visual">
+        <img src="assets/img/zarzamora.jpg" alt="Zarzamora FreshKampo" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🍇 Zarzamora</h2></div>
+        <p class="product-scientific">Rubus fruticosus</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+        </div>
+        <p class="product-desc">Es una baya carnosa de tamaño pequeño, compuesta de numerosas drupeolas. Tiende a ser un poco ácida, pero también tiene un sabor muy suave al probarla. Rica en antioxidantes y con gran aceptación en los principales supermercados.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Para garantizar la calidad de nuestras zarzamoras, cuidamos cada paso en nuestro proceso de producción, desde el cultivo hasta la cosecha.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Michoacán · Baja California · Colima · California</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+              <span class="oflag"><img src="assets/img/USA.png" alt="USA" loading="lazy"> Estados Unidos</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips"><span class="sc sc-v">Sofia</span><span class="sc sc-v">Tupy</span></div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips">
+              <span class="sc sc-p">12 × 4.4 oz</span><span class="sc sc-p">12 × 6 oz</span><span class="sc sc-p">8 × 12 oz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     🫐 ARÁNDANO
+══════════════════════════════════════ -->
+<section id="arandano" class="product-section">
+  <div class="container">
+    <div class="product-layout reverse reveal">
+      <div class="product-visual">
+        <img src="assets/img/arandano.jpg" alt="Arándano FreshKampo" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🍇 Arándano</h2></div>
+        <p class="product-scientific">Vaccinium corymbosum</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+        </div>
+        <p class="product-desc">El color de los arándanos cambia según la variedad — suelen ser azul y azul oscuro. Firmes y crujientes con un delicioso sabor ácido. Conocidos mundialmente como "superfood" por su alto contenido en antioxidantes.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Aseguramos la nutrición de tu familia proveyendo los más frescos, maduros, firmes y deliciosos arándanos, con procesos de aseguramiento de calidad e inocuidad.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Jalisco · Michoacán · Guanajuato · Nayarit · Puebla · Perú · Chile · Marruecos</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+              <span class="oflag"><img src="assets/img/morocco.png" alt="Marruecos" loading="lazy"> Marruecos</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips"><span class="sc sc-v">Biloxy</span><span class="sc sc-v">Ventura</span><span class="sc sc-v">Victoria</span></div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips">
+              <span class="sc sc-p">12 × 4.4 oz</span><span class="sc sc-p">12 × 6 oz</span>
+              <span class="sc sc-p">12 × 1 Dry Pint</span><span class="sc sc-p">8 × 18 oz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     🍈 HIGO
+══════════════════════════════════════ -->
+<section id="higo" class="product-section">
+  <div class="container">
+    <div class="product-layout reveal">
+      <div class="product-visual">
+        <img src="assets/img/higo.jpg" alt="Higo FreshKampo" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🍈 Higo</h2></div>
+        <p class="product-scientific">Ficus carica</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+        </div>
+        <p class="product-desc">Es un fruto increíblemente fresco y muy jugoso. Cuando están maduros son de color púrpura; su pulpa tiene un color de caramelo natural que hace énfasis en su dulzura — se derriten suave y tiernamente al paladar.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Ofrecemos higos con altos estándares de calidad. Nuestro equipo trabaja todos los días para cumplir con los requerimientos de los clientes más exigentes.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Michoacán · Colima · Jalisco · Sinaloa · Guanajuato · Aguascalientes</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips"><span class="sc sc-v">Black Mission</span></div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips">
+              <span class="sc sc-p">12 × 7 oz</span><span class="sc sc-p">8 × 1 lb</span>
+              <span class="sc sc-p">Charola 1.5 lb (liner 18, 21, 24)</span>
+              <span class="sc sc-p">Charola 1.3 lb (liner 18, 21, 24)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     🥑 AGUACATE
+══════════════════════════════════════ -->
+<section id="aguacate" class="product-section">
+  <div class="container">
+    <div class="product-layout reverse reveal">
+      <div class="product-visual">
+        <img src="assets/img/Producto aguacate.png" alt="Aguacate FreshKampo" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🥑 Aguacate</h2></div>
+        <p class="product-scientific">Persea americana — Var. Hass</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+        </div>
+        <!-- Aguacate — Video -->
+        <div class="drive-embed-wrap" id="avoc-drive-wrap">
+          <div class="drive-embed-header">
+            <span class="drive-embed-dot" aria-hidden="true"></span>
+            <span class="drive-embed-badge">Video FreshKampo</span>
+            <span class="drive-embed-title">🥑 Aguacate Hass — Del campo a tu mesa</span>
+          </div>
+          <div class="drive-embed-ratio">
+            <iframe
+              id="avoc-drive-iframe"
+              data-src="https://drive.google.com/file/d/1RxIJbQT_XcYYJA-kAuBLzmud2TxqTKb3/preview?autoplay=1"
+              src="https://drive.google.com/file/d/1RxIJbQT_XcYYJA-kAuBLzmud2TxqTKb3/preview"
+              title="Video Aguacate Hass FreshKampo"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="product-desc">Su cáscara arrugada y leñosa color oscuro esconde una pulpa deliciosa color verde esmeralda. Consistencia muy cremosa, con sabor exquisito y suave, con toques de avellana que permiten su combinación con cualquier alimento.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Cultivamos aguacates siguiendo minuciosamente cada paso en su proceso de producción, para que al llegar a tu mesa, tu familia y tú puedan disfrutar del sabor suave y cremoso de nuestros aguacates.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Michoacán · Jalisco · Nayarit</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips"><span class="sc sc-v">Hass</span></div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips">
+              <span class="sc sc-p">Cartón 4 kg</span><span class="sc sc-p">Cartón 6 kg</span>
+              <span class="sc sc-p">Cartón 11.3 kg</span><span class="sc sc-p">Cartón 14 kg</span>
+              <span class="sc sc-p">Plástico 10 kg</span><span class="sc sc-p">Plástico 20 kg</span><span class="sc sc-p">Plástico 23 kg</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     🌿 ESPÁRRAGO
+══════════════════════════════════════ -->
+<section id="esparrago" class="product-section">
+  <div class="container">
+    <div class="product-layout reveal">
+      <div class="product-visual">
+        <img src="assets/img/imagen-esparrago-min.png" alt="Espárrago FreshKampo" onerror="this.style.display='none'">
+      </div>
+      <div class="product-info">
+        <div class="product-title-row"><h2>🌿 Espárrago</h2></div>
+        <p class="product-scientific">Asparagus officinalis</p>
+        <div class="product-type-tags">
+          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+        </div>
+        <p class="product-desc">Es apreciado en la cocina por su gran aroma, su textura tierna y carnosa, y por su característico sabor con un toque amargo que resulta fresco y muy sabroso. Aporta minerales como potasio, calcio, fósforo, magnesio y selenio — considerado un alimento gourmet.</p>
+        <div class="product-valor">
+          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <p>Contribuimos a la versatilidad de tus platillos favoritos con espárragos ricos, firmes y frescos. Contamos con condiciones impecables para su producción.</p>
+        </div>
+        <div class="product-specs">
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-text">Guanajuato</div>
+            <div class="origin-flags">
+              <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-chips"><span class="sc sc-v">UC157NuP</span><span class="sc sc-v">Grande</span></div>
+          </div>
+          <div class="spec-box full">
+            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-chips"><span class="sc sc-p">11 lb</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CLIENTS / RETAILERS
+══════════════════════════════════════ -->
+<section class="clients-strip">
+  <div class="container">
+    <div class="clients-strip-header">
+      <span class="badge badge-accent">Nuestros clientes</span>
+      <h2>Presentes en los mejores supermercados del mundo</h2>
+      <p>Nuestros productos llevan frescura a las cadenas de retail internacionales más exigentes.</p>
+    </div>
+    <div class="clients-grid">
+      <img src="assets/img/cliente-01_walrmat.svg" alt="Walmart" loading="lazy">
+      <img src="assets/img/cliente-03_SAFEWAY.svg" alt="Safeway" loading="lazy">
+      <img src="assets/img/cliente-04_SPROUTS.svg" alt="Sprouts" loading="lazy">
+      <img src="assets/img/cliente-05_ALDI.svg" alt="Aldi" loading="lazy">
+      <img src="assets/img/cliente-06_SAMS.svg" alt="Sam's Club" loading="lazy">
+      <img src="assets/img/cliente-07_Loblaws.svg" alt="Loblaws" loading="lazy">
+      <img src="assets/img/cliente-08_Kroger.svg" alt="Kroger" loading="lazy">
+      <img src="assets/img/cliente-09_EDEKA.svg" alt="EDEKA" loading="lazy">
+      <img src="assets/img/HEB.svg" alt="HEB" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 data-i18n="cta-h2">¿Listo para trabajar con nosotros?</h2>
+    <p data-i18n="cta-desc">Contáctanos hoy y descubre cómo FreshKampo puede llevar tus frutas frescas a los mercados internacionales.</p>
+    <div class="cta-actions">
+      <a href="contacto.html" class="btn btn-white btn-lg" data-i18n="cta-btn1">Contáctanos</a>
+      <a href="disponibilidad.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);border-radius:9999px;" data-i18n="nav-availability">Disponibilidad</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/app.js"></script>
+<script src="js/page-i18n-overrides.js"></script>
+<script>
+(function(){
+  /* ── Hero video: force autoplay with multiple retries ── */
+  var hv = document.querySelector('.products-hero-video');
+  if (hv) {
+    hv.muted = true;
+    hv.defaultMuted = true;
+    hv.playsInline = true;
+    hv.setAttribute('muted', '');
+    hv.setAttribute('playsinline', '');
+    hv.setAttribute('webkit-playsinline', '');
+
+    function tryPlayHero() {
+      hv.muted = true;
+      hv.defaultMuted = true;
+      var p = hv.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(function(){});
+      }
+    }
+
+    if (hv.readyState < 2) {
+      hv.load();
+    }
+
+    /* Retry on multiple events to handle slow / blocked loads */
+    ['canplay','loadeddata','loadedmetadata','canplaythrough'].forEach(function(ev){
+      hv.addEventListener(ev, tryPlayHero, { once: true });
+    });
+    ['pointerdown','touchstart','keydown'].forEach(function(ev){
+      window.addEventListener(ev, tryPlayHero, { once: true });
+    });
+    /* Retry when tab re-gains focus (fixes "frozen poster on first load" bug) */
+    document.addEventListener('visibilitychange', function(){
+      if (!document.hidden && hv.paused) tryPlayHero();
+    });
+    window.addEventListener('focus', function(){
+      if (hv.paused) tryPlayHero();
+    });
+    /* Immediate + delayed attempts */
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function(){
+        tryPlayHero();
+        setTimeout(tryPlayHero, 400);
+        setTimeout(tryPlayHero, 1200);
+        setTimeout(tryPlayHero, 3000);
+      });
+    } else {
+      tryPlayHero();
+      setTimeout(tryPlayHero, 400);
+      setTimeout(tryPlayHero, 1200);
+      setTimeout(tryPlayHero, 3000);
+    }
+
+  }
+
+  /* ── Quick nav: highlight active product on scroll ── */
+  var sections = document.querySelectorAll('.product-section[id]');
+  var pills    = document.querySelectorAll('.pnav-item');
+  if (sections.length && pills.length) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        pills.forEach(function(p){ p.removeAttribute('style'); });
+        var active = document.querySelector('.pnav-item[href="#' + entry.target.id + '"]');
+        if (active) {
+          active.style.background    = 'var(--c-primary-50)';
+          active.style.color         = 'var(--c-primary)';
+          active.style.borderColor   = 'var(--c-primary-100)';
+        }
+      });
+    }, { rootMargin: '-20% 0px -65% 0px' });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* ── Aguacate: activa autoplay=1 cuando el usuario llega al video ── */
+  var driveIframe = document.getElementById('avoc-drive-iframe');
+  var driveWrap   = document.getElementById('avoc-drive-wrap');
+  if (driveIframe && driveWrap && 'IntersectionObserver' in window) {
+    var driveIO = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        var autoSrc = driveIframe.dataset.src;
+        if (driveIframe.src.indexOf('autoplay=1') === -1) {
+          driveIframe.src = autoSrc;
+        }
+        driveIO.disconnect();
+      }
+    }, { threshold: 0.25 });
+    driveIO.observe(driveWrap);
+  }
+
+})();
+</script>
+</body>
+</html>
