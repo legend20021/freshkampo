@@ -157,9 +157,15 @@
     }
 
     var lastScrollY = window.scrollY;
+    var openRafId = 0;
 
     function closeMenu(skipAnimation) {
       if (!menu.classList.contains('open') && !menu.classList.contains('closing')) return;
+
+      if (openRafId) {
+        cancelAnimationFrame(openRafId);
+        openRafId = 0;
+      }
 
       menu.classList.remove('open');
       toggle.classList.remove('open');
@@ -184,6 +190,11 @@
     }
 
     function openMenu() {
+      if (openRafId) {
+        cancelAnimationFrame(openRafId);
+        openRafId = 0;
+      }
+
       if (window.innerWidth <= 768) {
         teleportToBody();
         drawerOverlay.classList.add('open');
@@ -191,9 +202,18 @@
       setMenuTop();
       menu.classList.remove('closing');
       toggle.classList.add('open');
-      menu.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
+
+      if (window.innerWidth <= 768) {
+        // Let layout settle after teleporting to body before animating in.
+        openRafId = requestAnimationFrame(function () {
+          menu.classList.add('open');
+          openRafId = 0;
+        });
+      } else {
+        menu.classList.add('open');
+      }
     }
 
     toggle.addEventListener('click', function () {
