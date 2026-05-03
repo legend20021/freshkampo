@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshKampo — Berries Frescos del Campo al Mundo</title>
+  <meta name="description" content="FreshKampo comercializa berries y productos frescos de alta calidad desde México hacia EE.UU., Europa y Medio Oriente. Certificados internacionalmente." />
+  <meta name="keywords" content="berries frescos, fresa, frambuesa, zarzamora, arándano, higo, aguacate, espárrago, exportación, México, orgánico, FreshKampo" />
+  <meta property="og:title" content="FreshKampo — Del campo al mundo" />
+  <meta property="og:description" content="Comercializamos productos frescos de alta calidad, conectando los mejores campos de México con el mundo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://freshkampo.com/" />
+  <link rel="canonical" href="https://freshkampo.com/" />
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css?v=20260429b" />
+</head>
+<body>
+
+<!-- PAGE INTRO — brief entry on return visits -->
+<div id="page-intro" class="hidden" aria-hidden="true">
+  <img id="page-intro-logo" src="assets/img/logo-freshkampo-white.svg" alt="FreshKampo"
+       onerror="this.style.display='none'">
+  <span id="page-intro-tagline">Del campo al mundo</span>
+</div>
+
+<!-- ══════════════════════════════════
+     SPLASH SCREEN — 2026
+══════════════════════════════════ -->
+<div id="splash" role="dialog" aria-modal="true" aria-label="Bienvenido a FreshKampo">
+  <div class="splash-ray" aria-hidden="true"></div>
+  <div class="splash-bg">
+    <img src="assets/img/imagen-home_aguacates.png" alt="" class="splash-bg-img" aria-hidden="true">
+  </div>
+  <div class="splash-particles">
+    <div class="splash-particle"></div>
+    <div class="splash-particle"></div>
+    <div class="splash-particle"></div>
+    <div class="splash-particle"></div>
+    <div class="splash-particle"></div>
+    <div class="splash-particle"></div>
+    <div class="splash-particle"></div>
+  </div>
+  <div class="splash-inner">
+    <div class="splash-logo-wrap">
+      <img src="assets/img/logo-freshkampo-white.svg" alt="FreshKampo" class="splash-logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="splash-logo-text-fallback" style="display:none">Fresh<span>Kampo</span></div>
+    </div>
+    <div class="splash-card">
+      <span class="splash-card-badge" data-i18n="splash-badge">Política de Calidad e Inocuidad</span>
+      <h3 data-i18n="splash-title">Comprometidos con la excelencia desde el campo</h3>
+      <p data-i18n="splash-text">En MERIDIAN FRUITS SPR DE RL de CV comercializamos productos frescos con el firme compromiso de satisfacer los requerimientos y expectativas de nuestros clientes.</p>
+      <div class="splash-card-meta" data-i18n="splash-version">Versión 3 — 20/mayo/2024</div>
+    </div>
+    <div class="splash-progress">
+      <div class="splash-bar-track"><div class="splash-bar-fill"></div></div>
+    </div>
+    <button class="splash-dismiss" aria-label="Cerrar splash">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <span data-i18n="splash-skip">Cerrar</span>
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     TOP BAR
+══════════════════════════════════ -->
+<div id="top-bar-slot"></div>
+
+<!-- ══════════════════════════════════
+     NAVIGATION
+══════════════════════════════════ -->
+<div id="nav-slot"></div>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg-img" aria-hidden="true"></div>
+  <div class="hero-video-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-gradient" aria-hidden="true"></div>
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-blob" aria-hidden="true"></div>
+  <div class="container">
+    <!-- Left content -->
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero-badge">Líder en berries frescos desde 2004</div>
+      <h1>
+        <span data-i18n="hero-h1-line1">Del campo al</span><br>
+        <em data-i18n="hero-h1-line2">mundo</em>
+      </h1>
+      <p class="hero-desc" data-i18n="hero-desc">Comercializamos productos frescos de primera calidad, conectando los mejores campos de México con supermercados y distribuidores en Estados Unidos, Europa y Medio Oriente.</p>
+      <div class="hero-actions">
+        <a href="productos.html" class="btn btn-white btn-lg" data-i18n="hero-cta1">Conoce nuestros productos</a>
+        <a href="contacto.html" class="btn btn-lg" style="color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25);border-radius:9999px;padding:1rem 2.25rem;" data-i18n="hero-cta2">Contáctanos</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">230<span>+</span></div>
+          <div class="hero-stat-label" data-i18n="hero-stat1-label">Colaboradores globales</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">30<span>+</span></div>
+          <div class="hero-stat-label" data-i18n="hero-stat2-label">Clientes minoristas</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20<span>+</span></div>
+          <div class="hero-stat-label" data-i18n="hero-stat3-label">Años de experiencia</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right visual -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card-glass">
+        <div class="hero-card-title" data-i18n="hero-card-certs">Certificaciones Internacionales</div>
+        <div class="hero-cert-grid">
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-01.png" alt="ISO 9001" onerror="this.style.display='none'">
+            <span class="hero-cert-name">ISO 9001</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-02.png" alt="Primus GFS" onerror="this.style.display='none'">
+            <span class="hero-cert-name">Primus GFS</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-03.png" alt="IFS" onerror="this.style.display='none'">
+            <span class="hero-cert-name">IFS Broker</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-04.jpg" alt="NOP USDA" onerror="this.style.display='none'">
+            <span class="hero-cert-name">NOP USDA</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-05.jpg" alt="EU Organic" onerror="this.style.display='none'">
+            <span class="hero-cert-name">EU Organic</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-06.jpg" alt="COR" onerror="this.style.display='none'">
+            <span class="hero-cert-name">COR Canadá</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-07.jpg" alt="LPO" onerror="this.style.display='none'">
+            <span class="hero-cert-name">LPO Francia</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/certificaciones-09.png" alt="SMETA" onerror="this.style.display='none'">
+            <span class="hero-cert-name">SMETA</span>
+          </div>
+          <div class="hero-cert-item">
+            <img src="assets/img/logo-certificado-09.png" alt="Rainforest Alliance" onerror="this.style.display='none'">
+            <span class="hero-cert-name">Rainforest</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-products-mini">
+        <div class="hero-products-mini-title" data-i18n="hero-card-products">Productos disponibles</div>
+        <div class="hero-chips">
+          <span class="hero-chip">🍓 <span data-i18n="p1-name">Fresa</span></span>
+          <span class="hero-chip">🍓 <span data-i18n="p2-name">Frambuesa</span></span>
+          <span class="hero-chip">🍇 <span data-i18n="p3-name">Zarzamora</span></span>
+          <span class="hero-chip">🍇 <span data-i18n="p4-name">Arándano</span></span>
+          <span class="hero-chip">🥑 <span data-i18n="p6-name">Aguacate</span></span>
+          <span class="hero-chip">🌿 <span data-i18n="p7-name">Espárrago</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════════════════════════════
+     CLIENT TRUST BAR — Scrolling logos
+══════════════════════════════════ -->
+<div class="trust-bar" aria-label="Nuestros clientes">
+  <div class="trust-bar-inner">
+    <span class="trust-bar-label" data-i18n="clients-trust-label">Confían en nosotros</span>
+    <div class="trust-bar-divider" aria-hidden="true"></div>
+    <div class="trust-ticker-wrap">
+      <div class="trust-ticker" id="client-ticker" aria-hidden="true">
+        <img src="assets/img/cliente-01_walrmat.svg" alt="Walmart" class="trust-cert-img" style="filter:none;opacity:.7" title="Walmart">
+        <img src="assets/img/HEB.svg" alt="HEB" class="trust-cert-img" style="filter:none;opacity:.7" title="HEB">
+        <img src="assets/img/cliente-03_SAFEWAY.svg" alt="Safeway" class="trust-cert-img" style="filter:none;opacity:.7" title="Safeway">
+        <img src="assets/img/cliente-04_SPROUTS.svg" alt="Sprouts" class="trust-cert-img" style="filter:none;opacity:.7" title="Sprouts">
+        <img src="assets/img/cliente-05_ALDI.svg" alt="ALDI" class="trust-cert-img" style="filter:none;opacity:.7" title="ALDI">
+        <img src="assets/img/cliente-06_SAMS.svg" alt="Sam's Club" class="trust-cert-img" style="filter:none;opacity:.7" title="Sam's Club">
+        <img src="assets/img/cliente-07_Loblaws.svg" alt="Loblaws" class="trust-cert-img" style="filter:none;opacity:.7" title="Loblaws">
+        <img src="assets/img/cliente-08_Kroger.svg" alt="Kroger" class="trust-cert-img" style="filter:none;opacity:.7" title="Kroger">
+        <img src="assets/img/cliente-09_EDEKA.svg" alt="EDEKA" class="trust-cert-img" style="filter:none;opacity:.7" title="EDEKA">
+        <!-- Duplicate set for seamless loop -->
+        <img src="assets/img/cliente-01_walrmat.svg" alt="Walmart" class="trust-cert-img" style="filter:none;opacity:.7" title="Walmart">
+        <img src="assets/img/HEB.svg" alt="HEB" class="trust-cert-img" style="filter:none;opacity:.7" title="HEB">
+        <img src="assets/img/cliente-03_SAFEWAY.svg" alt="Safeway" class="trust-cert-img" style="filter:none;opacity:.7" title="Safeway">
+        <img src="assets/img/cliente-04_SPROUTS.svg" alt="Sprouts" class="trust-cert-img" style="filter:none;opacity:.7" title="Sprouts">
+        <img src="assets/img/cliente-05_ALDI.svg" alt="ALDI" class="trust-cert-img" style="filter:none;opacity:.7" title="ALDI">
+        <img src="assets/img/cliente-06_SAMS.svg" alt="Sam's Club" class="trust-cert-img" style="filter:none;opacity:.7" title="Sam's Club">
+        <img src="assets/img/cliente-07_Loblaws.svg" alt="Loblaws" class="trust-cert-img" style="filter:none;opacity:.7" title="Loblaws">
+        <img src="assets/img/cliente-08_Kroger.svg" alt="Kroger" class="trust-cert-img" style="filter:none;opacity:.7" title="Kroger">
+        <img src="assets/img/cliente-09_EDEKA.svg" alt="EDEKA" class="trust-cert-img" style="filter:none;opacity:.7" title="EDEKA">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     STATS
+══════════════════════════════════ -->
+<section class="stats-section" aria-labelledby="stats-heading">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="badge" data-i18n="stats-badge">Impacto global</span>
+      <h2 id="stats-heading" data-i18n="stats-h2">Números que nos respaldan</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="stat-num" data-count="230" data-suffix="+" data-i18n="stat1-num">230+</div>
+        <div class="stat-label" data-i18n="stat1-label">Empleados en todo el mundo</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="stat-num" data-count="2004" data-i18n="stat2-num">2004</div>
+        <div class="stat-label" data-i18n="stat2-label">Año de fundación</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <div class="stat-num" data-count="30" data-suffix="+" data-i18n="stat3-num">30+</div>
+        <div class="stat-label" data-i18n="stat3-label">Clientes minoristas finales</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-4">
+        <div class="stat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="stat-num" data-i18n="stat4-num">4</div>
+        <div class="stat-label" data-i18n="stat4-label">Continentes con presencia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PRODUCTS SHOWCASE
+══════════════════════════════════ -->
+<section class="section products-showcase" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="section-header reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
+      <div>
+        <span class="badge" data-i18n="products-badge">Nuestros productos</span>
+        <h2 id="products-heading" style="margin-top:.75rem" data-i18n="products-h2">Frescura que se siente en cada mordida</h2>
+        <p style="max-width:560px;margin-top:.5rem" data-i18n="products-desc">Berries y productos frescos de alta calidad, tanto convencional como orgánico.</p>
+      </div>
+      <a href="productos.html" class="btn btn-outline" data-i18n="products-cta">Ver todos los productos</a>
+    </div>
+
+    <div class="products-grid">
+      <!-- Fresa -->
+      <a href="productos.html#fresa" class="product-card reveal reveal-delay-1">
+        <div class="product-card-image product-card-image--clean product-card-image--fresa" aria-hidden="true">
+          <img src="assets/img/fresas.png" alt="Fresa FreshKampo" loading="lazy">
+          <span class="product-card-glyph">🍓</span>
+        </div>
+        <div class="product-card-body">
+          <h3 class="product-card-title" data-i18n="p1-name">Fresa</h3>
+          <p class="product-card-desc" data-i18n="p1-desc">Intensa, dulce y brillante. Cultivada en Michoacán, Baja California y Guanajuato.</p>
+          <div class="product-card-tags">
+            <span class="product-tag" data-i18n="tag-conv">Convencional</span>
+            <span class="product-tag product-tag-organic" data-i18n="tag-org">Orgánico</span>
+          </div>
+          <span class="product-card-link">
+            <span data-i18n="p-link">Ver detalle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <!-- Frambuesa -->
+      <a href="productos.html#frambuesa" class="product-card reveal reveal-delay-2">
+        <div class="product-card-image product-card-image--clean product-card-image--frambuesa" aria-hidden="true">
+          <img src="assets/img/frambuesa.jpg" alt="Frambuesa FreshKampo" loading="lazy">
+          <span class="product-card-glyph">🍒</span>
+        </div>
+        <div class="product-card-body">
+          <h3 class="product-card-title" data-i18n="p2-name">Frambuesa</h3>
+          <p class="product-card-desc" data-i18n="p2-desc">Pulpa jugosa con sabor dulce y ligeramente ácido. Disponible orgánica y convencional.</p>
+          <div class="product-card-tags">
+            <span class="product-tag" data-i18n="tag-conv">Convencional</span>
+            <span class="product-tag product-tag-organic" data-i18n="tag-org">Orgánico</span>
+          </div>
+          <span class="product-card-link">
+            <span data-i18n="p-link">Ver detalle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <!-- Zarzamora -->
+      <a href="productos.html#zarzamora" class="product-card reveal reveal-delay-3">
+        <div class="product-card-image product-card-image--clean product-card-image--zarzamora" aria-hidden="true">
+          <img src="assets/img/zarzamora.jpg" alt="Zarzamora FreshKampo" loading="lazy">
+          <span class="product-card-glyph">🍇</span>
+        </div>
+        <div class="product-card-body">
+          <h3 class="product-card-title" data-i18n="p3-name">Zarzamora</h3>
+          <p class="product-card-desc" data-i18n="p3-desc">Pequeña y carnosa con sabor ligeramente ácido. Cultivada principalmente en Michoacán.</p>
+          <div class="product-card-tags">
+            <span class="product-tag" data-i18n="tag-conv">Convencional</span>
+            <span class="product-tag product-tag-organic" data-i18n="tag-org">Orgánico</span>
+          </div>
+          <span class="product-card-link">
+            <span data-i18n="p-link">Ver detalle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <!-- Arándano -->
+      <a href="productos.html#arandano" class="product-card reveal reveal-delay-1">
+        <div class="product-card-image product-card-image--clean product-card-image--arandano" aria-hidden="true">
+          <img src="assets/img/arandano.jpg" alt="Arándano FreshKampo" loading="lazy">
+          <span class="product-card-glyph">🫐</span>
+        </div>
+        <div class="product-card-body">
+          <h3 class="product-card-title" data-i18n="p4-name">Arándano</h3>
+          <p class="product-card-desc" data-i18n="p4-desc">Firme y crujiente con delicioso sabor ácido. Múltiples zonas de cultivo.</p>
+          <div class="product-card-tags">
+            <span class="product-tag" data-i18n="tag-conv">Convencional</span>
+            <span class="product-tag product-tag-organic" data-i18n="tag-org">Orgánico</span>
+          </div>
+          <span class="product-card-link">
+            <span data-i18n="p-link">Ver detalle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <!-- Aguacate -->
+      <a href="productos.html#aguacate" class="product-card reveal reveal-delay-2">
+        <div class="product-card-image product-card-image--clean product-card-image--aguacate" aria-hidden="true">
+          <img src="assets/img/aguacate.jpg" alt="Aguacate FreshKampo" loading="lazy">
+          <span class="product-card-glyph">🥑</span>
+        </div>
+        <div class="product-card-body">
+          <h3 class="product-card-title" data-i18n="p6-name">Aguacate</h3>
+          <p class="product-card-desc" data-i18n="p6-desc">Pulpa cremosa con sabor exquisito y suave con notas de avellana. Variedad Hass.</p>
+          <div class="product-card-tags">
+            <span class="product-tag" data-i18n="tag-conv">Convencional</span>
+            <span class="product-tag product-tag-organic" data-i18n="tag-org">Orgánico</span>
+          </div>
+          <span class="product-card-link">
+            <span data-i18n="p-link">Ver detalle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <!-- Higo -->
+      <a href="productos.html#higo" class="product-card reveal reveal-delay-3">
+        <div class="product-card-image product-card-image--clean product-card-image--higo" aria-hidden="true">
+          <img src="assets/img/higo.jpg" alt="Higo FreshKampo" loading="lazy">
+          <span class="product-card-glyph">🍈</span>
+        </div>
+        <div class="product-card-body">
+          <h3 class="product-card-title" data-i18n="p5-name">Higo</h3>
+          <p class="product-card-desc" data-i18n="p5-desc">Jugoso y fresco, naturalmente acaramelado. Variedad Black Mission.</p>
+          <div class="product-card-tags">
+            <span class="product-tag" data-i18n="tag-conv">Convencional</span>
+          </div>
+          <span class="product-card-link">
+            <span data-i18n="p-link">Ver detalle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DISPONIBILIDAD PREVIEW
+══════════════════════════════════ -->
+<section class="section avail-prev-section" aria-labelledby="avail-prev-heading">
+  <div class="container">
+    <div class="avail-prev-grid">
+
+      <!-- TEXT + EMBEDDED IMAGE -->
+      <div class="avail-prev-content reveal">
+        <span class="badge badge-primary" data-i18n="avail-prev-badge">Disponibilidad</span>
+        <h2 id="avail-prev-heading" data-i18n="avail-prev-h2">Fruta fresca,<br>en su mejor momento</h2>
+        <p data-i18n="avail-prev-desc">Conoce las zonas de cultivo y los meses en que puedes encontrar los frutos que cultivamos con cuidado y pasión.</p>
+
+        <!-- CALENDAR IMAGE — embedded so on mobile it flows between text and CTA -->
+        <div class="avail-prev-visual">
+          <div class="avail-prev-img-wrap">
+            <img
+              src="assets/img/imagen-calendario-min_solo_es_de_muestra.jpg"
+              alt="Calendario de disponibilidad FreshKampo"
+              class="avail-prev-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <a href="disponibilidad.html" class="btn btn-primary avail-prev-cta">
+          <span data-i18n="avail-prev-cta">Ver calendario</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <div class="avail-prev-fruits">
+          <span class="avail-prev-fruit">🍓 Fresa</span>
+          <span class="avail-prev-fruit">🍇 Arándano</span>
+          <span class="avail-prev-fruit">🍇 Zarzamora</span>
+          <span class="avail-prev-fruit">🍈 Frambuesa</span>
+          <span class="avail-prev-fruit">🥑 Aguacate</span>
+          <span class="avail-prev-fruit">🌿 Espárrago</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CERTIFICATIONS
+══════════════════════════════════ -->
+<section class="section certs-section" aria-labelledby="certs-heading">
+  <div class="container">
+    <div class="section-header centered reveal" style="color:white;">
+      <span class="badge badge-accent" data-i18n="certs-badge">Calidad certificada</span>
+      <h2 id="certs-heading" style="color:white;margin-top:.75rem" data-i18n="certs-h2">Estándares internacionales de excelencia</h2>
+      <p style="color:rgba(255,255,255,.6);margin-top:.5rem" data-i18n="certs-desc">Todos nuestros productos cumplen con los más estrictos estándares de calidad e inocuidad reconocidos globalmente.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-card-top">
+          <div class="cert-icon cert-icon-img"><img src="assets/img/logo-cert-iso9001.png" alt="ISO 9001" style="max-height:40px;max-width:64px;object-fit:contain;"></div>
+          <div><div class="cert-name" data-i18n="cert1-name">ISO 9001:2015</div><div class="cert-category" data-i18n="cert1-cat">Calidad</div></div>
+        </div>
+        <p class="cert-desc" data-i18n="cert1-desc">Sistema de gestión de calidad internacional.</p>
+      </div>
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-card-top">
+          <div class="cert-icon cert-icon-img"><img src="assets/img/logo-cert-primus.png" alt="Primus GFS" style="max-height:40px;max-width:64px;object-fit:contain;"></div>
+          <div><div class="cert-name" data-i18n="cert2-name">Primus GFS</div><div class="cert-category" data-i18n="cert2-cat">Inocuidad</div></div>
+        </div>
+        <p class="cert-desc" data-i18n="cert2-desc">Auditoría de inocuidad alimentaria de terceros.</p>
+      </div>
+      <div class="cert-card reveal reveal-delay-3">
+        <div class="cert-card-top">
+          <div class="cert-icon cert-icon-img"><img src="assets/img/logo-cert-ifs.png" alt="IFS" style="max-height:40px;max-width:64px;object-fit:contain;"></div>
+          <div><div class="cert-name" data-i18n="cert3-name">IFS</div><div class="cert-category" data-i18n="cert3-cat">Inocuidad</div></div>
+        </div>
+        <p class="cert-desc" data-i18n="cert3-desc">International Featured Standards — acreditación broker.</p>
+      </div>
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-card-top">
+          <div class="cert-icon cert-icon-img"><img src="assets/img/logo-cert-usda.jpg" alt="NOP USDA" style="max-height:40px;max-width:64px;object-fit:contain;"></div>
+          <div><div class="cert-name" data-i18n="cert4-name">NOP / USDA</div><div class="cert-category" data-i18n="cert4-cat">Orgánico</div></div>
+        </div>
+        <p class="cert-desc" data-i18n="cert4-desc">Programa Nacional Orgánico de EE.UU.</p>
+      </div>
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-card-top">
+          <div class="cert-icon cert-icon-img"><img src="assets/img/logo-cert-eu.jpg" alt="EU Organic" style="max-height:40px;max-width:64px;object-fit:contain;"></div>
+          <div><div class="cert-name" data-i18n="cert5-name">EU Organic</div><div class="cert-category" data-i18n="cert5-cat">Orgánico</div></div>
+        </div>
+        <p class="cert-desc" data-i18n="cert5-desc">Equivalencia orgánica Unión Europea.</p>
+      </div>
+      <div class="cert-card reveal reveal-delay-3">
+        <div class="cert-card-top">
+          <div class="cert-icon cert-icon-img"><img src="assets/img/logo-cert-smeta.png" alt="SMETA Sedex" style="max-height:40px;max-width:64px;object-fit:contain;"></div>
+          <div><div class="cert-name" data-i18n="cert6-name">SMETA</div><div class="cert-category" data-i18n="cert6-cat">Ética</div></div>
+        </div>
+        <p class="cert-desc" data-i18n="cert6-desc">Auditoría ética Sedex — desde 2016.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="certificaciones.html" class="btn" style="border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);border-radius:9999px;padding:.75rem 1.75rem;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:.5rem;transition:all .25s ease;">
+        <span data-i18n="nav-certifications">Ver todas las certificaciones</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CLIENTS — Logos Grid
+══════════════════════════════════ -->
+<section class="clients-section" aria-labelledby="clients-heading">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="badge" data-i18n="clients-badge">Nuestros clientes</span>
+      <h2 id="clients-heading" style="margin-top:.75rem" data-i18n="clients-h2">Confianza de los mejores retailers del mundo</h2>
+      <p data-i18n="clients-desc">Abastecemos a más de 30 cadenas de supermercados y distribuidores en 4 continentes.</p>
+    </div>
+    <div class="clients-grid">
+      <div class="client-logo reveal reveal-delay-1"><img src="assets/img/cliente-01_walrmat.svg" alt="Walmart" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>WALMART</span>'"></div>
+      <div class="client-logo reveal reveal-delay-2"><img src="assets/img/cliente-08_Kroger.svg" alt="Kroger" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>KROGER</span>'"></div>
+      <div class="client-logo reveal reveal-delay-3"><img src="assets/img/cliente-05_ALDI.svg" alt="ALDI" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>ALDI</span>'"></div>
+      <div class="client-logo reveal reveal-delay-4"><img src="assets/img/cliente-06_SAMS.svg" alt="Sam's Club" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>SAM\'S</span>'"></div>
+      <div class="client-logo reveal reveal-delay-5"><img src="assets/img/cliente-07_Loblaws.svg" alt="Loblaws" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>LOBLAWS</span>'"></div>
+      <div class="client-logo reveal reveal-delay-1"><img src="assets/img/cliente-09_EDEKA.svg" alt="EDEKA" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>EDEKA</span>'"></div>
+      <div class="client-logo reveal reveal-delay-2"><img src="assets/img/cliente-03_SAFEWAY.svg" alt="Safeway" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>SAFEWAY</span>'"></div>
+      <div class="client-logo reveal reveal-delay-3"><img src="assets/img/cliente-04_SPROUTS.svg" alt="Sprouts" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>SPROUTS</span>'"></div>
+      <div class="client-logo reveal reveal-delay-4"><img src="assets/img/HEB.svg" alt="HEB" class="client-logo-img" onerror="this.outerHTML='<span style=\'font-size:.85rem;font-weight:800;letter-spacing:.05em;color:var(--c-gray-600)\'>HEB</span>'"></div>
+      <div class="client-logo reveal reveal-delay-5" style="background:var(--c-primary-50);border-color:var(--c-primary-100);">
+        <span style="font-size:.75rem;font-weight:700;color:var(--c-primary);letter-spacing:.06em;text-transform:uppercase;" data-i18n="clients-more">+20 más</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     WHY FRESHKAMPO
+══════════════════════════════════ -->
+<section class="section why-section" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content">
+        <div class="section-header reveal">
+          <span class="badge" data-i18n="why-badge">¿Por qué elegirnos?</span>
+          <h2 id="why-heading" style="margin-top:.75rem" data-i18n="why-h2">Integración vertical de principio a fin</h2>
+          <p style="margin-top:.5rem" data-i18n="why-desc">Controlamos cada eslabón de la cadena de suministro para garantizar la más alta calidad e inocuidad.</p>
+        </div>
+        <div class="why-features">
+          <div class="why-feature reveal reveal-delay-1">
+            <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><div class="why-feature-title" data-i18n="why1-title">Genética diferenciada</div><p class="why-feature-desc" data-i18n="why1-desc">Acceso a las mejores variedades de alto potencial productivo.</p></div>
+          </div>
+          <div class="why-feature reveal reveal-delay-2">
+            <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><div class="why-feature-title" data-i18n="why2-title">Red de productores</div><p class="why-feature-desc" data-i18n="why2-desc">Más del 90% de retención de productores año tras año.</p></div>
+          </div>
+          <div class="why-feature reveal reveal-delay-3">
+            <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <div><div class="why-feature-title" data-i18n="why3-title">Logística ágil</div><p class="why-feature-desc" data-i18n="why3-desc">Instalaciones regionales de enfriamiento, empaque y transporte.</p></div>
+          </div>
+          <div class="why-feature reveal reveal-delay-4">
+            <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><div class="why-feature-title" data-i18n="why4-title">Marketing global</div><p class="why-feature-desc" data-i18n="why4-desc">Tres subsidiarias en México, California y Rotterdam.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:2rem;" class="reveal">
+          <a href="integracion-vertical.html" class="btn btn-primary" data-i18n="why-cta">Conocer nuestra historia</a>
+        </div>
+      </div>
+
+      <!-- Visual (hidden on mobile) -->
+      <div class="why-visual" aria-hidden="true">
+        <div class="why-visual-main">
+          <div class="vchain-card">
+            <div class="vchain-header">
+              <span class="vchain-eyebrow">Cadena de valor integrada</span>
+              <div class="vchain-title">100% control propio</div>
+            </div>
+            <div class="vchain-pipeline">
+              <div class="vchain-step">
+                <div class="vchain-step-left">
+                  <div class="vchain-step-num">01</div>
+                  <div class="vchain-connector"></div>
+                </div>
+                <div class="vchain-step-body">
+                  <div class="vchain-step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0 0 6"/><path d="M6 8a6 6 0 0 1 12 0c0 7-3 9-6 11-3-2-6-4-6-11"/></svg>
+                  </div>
+                  <div class="vchain-step-text">
+                    <strong>Producción agrícola</strong>
+                    <span>Michoacán, México</span>
+                  </div>
+                  <div class="vchain-step-tag green">PRIMUS GFS</div>
+                </div>
+              </div>
+              <div class="vchain-step">
+                <div class="vchain-step-left">
+                  <div class="vchain-step-num">02</div>
+                  <div class="vchain-connector"></div>
+                </div>
+                <div class="vchain-step-body">
+                  <div class="vchain-step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                  </div>
+                  <div class="vchain-step-text">
+                    <strong>Control de calidad</strong>
+                    <span>Laboratorio propio</span>
+                  </div>
+                  <div class="vchain-step-tag green">ISO 9001</div>
+                </div>
+              </div>
+              <div class="vchain-step">
+                <div class="vchain-step-left">
+                  <div class="vchain-step-num">03</div>
+                  <div class="vchain-connector"></div>
+                </div>
+                <div class="vchain-step-body">
+                  <div class="vchain-step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                  </div>
+                  <div class="vchain-step-text">
+                    <strong>Logística &amp; cadena frío</strong>
+                    <span>Transporte refrigerado</span>
+                  </div>
+                  <div class="vchain-step-tag blue">24 / 7</div>
+                </div>
+              </div>
+              <div class="vchain-step">
+                <div class="vchain-step-left">
+                  <div class="vchain-step-num vchain-num-gold">04</div>
+                </div>
+                <div class="vchain-step-body vchain-body-gold">
+                  <div class="vchain-step-icon vchain-icon-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <div class="vchain-step-text">
+                    <strong class="vchain-gold-text">Distribución global</strong>
+                    <span>4 continentes activos</span>
+                  </div>
+                  <div class="vchain-step-tag gold">LIVE</div>
+                </div>
+              </div>
+            </div>
+            <div class="vchain-markets">
+              <div class="vchain-market">🇺🇸 EE.UU.</div>
+              <div class="vchain-market">🇪🇺 Europa</div>
+              <div class="vchain-market">🌍 M. Oriente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     GLOBAL PRESENCE
+══════════════════════════════════ -->
+<section class="section presence-section" aria-labelledby="presence-heading">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="badge" data-i18n="presence-badge">Alcance internacional</span>
+      <h2 id="presence-heading" style="margin-top:.75rem" data-i18n="presence-h2">Presencia en 4 continentes</h2>
+      <p style="margin:0 auto;margin-top:.5rem" data-i18n="presence-desc">Tres subsidiarias coordinan nuestra operación a nivel global desde México, Norteamérica y Europa.</p>
+    </div>
+    <div class="presence-offices">
+      <div class="office-card reveal reveal-delay-1">
+        <img src="assets/img/mex.png" class="office-flag-img" alt="México" width="72" height="72">
+        <div class="office-region" data-i18n="office1-region">México & Latinoamérica</div>
+        <div class="office-company" data-i18n="office1-company">Meridian Fruits</div>
+        <div class="office-info">Km 0.5 Carr. Peribán Los Reyes, SN, Los Camichines, 60440, Peribán, Mich., México</div>
+        <div style="margin:.75rem 0 .5rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+          <span style="font-size:.65rem;background:var(--c-primary-50);color:var(--c-primary);font-weight:700;padding:3px 8px;border-radius:9999px;">Sede corporativa</span>
+          <span style="font-size:.65rem;background:var(--c-gray-100);color:var(--c-gray-600);font-weight:600;padding:3px 8px;border-radius:9999px;">Producción</span>
+        </div>
+        <div class="office-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+523545512416">+52 (354) 551-2416</a>
+        </div>
+      </div>
+      <div class="office-card reveal reveal-delay-2">
+        <img src="assets/img/USA.png" class="office-flag-img" alt="EE.UU." width="72" height="72">
+        <div class="office-region" data-i18n="office2-region">Norteamérica</div>
+        <div class="office-company" data-i18n="office2-company">Meridian Fine Foods</div>
+        <div class="office-info">423 W. Fallbrook Ave. Ste. 205, Fresno, CA 93711, USA</div>
+        <div style="margin:.75rem 0 .5rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+          <span style="font-size:.65rem;background:var(--c-primary-50);color:var(--c-primary);font-weight:700;padding:3px 8px;border-radius:9999px;">Mayor mercado</span>
+          <span style="font-size:.65rem;background:var(--c-gray-100);color:var(--c-gray-600);font-weight:600;padding:3px 8px;border-radius:9999px;">Walmart · HEB · Safeway</span>
+        </div>
+        <div class="office-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+15593857123">+1 (559) 385-7123</a>
+        </div>
+      </div>
+      <div class="office-card reveal reveal-delay-3">
+        <img src="assets/img/european.png" class="office-flag-img" alt="Europa" width="72" height="72">
+        <div class="office-region" data-i18n="office3-region">Europa & Medio Oriente</div>
+        <div class="office-company" data-i18n="office3-company">Euro Meridian</div>
+        <div class="office-info">Iabc 5102, 4814 RN Breda, Países Bajos</div>
+        <div style="margin:.75rem 0 .5rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+          <span style="font-size:.65rem;background:var(--c-primary-50);color:var(--c-primary);font-weight:700;padding:3px 8px;border-radius:9999px;">Hub europeo</span>
+          <span style="font-size:.65rem;background:var(--c-gray-100);color:var(--c-gray-600);font-weight:600;padding:3px 8px;border-radius:9999px;">ALDI · Loblaws · EDEKA</span>
+        </div>
+        <div class="office-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+31687337098">+31 687337098</a>
+        </div>
+      </div>
+      <div class="office-card reveal reveal-delay-4">
+        <img src="assets/img/morocco.png" class="office-flag-img" alt="Marruecos" width="72" height="72">
+        <div class="office-region" data-i18n="office4-region">Marruecos</div>
+        <div class="office-company" data-i18n="office4-company">Meridian du Maghreb</div>
+        <div class="office-info">11, Rue El Wahda, Résidence Imam Ali, Appt. n° 2, Casablanca</div>
+        <div style="margin:.75rem 0 .5rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+          <span style="font-size:.65rem;background:var(--c-primary-50);color:var(--c-primary);font-weight:700;padding:3px 8px;border-radius:9999px;">Expansión Magreb</span>
+          <span style="font-size:.65rem;background:var(--c-gray-100);color:var(--c-gray-600);font-weight:600;padding:3px 8px;border-radius:9999px;">GCC · Medio Oriente</span>
+        </div>
+        <div class="office-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+212662376322">+212 662-376322</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PRODUCERS CTA
+══════════════════════════════════ -->
+<section class="section producers-section" aria-labelledby="producers-heading">
+  <div class="container">
+    <div class="producers-grid">
+      <div class="producers-content">
+        <span class="badge badge-accent" data-i18n="producers-badge">Socios productores</span>
+        <h2 id="producers-heading" style="color:white;margin-top:.75rem" data-i18n="producers-h2">Crece con nosotros</h2>
+        <p style="color:rgba(255,255,255,.75);margin-top:.75rem" data-i18n="producers-desc">Buscamos agricultores comprometidos con la excelencia que quieran acceder a mercados internacionales con el respaldo de nuestra plataforma.</p>
+        <div class="producers-pillars">
+          <div class="pillar-card"><div class="pillar-num">01</div><div class="pillar-title" data-i18n="pillar1-title">Comercialización</div><div class="pillar-desc" data-i18n="pillar1-desc">Acceso directo a supermercados globales.</div></div>
+          <div class="pillar-card"><div class="pillar-num">02</div><div class="pillar-title" data-i18n="pillar2-title">Genética</div><div class="pillar-desc" data-i18n="pillar2-desc">Variedades de alto rendimiento.</div></div>
+          <div class="pillar-card"><div class="pillar-num">03</div><div class="pillar-title" data-i18n="pillar3-title">Asesoría</div><div class="pillar-desc" data-i18n="pillar3-desc">Equipo multidisciplinario de apoyo.</div></div>
+          <div class="pillar-card"><div class="pillar-num">04</div><div class="pillar-title" data-i18n="pillar4-title">Financiamiento</div><div class="pillar-desc" data-i18n="pillar4-desc">Soluciones de capital y equipo.</div></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="productores.html" class="btn btn-white btn-lg" data-i18n="producers-cta">Únete como productor</a>
+        </div>
+      </div>
+      <div aria-hidden="true" style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2rem;">
+          <div style="font-size:3rem;font-weight:800;color:white;line-height:1;">90<span style="color:#C8A951;">%</span></div>
+          <div style="font-size:.875rem;color:rgba(255,255,255,.6);margin-top:.5rem;">Retención de productores año tras año</div>
+          <div style="margin-top:1.5rem;display:flex;gap:.5rem;align-items:center;">
+            <div style="flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:9999px;overflow:hidden;">
+              <div style="width:90%;height:100%;background:linear-gradient(90deg,#C8A951,#E8C96A);border-radius:9999px;"></div>
+            </div>
+            <span style="font-size:.75rem;color:#E8C96A;font-weight:700;">90%</span>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2rem;">
+          <div style="font-size:3rem;font-weight:800;color:white;line-height:1;">50<span style="color:#C8A951;">+</span></div>
+          <div style="font-size:.875rem;color:rgba(255,255,255,.6);margin-top:.5rem;">Hectáreas mínimas para programa completo</div>
+        </div>
+        <div style="background:rgba(200,169,81,.12);border:1px solid rgba(200,169,81,.25);border-radius:20px;padding:2rem;">
+          <div style="font-size:3rem;font-weight:800;color:white;line-height:1;">20<span style="color:#C8A951;">+</span></div>
+          <div style="font-size:.875rem;color:rgba(255,255,255,.6);margin-top:.5rem;">Años conectando productores con el mundo</div>
+          <div style="margin-top:1rem;font-size:.7rem;color:#E8C96A;font-weight:600;letter-spacing:.06em;text-transform:uppercase;">Desde 2003 — Michoacán, México</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CAREERS
+══════════════════════════════════ -->
+<section class="section careers-section" aria-labelledby="careers-heading">
+  <div class="container">
+    <div class="careers-grid">
+      <div>
+        <span class="badge reveal" data-i18n="careers-badge">Únete al equipo</span>
+        <h2 id="careers-heading" class="reveal" style="margin-top:.75rem" data-i18n="careers-h2">Más que una empresa, somos una familia</h2>
+        <p class="reveal" style="margin-top:.75rem" data-i18n="careers-desc">Buscamos personas apasionadas que quieran generar impacto positivo en la industria de frutas frescas a nivel mundial.</p>
+        <div class="careers-benefits">
+          <div class="benefit-item reveal reveal-delay-1">
+            <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div><div class="benefit-title" data-i18n="ben1-title">Compensación superior</div><div class="benefit-desc" data-i18n="ben1-desc">Salarios por encima del mercado con bonos por desempeño.</div></div>
+          </div>
+          <div class="benefit-item reveal reveal-delay-2">
+            <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div><div class="benefit-title" data-i18n="ben2-title">Flexibilidad</div><div class="benefit-desc" data-i18n="ben2-desc">Modalidad de trabajo remoto disponible.</div></div>
+          </div>
+          <div class="benefit-item reveal reveal-delay-3">
+            <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <div><div class="benefit-title" data-i18n="ben3-title">Crecimiento</div><div class="benefit-desc" data-i18n="ben3-desc">Plan de carrera formal y mentoría interna.</div></div>
+          </div>
+          <div class="benefit-item reveal reveal-delay-4">
+            <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div><div class="benefit-title" data-i18n="ben4-title">Bienestar</div><div class="benefit-desc" data-i18n="ben4-desc">Yoga, ejercicio funcional y servicios de psicología.</div></div>
+          </div>
+        </div>
+        <div style="margin-top:2rem;" class="reveal">
+          <a href="carreras.html" class="btn btn-primary btn-lg" data-i18n="careers-cta">Ver oportunidades</a>
+        </div>
+      </div>
+      <div class="careers-visual reveal">
+        <div class="careers-mission-title" data-i18n="careers-badge">Únete al equipo</div>
+        <blockquote class="careers-quote" data-i18n="careers-quote">"Generamos un impacto positivo en las personas ofreciendo berries y productos frescos de gran calidad."</blockquote>
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:1rem;">
+          <img src="assets/img/logo-happy-workers.svg" alt="Happy Workers" style="width:48px;height:48px;object-fit:contain;filter:brightness(0) invert(1);flex-shrink:0;"
+               onerror="this.style.display='none'">
+          <div>
+            <div style="font-size:.8rem;font-weight:700;color:white;">Happy Workers Awards</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Certificación de bienestar laboral</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA FINAL
+══════════════════════════════════ -->
+<section class="cta-section" aria-label="Call to action">
+  <div class="container">
+    <h2 class="reveal" data-i18n="cta-h2">¿Listo para trabajar con nosotros?</h2>
+    <p class="reveal" data-i18n="cta-desc">Contáctanos hoy y descubre cómo FreshKampo puede llevar tus frutas frescas a los mercados internacionales más exigentes.</p>
+    <div class="cta-actions reveal">
+      <a href="contacto.html" class="btn btn-white btn-lg" data-i18n="cta-btn1">Contáctanos</a>
+      <a href="integracion-vertical.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);border-radius:9999px;" data-i18n="cta-btn2">Conocer más</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/img/logo-footer.svg" alt="FreshKampo" style="height:40px;width:auto;filter:brightness(0) invert(1)"
+               onerror="this.outerHTML='<span>Fresh<span style=\'color:var(--c-accent)\'>Kampo</span></span>'">
+        </div>
+        <p class="footer-desc" data-i18n="footer-desc">Comercializamos productos frescos de alta calidad, conectando los mejores campos de México con el mundo.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/freshkampo/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.facebook.com/FreshKampo" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/freshkampo" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer-col1">Productos</div>
+        <nav class="footer-links" aria-label="Products navigation">
+          <a href="productos.html" class="footer-link" data-i18n="footer-link-fruit">Fruta fresca</a>
+          <a href="disponibilidad.html" class="footer-link" data-i18n="footer-link-availability">Disponibilidad</a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer-col2">Empresa</div>
+        <nav class="footer-links" aria-label="Company navigation">
+          <a href="integracion-vertical.html" class="footer-link" data-i18n="footer-link-integration">Integración Vertical</a>
+          <a href="certificaciones.html" class="footer-link" data-i18n="footer-link-certs">Certificaciones</a>
+          <a href="historia.html" class="footer-link" data-i18n="footer-link-history">Historia</a>
+          <a href="productores.html" class="footer-link" data-i18n="footer-link-producers">Productores</a>
+          <a href="carreras.html" class="footer-link" data-i18n="footer-link-careers">Carreras</a>
+          <a href="contacto.html" class="footer-link" data-i18n="footer-link-contact">Contacto</a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer-col3">Legal</div>
+        <nav class="footer-links" aria-label="Legal navigation">
+          <a href="aviso-privacidad.html" class="footer-link" data-i18n="footer-link-privacy">Aviso de Privacidad</a>
+          <a href="#" class="footer-link" data-modal="quality" data-i18n="footer-link-quality">Política de Calidad</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer-copy">© 2026 FreshKampo — Meridian Fruits SPR de RL de CV. Todos los derechos reservados.</span>
+      <div class="footer-bottom-links">
+        <a href="aviso-privacidad.html" data-i18n="footer-link-privacy">Aviso de Privacidad</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════
+     QUALITY POLICY MODAL
+══════════════════════════════════ -->
+<div id="qualityModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal modal-policy">
+    <div class="modal-header">
+      <div class="modal-header-top">
+        <span class="modal-badge" data-i18n="modal-badge">Política de Calidad &amp; Inocuidad</span>
+        <button class="modal-close" aria-label="Cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-header-identity">
+        <div class="modal-header-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div>
+          <h2 id="modal-title" class="modal-title" data-i18n="modal-title">FreshKampo</h2>
+          <p class="modal-subtitle" data-i18n="modal-subtitle">Meridian Fruits SPR de RL de CV</p>
+        </div>
+      </div>
+      <div class="modal-header-meta" aria-hidden="true">
+        <span class="modal-header-pill">Certificaciones vigentes</span>
+        <span class="modal-header-pill">Gestión integral de riesgos</span>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-intro-card">
+        <p data-i18n="modal-intro">En MERIDIAN FRUITS SPR DE RL de CV, comercializamos productos frescos para el deleite de nuestros clientes y consumidores con nuestro firme compromiso de satisfacer sus requerimientos y expectativas. Comprometidos con la calidad e inocuidad de nuestros productos en toda la cadena de suministro y con la mejora continua basados en los siguientes principios:</p>
+      </div>
+
+      <div class="modal-block">
+        <div class="modal-section-head">
+          <span class="modal-section-eyebrow">Principios rectores</span>
+        </div>
+        <div class="modal-principles">
+          <div class="principle-item">
+            <div class="principle-num">1</div>
+            <div class="principle-body">
+              <strong class="principle-title">Desarrollo de productores</strong>
+              <p class="principle-text" data-i18n="principle1">Desarrollamos productores confiables, brindando acompañamiento todo el ciclo de producción.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <div class="principle-num">2</div>
+            <div class="principle-body">
+              <strong class="principle-title">Libertad de operar</strong>
+              <p class="principle-text" data-i18n="principle2">Asegurar la libertad de operar a través del cumplimiento de la normativa aplicable y de la excelencia de nuestros sistemas de calidad para mantener la confianza con nuestros clientes.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <div class="principle-num">3</div>
+            <div class="principle-body">
+              <strong class="principle-title">Cadena de suministro eficiente</strong>
+              <p class="principle-text" data-i18n="principle3">Comprometidos con una cadena de suministros eficiente a través de una gestión efectiva de nuestros procesos operativos y evaluando riesgos de manera constante.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <div class="principle-num">4</div>
+            <div class="principle-body">
+              <strong class="principle-title">Seguridad de la información</strong>
+              <p class="principle-text" data-i18n="principle4">Implementamos políticas y controles de seguridad en nuestros procesos, con un buen uso de herramientas tecnológicas disponibles que respaldan la integridad, confidencialidad y disponibilidad de la información.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <div class="principle-num">5</div>
+            <div class="principle-body">
+              <strong class="principle-title">Ambiente laboral</strong>
+              <p class="principle-text" data-i18n="principle5">Promovemos un ambiente positivo y espacio laboral seguro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-block">
+        <div class="modal-section-head">
+          <span class="modal-section-eyebrow">Certificaciones vigentes</span>
+        </div>
+        <div class="modal-cert-grid">
+          <div class="modal-cert-item">
+            <img src="assets/img/logo-cert-primus.png" alt="Primus GFS" loading="lazy">
+            <span>Primus GFS</span>
+          </div>
+          <div class="modal-cert-item">
+            <img src="assets/img/logo-cert-primus-gap.png" alt="Global G.A.P." loading="lazy">
+            <span>Global G.A.P.</span>
+          </div>
+          <div class="modal-cert-item">
+            <img src="assets/img/logo-cert-ifs.png" alt="IFS Broker" loading="lazy">
+            <span>IFS Broker</span>
+          </div>
+          <div class="modal-cert-item">
+            <img src="assets/img/logo-cert-iso9001.png" alt="ISO 9001" loading="lazy">
+            <span>ISO 9001</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-meta-bar">
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Fecha de emisión</span>
+          <strong class="modal-meta-value" data-i18n="modal-date">20 de mayo de 2026</strong>
+        </div>
+        <div class="modal-meta-sep"></div>
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Versión</span>
+          <strong class="modal-meta-value" data-i18n="modal-version">Versión 3</strong>
+        </div>
+        <div class="modal-meta-sep"></div>
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Empresa</span>
+          <strong class="modal-meta-value">Meridian Fruits SPR de RL de CV</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-primary modal-action-close" style="width:100%;justify-content:center;gap:.6rem;" data-i18n="modal-close-btn">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/i18n.js?v=20260429b"></script>
+<script src="js/nav.js?v=20260429b"></script>
+<script src="js/app.js?v=20260429b"></script>
+</body>
+</html>

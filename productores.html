@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productores - FreshKampo | Crece tu empresa agricola con nosotros</title>
+  <meta name="description" content="Construye tu empresa agricola con FreshKampo: comercializacion directa, genetica, asesoria, financiamiento y mejores practicas para escalar con confianza." />
+  <link rel="canonical" href="https://freshkampo.com/productores" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .pr-hero {
+      position: relative;
+      min-height: 700px;
+      padding: 6.2rem 0 4.8rem;
+      overflow: hidden;
+      isolation: isolate;
+      background: #103620;
+    }
+    .pr-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -3;
+      filter: saturate(1.04) contrast(1.01);
+    }
+    .pr-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(66% 70% at 82% 20%, rgba(200, 169, 81, 0.23) 0%, rgba(200, 169, 81, 0) 68%),
+        radial-gradient(52% 65% at 15% 10%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 72%);
+    }
+    .pr-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(112deg, rgba(6, 18, 10, 0.72) 0%, rgba(8, 36, 21, 0.56) 48%, rgba(12, 46, 27, 0.46) 100%);
+    }
+    .pr-hero .container,
+    .pr-watch .container,
+    .pr-intro .container,
+    .pr-platform .container,
+    .pr-business .container,
+    .pr-highlight .container,
+    .pr-advisory .container,
+    .pr-growth .container,
+    .pr-join .container {
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 1024px) {
+      .pr-hero .container,
+      .pr-watch .container,
+      .pr-intro .container,
+      .pr-platform .container,
+      .pr-business .container,
+      .pr-highlight .container,
+      .pr-advisory .container,
+      .pr-growth .container,
+      .pr-join .container {
+        padding-right: calc(var(--space-6) + 56px);
+      }
+    }
+
+    .pr-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 2rem;
+      align-items: end;
+      max-width: 1140px;
+    }
+    .pr-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1.06rem;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.8rem;
+    }
+    .pr-breadcrumb a:hover {
+      color: #fff;
+    }
+    .pr-hero h1 {
+      color: #fff;
+      margin: 0.82rem 0 1rem;
+      max-width: 690px;
+      line-height: 1.03;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    }
+    .pr-hero-lead {
+      margin: 0;
+      max-width: 700px;
+      color: rgba(255, 255, 255, 0.87);
+      line-height: 1.8;
+      font-size: 1.04rem;
+    }
+    .pr-hero-actions {
+      margin-top: 1.55rem;
+      display: flex;
+      gap: 0.74rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .pr-hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.44rem;
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .pr-hero-note::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+    }
+    .pr-hero-card {
+      width: min(100%, 360px);
+      justify-self: end;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: linear-gradient(155deg, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.08));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 24px 54px rgba(0, 0, 0, 0.24);
+      padding: 1.2rem 1.1rem;
+    }
+    .pr-hero-card-kicker {
+      font-size: 0.64rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #f0d58f;
+      margin-bottom: 0.55rem;
+    }
+    .pr-hero-card h2 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(1.08rem, 2.2vw, 1.42rem);
+      line-height: 1.28;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+    .pr-hero-card p {
+      margin: 0.7rem 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.58;
+      font-size: 0.88rem;
+    }
+
+    .pr-watch {
+      padding: 0;
+      background: #f6faf7;
+    }
+    .pr-watch-wrap {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition:
+        max-height 0.78s cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 0.44s ease,
+        transform 0.44s ease;
+    }
+    .pr-watch.is-open {
+      padding: 2.4rem 0 2.9rem;
+    }
+    .pr-watch.is-open .pr-watch-wrap {
+      max-height: 920px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pr-watch-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(26, 92, 56, 0.18);
+      background: #fff;
+      box-shadow: 0 24px 62px rgba(12, 52, 30, 0.16);
+    }
+    .pr-watch-head {
+      padding: 0.95rem 1rem 0.88rem;
+      background: linear-gradient(145deg, #f8fcf9, #ecf6ef);
+      border-bottom: 1px solid rgba(26, 92, 56, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.9rem;
+    }
+    .pr-watch-head h2 {
+      margin: 0;
+      color: #143f29;
+      font-size: clamp(1.03rem, 2vw, 1.35rem);
+      text-wrap: balance;
+    }
+    .pr-watch-close {
+      border: 1px solid rgba(20, 63, 41, 0.22);
+      background: #fff;
+      color: #143f29;
+      border-radius: 999px;
+      padding: 0.36rem 0.7rem;
+      font-size: 0.77rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.34rem;
+      cursor: pointer;
+      transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
+    }
+    .pr-watch-close:hover {
+      transform: translateY(-1px);
+      border-color: rgba(20, 63, 41, 0.4);
+      box-shadow: 0 8px 20px rgba(20, 63, 41, 0.12);
+    }
+    .pr-watch-close .x {
+      font-size: 0.96rem;
+      line-height: 1;
+    }
+    .pr-watch-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .pr-watch-media video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pr-watch-foot {
+      padding: 0.65rem 1rem 0.8rem;
+      text-align: center;
+      border-top: 1px solid rgba(26, 92, 56, 0.12);
+      background: #fff;
+      color: var(--c-gray-500);
+      font-size: 0.8rem;
+    }
+    .pr-watch-foot a {
+      color: var(--c-primary);
+      font-weight: 700;
+    }
+
+    .pr-intro {
+      padding: 3.2rem 0 2.2rem;
+      background: #f6faf7;
+    }
+    .pr-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+      gap: 1.45rem;
+      align-items: stretch;
+    }
+    .pr-intro-copy {
+      border-radius: 22px;
+      border: 1px solid rgba(26, 92, 56, 0.14);
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(13, 61, 36, 0.1);
+      padding: 1.12rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .pr-intro h2 {
+      margin: 0.72rem 0 0.58rem;
+      text-wrap: balance;
+    }
+    .pr-intro p {
+      margin: 0;
+      color: var(--c-gray-600);
+      line-height: 1.78;
+    }
+    .pr-intro-aside {
+      border-radius: 22px;
+      border: 1px solid rgba(26, 92, 56, 0.14);
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(13, 61, 36, 0.1);
+      padding: 1.12rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .pr-intro-aside h3 {
+      margin: 0;
+      color: var(--c-primary-dark);
+      font-size: 1.02rem;
+      letter-spacing: -0.01em;
+    }
+    .pr-intro-aside p {
+      margin: 0.45rem 0 0.72rem;
+      color: var(--c-gray-500);
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+    .pr-intro-aside ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.66rem;
+    }
+    .pr-intro-aside li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.58rem;
+      color: var(--c-gray-700);
+      font-size: 0.86rem;
+      line-height: 1.58;
+    }
+    .pr-intro-aside li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.38rem;
+      background: var(--c-primary-light);
+      box-shadow: 0 0 0 4px rgba(42, 122, 78, 0.14);
+    }
+
+    .pr-platform {
+      padding: 1.2rem 0 3rem;
+      background: #f6faf7;
+    }
+    .pr-platform-card {
+      border-radius: 30px;
+      border: 1px solid var(--c-gray-100);
+      background: #fff;
+      box-shadow: 0 22px 54px rgba(12, 52, 30, 0.13);
+      padding: 1.2rem 1.1rem;
+    }
+    .pr-platform-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+      gap: 0.95rem;
+      align-items: stretch;
+    }
+    .pr-platform-head {
+      text-align: left;
+      max-width: none;
+      margin: 0;
+      border-radius: 20px;
+      border: 1px solid rgba(26, 92, 56, 0.12);
+      background: linear-gradient(145deg, #f9fcfa, #eef7f2);
+      padding: 1rem 0.92rem;
+    }
+    .pr-platform-head h2 {
+      margin: 0.7rem 0 0.5rem;
+    }
+    .pr-platform-head p {
+      margin: 0;
+      line-height: 1.76;
+      color: var(--c-gray-500);
+    }
+    .pr-platform-story {
+      margin-top: 0.22rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .pr-platform-copy {
+      margin: 0;
+      border: 1px solid rgba(26, 92, 56, 0.14);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.84);
+      padding: 0.62rem 0.66rem;
+      color: var(--c-gray-600);
+      font-size: 0.84rem;
+      line-height: 1.62;
+    }
+    .pr-platform-copy strong {
+      color: var(--c-primary-dark);
+    }
+    .pr-platform-list {
+      list-style: none;
+      margin: 0.85rem 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.46rem 0.52rem;
+    }
+    .pr-platform-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      color: var(--c-gray-700);
+      font-size: 0.84rem;
+      line-height: 1.6;
+      border: 1px solid rgba(26, 92, 56, 0.11);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 0.42rem 0.48rem;
+    }
+    .pr-platform-list li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      margin-top: 0.35rem;
+      border-radius: 50%;
+      background: var(--c-accent);
+      box-shadow: 0 0 0 4px rgba(200, 169, 81, 0.2);
+      flex-shrink: 0;
+    }
+    .pr-platform-media {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(15, 55, 33, 0.12);
+      background: #f8fcf9;
+      padding: 0.65rem;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pr-platform-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 290px;
+      object-fit: contain;
+      display: block;
+      background: #fff;
+      border-radius: 14px;
+    }
+
+    @media (min-width: 1081px) {
+      .pr-platform-card,
+      .pr-platform-head,
+      .pr-platform-copy,
+      .pr-platform-list li,
+      .pr-platform-media,
+      .pr-platform-media img {
+        background: #fff;
+      }
+      .pr-platform-head {
+        border-color: rgba(19, 30, 24, 0.1);
+      }
+      .pr-platform-copy {
+        border-color: rgba(19, 30, 24, 0.1);
+      }
+      .pr-platform-list li {
+        border-color: rgba(19, 30, 24, 0.08);
+      }
+      .pr-platform-media {
+        border-color: rgba(19, 30, 24, 0.1);
+      }
+    }
+
+    .pr-business {
+      padding: 2.6rem 0 2.1rem;
+      background: #fff;
+    }
+    .pr-business-stack {
+      display: grid;
+      gap: 1rem;
+    }
+    .pr-business-item {
+      border-radius: 24px;
+      border: 1px solid rgba(26, 92, 56, 0.12);
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(13, 61, 36, 0.1);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    }
+    .pr-business-item.is-reverse {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+    }
+    .pr-business-media {
+      min-height: 250px;
+      position: relative;
+    }
+    .pr-business-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .pr-business-copy {
+      padding: 1.16rem 1.05rem;
+      display: grid;
+      gap: 0.56rem;
+      align-content: center;
+    }
+    .pr-business-kicker {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      border: 1px solid rgba(26, 92, 56, 0.2);
+      background: rgba(26, 92, 56, 0.08);
+      color: var(--c-primary-dark);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.55rem;
+    }
+    .pr-business-copy h3 {
+      margin: 0;
+      color: var(--c-gray-900);
+      font-size: 1.2rem;
+    }
+    .pr-business-copy p {
+      margin: 0;
+      color: var(--c-gray-600);
+      line-height: 1.7;
+    }
+    .pr-business-points {
+      list-style: none;
+      margin: 0.16rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.38rem;
+    }
+    .pr-business-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.48rem;
+      color: var(--c-gray-700);
+      font-size: 0.83rem;
+      line-height: 1.56;
+    }
+    .pr-business-points li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      margin-top: 0.37rem;
+      border-radius: 50%;
+      background: var(--c-primary-light);
+      box-shadow: 0 0 0 4px rgba(42, 122, 78, 0.14);
+      flex-shrink: 0;
+    }
+
+    .pr-highlight {
+      padding: 0.6rem 0 2.8rem;
+      background: #fff;
+    }
+    .pr-highlight-card {
+      max-width: 880px;
+      margin: 0 auto;
+      border-radius: 22px;
+      border: 1px solid rgba(26, 92, 56, 0.18);
+      background: linear-gradient(135deg, #f7fcf8 0%, #eaf5ee 100%);
+      box-shadow: 0 14px 32px rgba(12, 52, 30, 0.1);
+      text-align: center;
+      padding: 1.22rem 1.05rem;
+    }
+    .pr-highlight-card strong {
+      color: var(--c-primary-dark);
+      font-size: clamp(1.08rem, 2.2vw, 1.34rem);
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .pr-highlight-card p {
+      margin: 0;
+      color: var(--c-gray-600);
+      line-height: 1.68;
+    }
+
+    .pr-advisory {
+      position: relative;
+      padding: 3.2rem 0 3.2rem;
+      overflow: hidden;
+      isolation: isolate;
+      background: #123e27;
+    }
+    .pr-advisory::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("assets/img/wrapper-asesoria.jpg") center / cover no-repeat;
+      opacity: 0.55;
+    }
+    .pr-advisory::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(60% 56% at 90% 15%, rgba(200, 169, 81, 0.16) 0%, rgba(200, 169, 81, 0) 70%),
+        linear-gradient(130deg, rgba(8, 26, 16, 0.62) 0%, rgba(13, 48, 29, 0.52) 52%, rgba(21, 68, 42, 0.46) 100%);
+    }
+    .pr-advisory-head {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 1.22rem;
+      color: #fff;
+    }
+    .pr-advisory-head h2 {
+      margin: 0.7rem 0 0.5rem;
+      color: #fff;
+    }
+    .pr-advisory-head p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.76;
+    }
+    .pr-tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+    .pr-tool {
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 1.02rem 0.9rem;
+      color: #fff;
+    }
+    .pr-tool-kicker {
+      margin: 0 0 0.34rem;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.64rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+    }
+    .pr-tool h3 {
+      margin: 0 0 0.4rem;
+      color: #fff;
+      font-size: 1.02rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .pr-tool h3::before {
+      content: none;
+    }
+    .pr-tool-icon {
+      font-size: 1.02rem;
+      line-height: 1;
+      transform: translateY(-1px);
+      filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.2));
+    }
+    .pr-tool p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.87);
+      font-size: 0.84rem;
+      line-height: 1.64;
+    }
+    .pr-tool-note {
+      margin-top: 0.45rem;
+      color: rgba(240, 213, 143, 0.95);
+      font-size: 0.78rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .pr-growth {
+      padding: 3rem 0 2.8rem;
+      background: #f7faf8;
+    }
+    .pr-growth-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pr-growth-card {
+      border-radius: 22px;
+      border: 1px solid rgba(26, 92, 56, 0.14);
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(13, 61, 36, 0.1);
+      overflow: hidden;
+    }
+    .pr-growth-card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+    }
+    .pr-growth-copy {
+      padding: 1rem 0.95rem 1.06rem;
+    }
+    .pr-growth-copy h3 {
+      margin: 0 0 0.4rem;
+      color: var(--c-gray-900);
+      font-size: 1.14rem;
+    }
+    .pr-growth-copy p {
+      margin: 0;
+      color: var(--c-gray-600);
+      line-height: 1.7;
+    }
+
+    .pr-join {
+      padding: 2.6rem 0 4.1rem;
+      background: #f7faf8;
+    }
+    .pr-join-shell {
+      border-radius: 30px;
+      border: 1px solid var(--c-gray-100);
+      background: #fff;
+      box-shadow: 0 24px 58px rgba(13, 61, 36, 0.14);
+      padding: 1.4rem 1.2rem;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .pr-join-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 1rem;
+    }
+    .pr-join-head h2 {
+      margin: 0.72rem 0 0.46rem;
+    }
+    .pr-join-head p {
+      margin: 0;
+      color: var(--c-gray-500);
+      line-height: 1.74;
+    }
+    .pr-join-form {
+      display: grid;
+      gap: 0.72rem;
+    }
+    .pr-join-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.72rem;
+    }
+    .pr-group {
+      display: grid;
+      gap: 0.32rem;
+    }
+    .pr-group label {
+      color: var(--c-gray-700);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .pr-group label span {
+      color: #b40c3a;
+    }
+    .pr-group input,
+    .pr-group textarea {
+      border: 1px solid var(--c-gray-200);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--c-gray-800);
+      width: 100%;
+      padding: 0.75rem 0.76rem;
+      outline: 0;
+      transition: border-color var(--t-fast), box-shadow var(--t-fast);
+    }
+    .pr-group input:focus,
+    .pr-group textarea:focus {
+      border-color: var(--c-primary-light);
+      box-shadow: 0 0 0 4px rgba(42, 122, 78, 0.12);
+    }
+    .pr-group textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .pr-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .pr-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .pr-business-item,
+      .pr-business-item.is-reverse {
+        grid-template-columns: 1fr;
+      }
+      .pr-business-copy {
+        order: 1;
+      }
+      .pr-business-media {
+        order: 2;
+      }
+      .pr-platform-layout {
+        grid-template-columns: 1fr;
+      }
+      .pr-platform-media {
+        order: 1;
+        min-height: auto;
+      }
+      .pr-platform-head {
+        order: 2;
+      }
+      .pr-platform-media img {
+        min-height: 0;
+        max-height: 260px;
+      }
+      .pr-platform-list {
+        grid-template-columns: 1fr;
+      }
+      .pr-business-media {
+        min-height: 240px;
+      }
+    }
+    @media (max-width: 900px) {
+      .pr-hero {
+        min-height: 620px;
+        padding: 4.8rem 0 3.2rem;
+      }
+      .pr-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .pr-hero-card {
+        justify-self: start;
+        width: min(100%, 560px);
+      }
+      .pr-intro-grid,
+      .pr-growth-grid,
+      .pr-join-grid {
+        grid-template-columns: 1fr;
+      }
+      .pr-tools-grid {
+        grid-template-columns: 1fr;
+      }
+      .pr-watch-media {
+        aspect-ratio: 16 / 10;
+      }
+    }
+    @media (max-width: 767px) {
+      .pr-hero {
+        min-height: 560px;
+        padding: 4.05rem 0 2.9rem;
+      }
+      .pr-hero h1 {
+        font-size: clamp(1.95rem, 9.2vw, 2.58rem);
+      }
+      .pr-hero-lead {
+        font-size: 0.96rem;
+        line-height: 1.72;
+      }
+      .pr-hero-card {
+        border-radius: 20px;
+        padding: 1.02rem 0.92rem;
+      }
+      .pr-watch.is-open {
+        padding: 1.95rem 0 2.4rem;
+      }
+      .pr-watch-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .pr-watch-close {
+        align-self: flex-end;
+      }
+      .pr-watch-shell,
+      .pr-platform-card,
+      .pr-business-item,
+      .pr-highlight-card,
+      .pr-growth-card,
+      .pr-join-shell {
+        border-radius: 20px;
+      }
+      .pr-platform-card,
+      .pr-join-shell {
+        padding: 1.08rem 0.9rem;
+      }
+      .pr-platform-layout {
+        gap: 0.72rem;
+      }
+      .pr-platform-head {
+        padding: 0.86rem 0.76rem;
+      }
+      .pr-platform-head h2 {
+        margin: 0.56rem 0 0.44rem;
+        font-size: clamp(1.02rem, 5.1vw, 1.2rem);
+      }
+      .pr-platform-story {
+        gap: 0.4rem;
+      }
+      .pr-platform-copy {
+        padding: 0.54rem 0.58rem;
+        font-size: 0.79rem;
+        line-height: 1.52;
+      }
+      .pr-platform-list {
+        margin-top: 0.58rem;
+        gap: 0.34rem;
+      }
+      .pr-platform-list li {
+        font-size: 0.78rem;
+        line-height: 1.45;
+        padding: 0.34rem 0.42rem;
+      }
+      .pr-platform-list li::before {
+        width: 6px;
+        height: 6px;
+        margin-top: 0.31rem;
+      }
+      .pr-platform-media {
+        border-radius: 16px;
+        padding: 0.45rem;
+      }
+      .pr-platform-media img {
+        max-height: 190px;
+        border-radius: 11px;
+      }
+      .pr-business-copy,
+      .pr-growth-copy {
+        padding: 0.92rem 0.86rem;
+      }
+      .pr-business-media {
+        min-height: 190px;
+      }
+      .pr-growth-card img {
+        height: 220px;
+      }
+      .pr-watch-media {
+        aspect-ratio: 16 / 11;
+      }
+      .pr-group input,
+      .pr-group textarea {
+        padding: 0.7rem;
+      }
+    }
+    @media (max-width: 520px) {
+      .pr-hero-note {
+        font-size: 0.63rem;
+        padding: 0.35rem 0.65rem;
+      }
+      .pr-platform-media img {
+        max-height: 170px;
+      }
+      .pr-watch-media {
+        aspect-ratio: 16 / 12;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<section class="pr-hero">
+  <video class="pr-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="https://freshkampo.com/wp-content/uploads/2021/08/Productores-Freshkampo.mp4" type="video/mp4">
+    <source src="assets/video/hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <div class="pr-hero-grid">
+      <div class="pr-reveal">
+        <nav class="pr-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+          <span data-i18n="nav-producers">Productores</span>
+        </nav>
+
+        <span class="badge badge-accent" data-i18n="nav-producers">Productores</span>
+        <h1>Crece tu empresa agricola<br>con nosotros.</h1>
+        <p class="pr-hero-lead">Si eres productor de berries, aguacate, higo o esparrago, en FreshKampo encuentras una plataforma solida para profesionalizar tu operacion, escalar con orden y llegar a mercados internacionales con confianza.</p>
+
+        <div class="pr-hero-actions">
+          <a href="#pr-watch" class="btn btn-accent btn-lg" data-pr-watch-toggle>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            Ver video
+          </a>
+          <span class="pr-hero-note">Tu crecimiento tambien es nuestro</span>
+        </div>
+      </div>
+
+      <aside class="pr-hero-card pr-reveal">
+        <p class="pr-hero-card-kicker">Con quien trabajamos</p>
+        <h2>Productores e inversionistas listos para construir una operacion de clase mundial.</h2>
+        <p>Desde proyectos nuevos hasta ranchos consolidados, te acompanamos para llegar al siguiente nivel con estrategia, mercado y ejecucion.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="pr-watch" class="pr-watch">
+  <div class="container pr-watch-wrap">
+    <div class="pr-watch-shell">
+      <div class="pr-watch-head">
+        <h2>Conoce la experiencia FreshKampo para productores</h2>
+        <button type="button" class="pr-watch-close" data-pr-watch-close aria-label="Ocultar video">
+          <span class="x" aria-hidden="true">&times;</span>
+          Ocultar
+        </button>
+      </div>
+      <div class="pr-watch-media">
+        <video id="producersWatchVideo" controls playsinline preload="metadata" poster="assets/img/wrapper-productores-03.jpg">
+          <source src="https://freshkampo.com/wp-content/uploads/2021/08/Productores-Freshkampo.mp4" type="video/mp4">
+          <source src="assets/video/hero.mp4" type="video/mp4">
+          Tu navegador no soporta la reproduccion de video.
+        </video>
+      </div>
+      <div class="pr-watch-foot">
+        Si prefieres verlo en YouTube, abre este enlace:
+        <a href="https://www.youtube.com/watch?v=fYy_ApparZI" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pr-intro">
+  <div class="container">
+    <div class="pr-intro-grid pr-reveal">
+      <div class="pr-intro-copy">
+        <span class="badge">Perfil ideal</span>
+        <h2>Tu empresa agricola puede crecer con estructura, control y rentabilidad.</h2>
+        <p>Nos interesa conocerte si buscas una construccion profesional de negocio agricola. No importa si estas evaluando entrar a la industria o si ya operas decenas de hectareas: te ayudamos a consolidar un camino claro de crecimiento.</p>
+      </div>
+      <aside class="pr-intro-aside">
+        <h3>Perfil de colaboracion ideal</h3>
+        <p>Nos integramos con equipos que desean crecer con orden, disciplina operativa y vision de largo plazo.</p>
+        <ul>
+          <li>Productores de berries, aguacate, higo y esparrago.</li>
+          <li>Equipos que buscan estandarizar calidad e inocuidad.</li>
+          <li>Inversionistas que quieren ejecutar con acompanamiento experto.</li>
+          <li>Operaciones que quieren pasar de volumen a valor sostenible.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="pr-platform">
+  <div class="container">
+    <article class="pr-platform-card pr-reveal">
+      <div class="pr-platform-layout">
+        <header class="pr-platform-head">
+          <span class="badge">Plataforma de negocio</span>
+          <h2>Plataforma integral de construccion de negocio agricola</h2>
+          <div class="pr-platform-story">
+            <p class="pr-platform-copy"><strong>Construimos empresa, no solo ventas.</strong> Te ayudamos a pasar de una operacion reactiva a una organizacion con direccion, indicadores y decisiones estrategicas por temporada.</p>
+            <p class="pr-platform-copy"><strong>Ecosistema integrado para crecer.</strong> Comercializacion, genetica, asesoria tecnica, financiamiento y mejores practicas trabajan juntos para sostener valor en cada hectarea.</p>
+          </div>
+          <ul class="pr-platform-list">
+            <li>Ruta clara de crecimiento desde planeacion hasta venta internacional.</li>
+            <li>Acompanamiento cercano para profesionalizar equipos y procesos.</li>
+            <li>Herramientas para proteger rentabilidad y reducir riesgos operativos.</li>
+          </ul>
+        </header>
+        <div class="pr-platform-media">
+          <img src="assets/img/infografia-productores-01.gif" alt="Infografia de plataforma para productores" loading="lazy">
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="pr-business">
+  <div class="container">
+    <div class="pr-business-stack">
+      <article class="pr-business-item pr-reveal">
+        <figure class="pr-business-media">
+          <img src="assets/img/wrapper-productores-01.png" alt="Comercializacion FreshKampo" loading="lazy">
+        </figure>
+        <div class="pr-business-copy">
+          <span class="pr-business-kicker">Canal internacional</span>
+          <h3>Comercializacion</h3>
+          <p>Vendemos tu fruta directamente a supermercados en Estados Unidos, Europa y Medio Oriente. No trabajamos con intermediarios. Al contar con compromiso y proyecciones de cosecha, negociamos programas estables con precios altamente competitivos para optimizar el retorno financiero de nuestros productores.</p>
+          <p>Este modelo te permite planear con mas certeza, reducir volatilidad comercial y tomar decisiones de inversion con mejor visibilidad de demanda.</p>
+          <ul class="pr-business-points">
+            <li>Programas de venta con enfoque en continuidad y largo plazo.</li>
+            <li>Alineacion entre volumen, calidad y ventanas de mercado.</li>
+            <li>Mayor control sobre margen al eliminar intermediacion.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="pr-business-item is-reverse pr-reveal">
+        <div class="pr-business-copy">
+          <span class="pr-business-kicker">Ventaja varietal</span>
+          <h3>Genetica</h3>
+          <p>Trabajar con FreshKampo te brinda acceso a variedades con gran potencial productivo. Tenemos relaciones con algunas de las casas geneticas mas importantes del mundo para que tu operacion compita con mejor productividad, calidad y valor comercial.</p>
+          <p>Te acompanamos para seleccionar la genetica correcta segun clima, suelo, mercado y estrategia de cosecha, con enfoque en vida de anaquel, consistencia y diferenciacion comercial.</p>
+          <ul class="pr-business-points">
+            <li>Evaluacion varietal con criterio tecnico y financiero.</li>
+            <li>Implementacion gradual para proteger flujo de caja y rendimiento.</li>
+            <li>Mejor posicionamiento en mercados que premian calidad superior.</li>
+          </ul>
+        </div>
+        <figure class="pr-business-media">
+          <img src="assets/img/aguacate.jpg" alt="Genetica y variedades de alto potencial" loading="lazy">
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pr-highlight">
+  <div class="container">
+    <div class="pr-highlight-card pr-reveal">
+      <strong>Mas del 90% de nuestros productores se quedan con nosotros cada temporada.</strong>
+      <p>Esa permanencia se construye con resultados, acompanamiento real y relaciones de largo plazo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pr-advisory">
+  <div class="container">
+    <header class="pr-advisory-head pr-reveal">
+      <span class="badge badge-accent">Asesoria</span>
+      <h2>Te damos herramientas robustas para operar mejor y crecer con control.</h2>
+      <p>Cuando te unes a la familia FreshKampo cuentas con un equipo multidisciplinario que trabaja contigo de forma continua. Nuestro objetivo es que cada decision en campo y en oficina tenga impacto directo en rentabilidad, estabilidad operativa y crecimiento sostenible.</p>
+    </header>
+
+    <div class="pr-tools-grid">
+      <article class="pr-tool pr-reveal">
+        <p class="pr-tool-kicker">Acompanamiento en campo</p>
+        <h3><span class="pr-tool-icon" aria-hidden="true">&#127793;</span>Produccion</h3>
+        <p>Planteamos metas de volumen por temporada y te acompanamos para cumplirlas. Integramos experiencia tecnica, seguimiento en campo y tecnologia para estabilizar rendimiento y bajar variaciones entre cortes.</p>
+        <p class="pr-tool-note">Objetivo: mas productividad por hectarea sin perder consistencia.</p>
+      </article>
+      <article class="pr-tool pr-reveal">
+        <p class="pr-tool-kicker">Control de valor</p>
+        <h3><span class="pr-tool-icon" aria-hidden="true">&#127942;</span>Calidad</h3>
+        <p>Exportamos toda la fruta de nuestros productores. Te apoyamos para reducir rechazos y perdidas desde cosecha hasta cooler, manteniendo estandares de clase mundial en cada lote.</p>
+        <p class="pr-tool-note">Objetivo: proteger precio final y reputacion comercial.</p>
+      </article>
+      <article class="pr-tool pr-reveal">
+        <p class="pr-tool-kicker">Cumplimiento global</p>
+        <h3><span class="pr-tool-icon" aria-hidden="true">&#128737;</span>Inocuidad</h3>
+        <p>El 100% de nuestros productores y ranchos estan certificados. Te guiamos para certificarte y mantenerte en Global Gap y/o Primus con procesos claros, evidencia documental y auditorias preparadas.</p>
+        <p class="pr-tool-note">Objetivo: abrir mercado y sostener permanencia internacional.</p>
+      </article>
+      <article class="pr-tool pr-reveal">
+        <p class="pr-tool-kicker">Vision empresarial</p>
+        <h3><span class="pr-tool-icon" aria-hidden="true">&#128200;</span>Negocio</h3>
+        <p>Te acompanamos a disenar cronogramas por cultivo y estructuras de personal en produccion, administracion y contabilidad para operar de forma sana, rentable y escalable.</p>
+        <p class="pr-tool-note">Objetivo: transformar una operacion productiva en una empresa solida.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pr-growth">
+  <div class="container">
+    <div class="pr-growth-grid">
+      <article class="pr-growth-card pr-reveal">
+        <img src="assets/img/wrapper-productores-03.png" alt="Financiamiento para crecer" loading="lazy">
+        <div class="pr-growth-copy">
+          <h3>Financiamiento</h3>
+          <p>Entendemos que necesitas capital para crecer. Contamos con fuentes propias y alianzas con terceros para crear un vehiculo acorde a tus necesidades, ya sea planta, infraestructura o capital de trabajo.</p>
+        </div>
+      </article>
+
+      <article class="pr-growth-card pr-reveal">
+        <img src="assets/img/wrapper-productores-04.png" alt="Mejores practicas y vision global" loading="lazy">
+        <div class="pr-growth-copy">
+          <h3>Mejores practicas</h3>
+          <p>Nuestra red de productores en Mexico, Estados Unidos y Union Europea nos permite concentrar conocimiento y difundir mejores practicas para que la gestion local tenga una perspectiva global.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pr-join">
+  <div class="container">
+    <article class="pr-join-shell pr-reveal">
+      <header class="pr-join-head">
+        <span class="badge">Unete a la familia</span>
+        <h2>Crece tu empresa agricola con nosotros</h2>
+        <p>Agenda una platica inicial y conversemos sobre tu operacion. Estamos listos para ayudarte a construir el siguiente nivel de tu negocio.</p>
+      </header>
+
+      <form id="contactForm" class="pr-join-form" novalidate>
+        <div class="pr-join-grid">
+          <div class="pr-group">
+            <label for="nombre">Nombre <span>*</span></label>
+            <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="pr-group">
+            <label for="email">E-mail <span>*</span></label>
+            <input class="form-control" type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="pr-join-grid">
+          <div class="pr-group">
+            <label for="celular">Celular <span>*</span></label>
+            <input class="form-control" type="tel" id="celular" name="celular" autocomplete="tel" required>
+          </div>
+          <div class="pr-group">
+            <label for="cultivo">Cultivo principal</label>
+            <input class="form-control" type="text" id="cultivo" name="cultivo" placeholder="Ej. Zarzamora / Aguacate">
+          </div>
+        </div>
+
+        <div class="pr-group">
+          <label for="comentarios">Comentarios</label>
+          <textarea class="form-control" id="comentarios" name="comentarios" placeholder="Cuentanos en que etapa esta tu operacion y que tipo de apoyo necesitas."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Quiero crecer como productor
+        </button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/app.js"></script>
+<script src="js/page-i18n-overrides.js"></script>
+<script>
+(function () {
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.pr-reveal'));
+  var watchSection = document.getElementById('pr-watch');
+  var watchVideo = document.getElementById('producersWatchVideo');
+  var watchTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-pr-watch-toggle]'));
+  var watchCloseButtons = Array.prototype.slice.call(document.querySelectorAll('[data-pr-watch-close]'));
+
+  function setVisible(el, visible) {
+    el.classList.toggle('is-visible', visible);
+  }
+
+  function openWatch(autoplay) {
+    if (!watchSection) return;
+    watchSection.classList.add('is-open');
+
+    if (autoplay && watchVideo) {
+      window.setTimeout(function () {
+        watchVideo.play().catch(function () {
+          /* Browser may require explicit interaction with controls. */
+        });
+      }, 180);
+    }
+
+    window.setTimeout(function () {
+      watchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 40);
+  }
+
+  function closeWatch(scrollToHero) {
+    if (!watchSection) return;
+    watchSection.classList.remove('is-open');
+
+    if (watchVideo) {
+      watchVideo.pause();
+      try {
+        watchVideo.currentTime = 0;
+      } catch (error) {
+        /* Some browsers may block currentTime reset while metadata is not ready. */
+      }
+    }
+
+    if (scrollToHero) {
+      var heroSection = document.querySelector('.pr-hero');
+      if (heroSection) {
+        window.setTimeout(function () {
+          heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 40);
+      }
+    }
+  }
+
+  watchTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      openWatch(true);
+    });
+  });
+
+  watchCloseButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      closeWatch(true);
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && watchSection && watchSection.classList.contains('is-open')) {
+      closeWatch(false);
+    }
+  });
+
+  if (window.location.hash === '#pr-watch') {
+    openWatch(false);
+  }
+
+  if (!revealEls.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      setVisible(entry.target, entry.isIntersecting);
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -4% 0px' });
+
+  revealEls.forEach(function (el) {
+    observer.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

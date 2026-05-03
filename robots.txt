@@ -1,0 +1,13 @@
+# FreshKampo — Robots.txt
+# https://freshkampo.com
+
+User-agent: *
+Allow: /
+
+# Block admin / private areas (if applicable)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+
+# Sitemap
+Sitemap: https://freshkampo.com/sitemap.xml

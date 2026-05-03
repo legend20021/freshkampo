@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia - FreshKampo | Desde 2004 conectando campos con el mundo</title>
+  <meta name="description" content="Conoce la historia de FreshKampo desde su fundacion en 2004 en Michoacan hasta convertirse en lider internacional de berries frescos." />
+  <link rel="canonical" href="https://freshkampo.com/historia" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hs-hero {
+      position: relative;
+      min-height: 680px;
+      padding: 6.4rem 0 4.2rem;
+      overflow: hidden;
+      isolation: isolate;
+      background: #0d2f1d;
+    }
+    .hs-hero-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -3;
+      filter: saturate(1.06) contrast(1.02);
+    }
+    .hs-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(56% 62% at 12% 18%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 72%),
+        radial-gradient(62% 70% at 84% 72%, rgba(200, 169, 81, 0.14) 0%, rgba(200, 169, 81, 0) 72%);
+      z-index: -2;
+      opacity: 0.95;
+    }
+    .hs-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(70% 78% at 18% 15%, rgba(200, 169, 81, 0.2) 0%, rgba(200, 169, 81, 0) 60%),
+        linear-gradient(112deg, rgba(5, 18, 10, 0.64) 0%, rgba(8, 36, 21, 0.52) 48%, rgba(12, 46, 27, 0.42) 100%);
+    }
+    .hs-hero .container,
+    .hs-watch-section .container,
+    .hs-timeline-section .container,
+    .hs-future-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 1024px) {
+      .hs-hero .container,
+      .hs-watch-section .container,
+      .hs-timeline-section .container,
+      .hs-future-section .container {
+        padding-right: calc(var(--space-6) + 56px);
+      }
+    }
+
+    .hs-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.78fr);
+      gap: 1.8rem;
+      align-items: end;
+      max-width: 1120px;
+    }
+    .hs-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.8rem;
+    }
+    .hs-breadcrumb a:hover {
+      color: #fff;
+    }
+    .hs-hero h1 {
+      color: #fff;
+      max-width: 660px;
+      margin: 0.9rem 0 1rem;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      text-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(14px);
+      animation: hsRise 0.82s 0.11s ease forwards;
+    }
+    .hs-hero-lead {
+      max-width: 650px;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.82;
+      font-size: 1.03rem;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: hsRise 0.82s 0.2s ease forwards;
+    }
+    .hs-hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.82rem;
+      flex-wrap: wrap;
+      margin-top: 1.65rem;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: hsRise 0.82s 0.29s ease forwards;
+    }
+    .hs-hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.84);
+      padding: 0.44rem 0.9rem;
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hs-hero-chip::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+    }
+
+    .hs-hero-panel {
+      justify-self: end;
+      width: min(100%, 328px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.24);
+      padding: 1.15rem 1.1rem;
+      font-family: var(--font-sans);
+    }
+    .hs-panel-kicker {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 800;
+      color: var(--c-accent-light);
+      margin-bottom: 0.62rem;
+    }
+    .hs-hero-panel h2 {
+      margin: 0;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      font-size: clamp(1.12rem, 2.2vw, 1.48rem);
+      line-height: 1.27;
+      text-wrap: balance;
+    }
+    .hs-hero-panel p {
+      margin: 0.7rem 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.55;
+      font-size: 0.89rem;
+      font-family: var(--font-sans);
+      font-style: normal;
+    }
+    .hs-watch-section {
+      padding: 0;
+      background: linear-gradient(180deg, #f1f7f3 0%, #f7faf8 100%);
+    }
+    .hs-watch-wrap {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-14px);
+      transition:
+        max-height 0.78s cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 0.45s ease,
+        transform 0.45s ease;
+    }
+    .hs-watch-section.is-open {
+      padding: 2.7rem 0 4rem;
+    }
+    .hs-watch-section.is-open .hs-watch-wrap {
+      max-height: 920px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hs-watch-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      border-radius: 28px;
+      border: 1px solid rgba(26, 92, 56, 0.16);
+      background: #fff;
+      box-shadow: 0 26px 60px rgba(13, 61, 36, 0.15);
+      overflow: hidden;
+    }
+    .hs-watch-head {
+      padding: 1rem 1.15rem 0.92rem;
+      background: linear-gradient(145deg, #f8fcf9, #edf6f0);
+      border-bottom: 1px solid rgba(26, 92, 56, 0.14);
+      text-align: center;
+    }
+    .hs-watch-head h2 {
+      margin: 0;
+      color: #123824;
+      font-size: clamp(1.06rem, 2.1vw, 1.38rem);
+      text-wrap: balance;
+    }
+    .hs-watch-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .hs-watch-frame video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      object-fit: cover;
+    }
+
+    .js-scroll-fx {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .js-scroll-fx.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hs-timeline-section {
+      padding: 4.4rem 0 3rem;
+      background: #f7faf8;
+    }
+    .hs-timeline-head {
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 2rem;
+    }
+    .hs-timeline-head h2 {
+      max-width: 760px;
+      margin: 0.72rem auto;
+      text-wrap: balance;
+    }
+    .hs-timeline-head p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--c-gray-500);
+      line-height: 1.78;
+    }
+
+    .hs-track-shell {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid var(--c-gray-100);
+      background: #f3f7f4;
+      box-shadow: 0 24px 58px rgba(13, 61, 36, 0.14);
+      isolation: isolate;
+    }
+    .hs-track-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("assets/img/historia/img-historia-mapa-min.jpg") center / cover no-repeat;
+      opacity: 0.45;
+      filter: grayscale(1);
+      z-index: 0;
+    }
+    .hs-track-shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(60% 56% at 50% 8%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 70%),
+        linear-gradient(180deg, rgba(247, 250, 248, 0.52), rgba(247, 250, 248, 0.9));
+    }
+
+    .hs-timeline-track {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 90px minmax(0, 1fr);
+      column-gap: 1.4rem;
+      row-gap: 1.2rem;
+      padding: 1.45rem;
+    }
+    .hs-timeline-track::before {
+      content: "";
+      position: absolute;
+      top: 1.1rem;
+      bottom: 1.1rem;
+      left: 50%;
+      width: 3px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(26, 92, 56, 0.24), rgba(200, 169, 81, 0.62), rgba(26, 92, 56, 0.24));
+      box-shadow: 0 0 0 8px rgba(26, 92, 56, 0.05);
+    }
+
+    .hs-step {
+      --connector-distance: clamp(56px, 5.2vw, 72px);
+      position: relative;
+      border-radius: 22px;
+      border: 1px solid rgba(26, 92, 56, 0.14);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 14px 30px rgba(15, 53, 31, 0.12);
+      padding: 0.86rem 0.86rem 0.9rem;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(26px) scale(0.97);
+      transition:
+        opacity 0.56s ease,
+        transform 0.56s cubic-bezier(0.22, 0.61, 0.36, 1),
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+    .hs-step.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .hs-step:hover {
+      border-color: rgba(26, 92, 56, 0.31);
+      box-shadow: 0 22px 40px rgba(15, 53, 31, 0.17);
+    }
+    .hs-step.is-left {
+      grid-column: 1;
+    }
+    .hs-step.is-right {
+      grid-column: 3;
+    }
+
+    .hs-step.is-left::before,
+    .hs-step.is-right::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: var(--connector-distance);
+      height: 30px;
+      pointer-events: none;
+    }
+    .hs-step.is-left::before {
+      right: calc(var(--connector-distance) * -1);
+      border-top: 2px dashed rgba(26, 92, 56, 0.44);
+      border-right: 2px dashed rgba(26, 92, 56, 0.3);
+      border-top-right-radius: 32px;
+    }
+    .hs-step.is-right::before {
+      left: calc(var(--connector-distance) * -1);
+      border-top: 2px dashed rgba(26, 92, 56, 0.44);
+      border-left: 2px dashed rgba(26, 92, 56, 0.3);
+      border-top-left-radius: 32px;
+    }
+    .hs-step.is-left::after,
+    .hs-step.is-right::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 7px);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: radial-gradient(circle at 38% 35%, #fff 8%, var(--c-accent) 48%, var(--c-accent-dark) 100%);
+      box-shadow: 0 0 0 5px rgba(200, 169, 81, 0.2);
+    }
+    .hs-step.is-left::after {
+      right: calc(var(--connector-distance) * -1 - 7px);
+    }
+    .hs-step.is-right::after {
+      left: calc(var(--connector-distance) * -1 - 7px);
+    }
+
+    .hs-step-head {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 0.7rem;
+      align-items: center;
+      margin-bottom: 0.62rem;
+    }
+    .hs-step-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 44% 34%, rgba(255, 255, 255, 0.96), rgba(241, 247, 243, 0.95));
+      border: 1px solid rgba(26, 92, 56, 0.2);
+      transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+    }
+    .hs-step-icon::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 1px dashed rgba(26, 92, 56, 0.25);
+      transition: transform 0.55s ease, opacity 0.25s ease;
+      opacity: 0.75;
+    }
+    .hs-step:hover .hs-step-icon {
+      transform: rotate(6deg) scale(1.04);
+      box-shadow: 0 8px 20px rgba(13, 61, 36, 0.2);
+    }
+    .hs-step:hover .hs-step-icon::before {
+      transform: rotate(24deg);
+      opacity: 1;
+    }
+    .hs-step-icon img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .hs-step-year {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--c-primary);
+      margin-bottom: 0.28rem;
+    }
+    .hs-step-title {
+      margin: 0;
+      color: var(--c-gray-900);
+      font-size: 0.98rem;
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+
+    .hs-step-media {
+      position: relative;
+      height: 108px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(26, 92, 56, 0.14);
+      margin-bottom: 0.62rem;
+      background: #e8efea;
+      cursor: zoom-in;
+    }
+    .hs-step-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.64s ease;
+    }
+    .hs-step-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(8, 38, 21, 0.34), rgba(8, 38, 21, 0));
+      pointer-events: none;
+    }
+    .hs-step:hover .hs-step-media img {
+      transform: scale(1.07);
+    }
+    .hs-step p {
+      margin: 0;
+      color: var(--c-gray-600);
+      line-height: 1.62;
+      font-size: 0.8rem;
+    }
+
+    .hs-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(6, 18, 10, 0.86);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+    .hs-lightbox.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .hs-lightbox-inner {
+      position: relative;
+      width: min(96vw, 1200px);
+      max-height: 90vh;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      background: #0a120d;
+    }
+    .hs-lightbox-inner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 90vh;
+      object-fit: contain;
+      background: #0a120d;
+    }
+    .hs-lightbox-close {
+      position: absolute;
+      top: 0.55rem;
+      right: 0.55rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      font-size: 1.22rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform var(--t-fast), background var(--t-fast);
+    }
+    .hs-lightbox-close:hover {
+      background: rgba(0, 0, 0, 0.78);
+      transform: scale(1.06);
+    }
+
+    .hs-future-section {
+      padding: 3rem 0 4.6rem;
+      background: #f7faf8;
+    }
+    .hs-next-story {
+      max-width: 1040px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(26, 92, 56, 0.16);
+      background:
+        radial-gradient(58% 80% at 8% 0%, rgba(200, 169, 81, 0.2), transparent 76%),
+        radial-gradient(62% 72% at 100% 100%, rgba(46, 122, 78, 0.18), transparent 72%),
+        linear-gradient(135deg, #f7fbf8 0%, #ecf5ef 52%, #e8f2eb 100%);
+      box-shadow: 0 18px 44px rgba(11, 50, 29, 0.14);
+      padding: 1.5rem 1.34rem;
+      text-align: center;
+      isolation: isolate;
+    }
+    .hs-next-story::before {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      top: -74px;
+      right: -64px;
+      background: radial-gradient(circle, rgba(200, 169, 81, 0.24) 0%, rgba(200, 169, 81, 0) 72%);
+      animation: hsFloatOrb 4.8s ease-in-out infinite;
+      z-index: -1;
+    }
+    .hs-next-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.44rem;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-primary);
+      margin-bottom: 0.55rem;
+    }
+    .hs-next-kicker::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      box-shadow: 0 0 0 5px rgba(200, 169, 81, 0.2);
+      animation: hsDotPulse 2.3s ease-in-out infinite;
+    }
+    .hs-next-story h2 {
+      margin: 0 0 0.46rem;
+      color: #123b26;
+      font-size: clamp(1.22rem, 2.5vw, 1.82rem);
+      letter-spacing: -0.015em;
+    }
+    .hs-next-story p {
+      margin: 0 auto;
+      max-width: 820px;
+      color: #335a44;
+      line-height: 1.72;
+    }
+
+    @media (max-width: 1120px) {
+      .hs-timeline-track {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 1.05rem;
+      }
+      .hs-timeline-track::before,
+      .hs-step::before,
+      .hs-step::after {
+        display: none;
+      }
+      .hs-step {
+        grid-column: auto !important;
+      }
+      .hs-step-media {
+        height: 92px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hs-hero {
+        min-height: 600px;
+        padding: 4.8rem 0 3.1rem;
+      }
+      .hs-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .hs-hero-panel {
+        justify-self: start;
+        width: min(100%, 560px);
+      }
+      .hs-watch-frame {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hs-hero {
+        min-height: 540px;
+        padding: 4.05rem 0 2.7rem;
+      }
+      .hs-hero h1 {
+        font-size: clamp(1.9rem, 9vw, 2.48rem);
+      }
+      .hs-hero-lead {
+        font-size: 0.96rem;
+        line-height: 1.73;
+      }
+      .hs-hero-panel {
+        border-radius: 20px;
+        padding: 1.05rem 0.95rem;
+      }
+      .hs-watch-section.is-open {
+        padding: 2.1rem 0 3rem;
+      }
+      .hs-watch-shell {
+        border-radius: 22px;
+      }
+      .hs-watch-head {
+        padding: 0.9rem 0.82rem 0.84rem;
+      }
+      .hs-watch-frame {
+        aspect-ratio: 16 / 11;
+      }
+      .hs-lightbox {
+        padding: 0.6rem;
+      }
+      .hs-lightbox-close {
+        width: 34px;
+        height: 34px;
+        font-size: 1.1rem;
+      }
+      .hs-step {
+        transition:
+          opacity 0.36s ease,
+          transform 0.36s cubic-bezier(0.22, 0.61, 0.36, 1),
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .hs-track-shell {
+        border-radius: 23px;
+        padding: 0.52rem;
+      }
+      .hs-track-shell::before {
+        opacity: 0.22;
+      }
+      .hs-timeline-track {
+        display: block;
+        padding: 0;
+      }
+      .hs-step {
+        margin-bottom: 0.74rem;
+        padding: 0.75rem 0.72rem 0.74rem;
+      }
+      .hs-step:last-child {
+        margin-bottom: 0;
+      }
+      .hs-step-head {
+        grid-template-columns: 58px 1fr;
+        gap: 0.64rem;
+        margin-bottom: 0.2rem;
+      }
+      .hs-step-icon {
+        width: 58px;
+        height: 58px;
+      }
+      .hs-step-icon img {
+        width: 49px;
+        height: 49px;
+      }
+      .hs-step-media {
+        display: none;
+      }
+      .hs-step-year {
+        margin-bottom: 0.18rem;
+        font-size: 0.56rem;
+      }
+      .hs-step-title {
+        font-size: 0.92rem;
+      }
+      .hs-step p {
+        font-size: 0.75rem;
+        line-height: 1.56;
+      }
+      .hs-next-story {
+        border-radius: 22px;
+        padding: 1.16rem 0.9rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hs-hero-chip {
+        font-size: 0.64rem;
+        padding: 0.38rem 0.7rem;
+      }
+      .hs-timeline-head p {
+        font-size: 0.91rem;
+      }
+      .hs-watch-frame {
+        aspect-ratio: 16 / 12;
+      }
+    }
+
+    @keyframes hsHeroZoom {
+      from { transform: scale(1.08); }
+      to { transform: scale(1.06); }
+    }
+    @keyframes hsRise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes hsDotPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 5px rgba(200, 169, 81, 0.2); }
+      50% { transform: scale(1.13); box-shadow: 0 0 0 8px rgba(200, 169, 81, 0.12); }
+    }
+    @keyframes hsFloatOrb {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+  </style>
+</head>
+<body>
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<section class="hs-hero">
+  <video class="hs-hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="https://freshkampo.com/wp-content/uploads/2021/08/Historia-Freshkampo.mp4" type="video/mp4">
+    <source src="assets/video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="hs-hero-grid">
+      <div>
+        <nav class="hs-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+          <span data-i18n="nav-history">Historia</span>
+        </nav>
+
+        <span class="badge badge-accent" data-i18n="nav-history">Historia</span>
+        <h1>Mas que una empresa,<br>somos una familia</h1>
+        <p class="hs-hero-lead">En FreshKampo, mas que una empresa, somos una familia. Llevamos mas de 15 anos cumpliendo nuestra promesa de entregar berries frescas, ricas, nutritivas y cultivadas en armonia con el medio ambiente.</p>
+
+        <div class="hs-hero-actions">
+          <a href="#historia-video" class="btn btn-accent btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            Ver video
+          </a>
+          <span class="hs-hero-chip">Una historia real de crecimiento</span>
+        </div>
+      </div>
+
+      <aside class="hs-hero-panel reveal reveal-delay-1">
+        <p class="hs-panel-kicker">Nuestra esencia</p>
+        <h2>Una historia de esfuerzo, dedicacion y pasion.</h2>
+        <p>Desde Periban, Michoacan, hacia multiples mercados internacionales, avanzamos etapa por etapa con una sola idea: crecer juntos.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="historia-video" class="hs-watch-section">
+  <div class="container hs-watch-wrap">
+    <div class="hs-watch-shell">
+      <div class="hs-watch-head">
+        <h2>Asi inicio FreshKampo y asi seguimos creciendo en 2026</h2>
+      </div>
+
+      <div class="hs-watch-frame">
+        <video id="historyWatchVideo" controls playsinline preload="metadata" poster="assets/img/historia/wrapper-historia-min-1500x630.jpg">
+          <source src="https://freshkampo.com/wp-content/uploads/2021/08/Historia-Freshkampo.mp4" type="video/mp4">
+          <source src="assets/video/hero.mp4" type="video/mp4">
+          Tu navegador no soporta la reproduccion de video.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hs-timeline-section">
+  <div class="container">
+    <header class="hs-timeline-head reveal">
+      <span class="badge">Nuestra historia</span>
+      <h2>Un camino real que sigue creciendo</h2>
+      <p>Replanteamos el recorrido para que se viva como una historia secuencial: conectada, clara y con cada hito apareciendo al ritmo del scroll.</p>
+    </header>
+
+    <div class="hs-track-shell reveal">
+      <div class="hs-timeline-track">
+        <article class="hs-step is-left js-hs-step" style="--step:1;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-01.svg" alt="Hito 2004" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2004</span>
+              <h3 class="hs-step-title">Nace FreshKampo</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (1).png" alt="Inicio FreshKampo" loading="lazy"></div>
+          <p>Empezamos dos personas con el sueno de cambiar el entorno. Sumamos a productores que transicionaron la primera huerta de aguacate convencional a organico en Periban, Michoacan.</p>
+        </article>
+
+        <article class="hs-step is-right js-hs-step" style="--step:2;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-02.svg" alt="Hito 2006" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2006</span>
+              <h3 class="hs-step-title">Nuestra primera venta internacional</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (2).png" alt="Primer exportacion internacional" loading="lazy"></div>
+          <p>Exportamos nuestro primer pedido de zarzamoras y definimos como estrategia ofrecer la gama completa de berries para responder mejor a cada cliente.</p>
+        </article>
+
+        <article class="hs-step is-left js-hs-step" style="--step:3;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-03.svg" alt="Hito 2008" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2008</span>
+              <h3 class="hs-step-title">Primer Congreso Nacional de Berries</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (3).png" alt="Congreso nacional de berries" loading="lazy"></div>
+          <p>Con la mision de encontrar a los mas innovadores de la industria, reunimos especialistas de mas de 10 paises en un foro nacional organizado por nosotros.</p>
+        </article>
+
+        <article class="hs-step is-right js-hs-step" style="--step:4;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-04.svg" alt="Hito 2012" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2012</span>
+              <h3 class="hs-step-title">Presencia global</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (4).png" alt="Presencia global FreshKampo" loading="lazy"></div>
+          <p>La gama completa de berries FreshKampo ya se encontraba en supermercados de Norteamerica y Europa. Era claro que el siguiente paso era crecer aun mas.</p>
+        </article>
+
+        <article class="hs-step is-left js-hs-step" style="--step:5;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-05.svg" alt="Hito 2014" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2014</span>
+              <h3 class="hs-step-title">Integracion vertical hacia USA</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (5).png" alt="Integracion vertical hacia USA" loading="lazy"></div>
+          <p>Establecimos Meridian Fine Foods en Estados Unidos, la primera subsidiaria fuera de Mexico para dar mejor servicio a nuestros clientes de Norteamerica.</p>
+        </article>
+
+        <article class="hs-step is-right js-hs-step" style="--step:6;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-06.svg" alt="Hito 2017" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2017</span>
+              <h3 class="hs-step-title">Presencia en el Viejo Mundo</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (6).png" alt="Apertura en Europa" loading="lazy"></div>
+          <p>En Rotterdam, Holanda, abrimos Euro Meridian, nuestra subsidiaria europea. La vision global de FreshKampo tomaba cada vez mas forma.</p>
+        </article>
+
+        <article class="hs-step is-left js-hs-step" style="--step:7;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-07.svg" alt="Hito 2019" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2019</span>
+              <h3 class="hs-step-title">Produccion en Marruecos</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (7).png" alt="Produccion en Marruecos" loading="lazy"></div>
+          <p>Creamos Meridian du Maghreb para apoyar a productores marroquies a cultivar frutos de clase mundial orientados al mercado europeo.</p>
+        </article>
+
+        <article class="hs-step is-right js-hs-step" style="--step:8;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-08.svg" alt="Hito 2021" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2021</span>
+              <h3 class="hs-step-title">Mas de 230 colaboradores</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (8).png" alt="Equipo FreshKampo" loading="lazy"></div>
+          <p>Seguimos construyendo nuestro camino para continuar entregando la mejor version de nosotros mismos, creciendo a pasos firmes como una sola familia.</p>
+        </article>
+
+        <article class="hs-step is-left js-hs-step" style="--step:9;">
+          <header class="hs-step-head">
+            <div class="hs-step-icon"><img src="assets/img/historia/icon-historia-09.svg" alt="Hito 2026" loading="lazy"></div>
+            <div>
+              <span class="hs-step-year">2026</span>
+              <h3 class="hs-step-title">Seguimos creciendo con vision global</h3>
+            </div>
+          </header>
+          <div class="hs-step-media"><img src="assets/img/historia/h (9).png" alt="FreshKampo en 2026" loading="lazy"></div>
+          <p>Fortalecemos nuestra integracion vertical, cultura de inocuidad y operacion global para llevar mas frutos FreshKampo a nuevos mercados y nuevas familias.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hs-future-section">
+  <div class="container">
+    <article class="hs-next-story js-scroll-fx">
+      <span class="hs-next-kicker">En adelante</span>
+      <h2>Esto es solo el comienzo</h2>
+      <p>Contribuir a que el mundo cada dia tenga acceso a mas frutos FreshKampo nos mueve a alcanzar el siguiente nivel. Nuestra historia continua con la misma pasion que nos trajo hasta aqui.</p>
+    </article>
+  </div>
+</section>
+
+<div class="hs-lightbox" id="hsLightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada de historia">
+  <div class="hs-lightbox-inner">
+    <img id="hsLightboxImg" src="" alt="Imagen ampliada" />
+    <button class="hs-lightbox-close" id="hsLightboxClose" type="button" aria-label="Cerrar imagen">✕</button>
+  </div>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Te gustaria construir el siguiente capitulo con nosotros?</h2>
+    <p>Estamos listos para seguir creciendo con clientes, productores y aliados que compartan esta vision.</p>
+    <div class="cta-actions">
+      <a href="contacto.html" class="btn btn-white btn-lg">Contactanos</a>
+      <a href="productores.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);border-radius:9999px;" data-i18n="nav-producers">Productores</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/app.js"></script>
+<script src="js/page-i18n-overrides.js"></script>
+<script>
+(function () {
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.js-hs-step'));
+  var effects = Array.prototype.slice.call(document.querySelectorAll('.js-scroll-fx'));
+  var timelineMedia = Array.prototype.slice.call(document.querySelectorAll('.hs-step-media'));
+  var watchSection = document.getElementById('historia-video');
+  var watchVideo = document.getElementById('historyWatchVideo');
+  var watchTriggers = Array.prototype.slice.call(document.querySelectorAll('a[href="#historia-video"]'));
+  var lightbox = document.getElementById('hsLightbox');
+  var lightboxImg = document.getElementById('hsLightboxImg');
+  var lightboxClose = document.getElementById('hsLightboxClose');
+
+  function setVisible(el, visible) {
+    el.classList.toggle('is-visible', visible);
+  }
+
+  function openWatchSection(autoplay) {
+    if (!watchSection) return;
+    watchSection.classList.add('is-open');
+
+    if (autoplay && watchVideo) {
+      window.setTimeout(function () {
+        watchVideo.play().catch(function () {
+          /* Browser may require user interaction with controls. */
+        });
+      }, 220);
+    }
+
+    window.setTimeout(function () {
+      watchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 40);
+  }
+
+  function openHistoryLightbox(img) {
+    if (!lightbox || !lightboxImg || !img) return;
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || 'Imagen ampliada';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeHistoryLightbox() {
+    if (!lightbox || !lightboxImg) return;
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    window.setTimeout(function () {
+      lightboxImg.src = '';
+    }, 180);
+  }
+
+  watchTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      openWatchSection(true);
+    });
+  });
+
+  timelineMedia.forEach(function (media) {
+    var img = media.querySelector('img');
+    if (!img) return;
+
+    media.setAttribute('role', 'button');
+    media.setAttribute('tabindex', '0');
+    media.setAttribute('aria-label', 'Abrir imagen en grande');
+
+    media.addEventListener('click', function () {
+      openHistoryLightbox(img);
+    });
+
+    media.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openHistoryLightbox(img);
+      }
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', function (event) {
+      event.preventDefault();
+      closeHistoryLightbox();
+    });
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) {
+        closeHistoryLightbox();
+      }
+    });
+  }
+
+  if (window.location.hash === '#historia-video') {
+    openWatchSection(false);
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
+      closeHistoryLightbox();
+    }
+  });
+
+  if (!steps.length && !effects.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    steps.forEach(function (step) {
+      step.classList.add('is-visible');
+    });
+    effects.forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+    return;
+  }
+
+  var isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+  if (steps.length) {
+    if (isMobile) {
+      var mobileStepObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          setVisible(entry.target, entry.isIntersecting);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -2% 0px' });
+
+      steps.forEach(function (step) {
+        mobileStepObserver.observe(step);
+      });
+    } else {
+      var pairMap = [];
+      for (var i = 0; i < steps.length; i += 2) {
+        pairMap.push({
+          left: steps[i],
+          right: steps[i + 1] || null,
+          count: 0,
+          timerId: null
+        });
+      }
+
+      var stepPairIndex = new Map();
+      pairMap.forEach(function (pair, pairIndex) {
+        if (pair.left) stepPairIndex.set(pair.left, pairIndex);
+        if (pair.right) stepPairIndex.set(pair.right, pairIndex);
+      });
+
+      var pairObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var pairIndex = stepPairIndex.get(entry.target);
+          if (pairIndex === undefined) return;
+          var pair = pairMap[pairIndex];
+
+          if (entry.isIntersecting) {
+            pair.count += 1;
+            if (pair.count === 1) {
+              setVisible(pair.left, true);
+              if (pair.right) {
+                if (pair.timerId) window.clearTimeout(pair.timerId);
+                pair.timerId = window.setTimeout(function () {
+                  setVisible(pair.right, true);
+                }, 120);
+              }
+            }
+          } else {
+            pair.count = Math.max(0, pair.count - 1);
+            if (pair.count === 0) {
+              if (pair.timerId) window.clearTimeout(pair.timerId);
+              setVisible(pair.left, false);
+              if (pair.right) setVisible(pair.right, false);
+            }
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -6% 0px' });
+
+      steps.forEach(function (step) {
+        pairObserver.observe(step);
+      });
+    }
+  }
+
+  var fxObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      setVisible(entry.target, entry.isIntersecting);
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -6% 0px' });
+
+  effects.forEach(function (el) {
+    fxObserver.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

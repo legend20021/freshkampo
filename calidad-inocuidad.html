@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calidad e Inocuidad — FreshKampo | GFSI, BPA, Cadena de Frío</title>
+  <meta name="description" content="Conoce los estándares de calidad e inocuidad de FreshKampo: GFSI, BPA, análisis multirresiduos, auditorías de productores y política de calidad." />
+  <link rel="canonical" href="https://freshkampo.com/calidad-inocuidad" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ══ HERO ══ */
+    .cq-hero{position:relative;background-image:url('assets/img/wrapper-calidad.jpg');background-size:cover;background-position:center 40%;background-repeat:no-repeat;min-height:620px;display:flex;align-items:center;padding:6rem 0 5rem;overflow:hidden;}
+    .cq-hero::before{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(120deg, rgb(5 18 10) 0%, rgb(8 35 18 / 30%) 40%, rgb(14 52 28 / 0%) 65%, rgba(4, 12, 6, .15) 100%)}
+    .cq-hero::after{content:'';position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 55% 50% at 10% 25%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
+    .cq-hero .container{position:relative;z-index:1;}
+    .cq-hero-grid{display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:center;}
+    .cq-hero .breadcrumb{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:1.25rem;}
+    .cq-hero .breadcrumb a{color:rgba(255,255,255,.45);}
+    .cq-hero .breadcrumb a:hover{color:#fff;}
+    .cq-hero h1{color:#fff;margin:.5rem 0 1rem;max-width:660px;}
+    .cq-hero-lead{color:rgba(255,255,255,.72);font-size:1.1rem;max-width:560px;margin-bottom:2rem;}
+    .cq-stats{display:flex;background:rgba(255,255,255,.07);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;max-width:540px;}
+    .cq-stat{flex:1;padding:1.1rem 1rem;text-align:center;border-right:1px solid rgba(255,255,255,.1);}
+    .cq-stat:last-child{border-right:none;}
+    .cq-stat strong{display:block;font-size:1.5rem;font-weight:800;color:var(--c-accent-light);line-height:1;margin-bottom:.25rem;}
+    .cq-stat span{font-size:.65rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.07em;}
+    .cq-hero-card{background:rgba(255,255,255,.09);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:1.75rem 1.5rem;}
+    .cq-hero-card-icon{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,rgba(200,169,81,.3),rgba(200,169,81,.1));border:1px solid rgba(200,169,81,.3);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;}
+    .cq-hero-card h4{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:.4rem;line-height:1.3;}
+    .cq-hero-card p{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.6;margin:0;}
+    .cq-hero-card hr{border:none;border-top:1px solid rgba(255,255,255,.1);margin:.9rem 0;}
+    .cq-cert-list{display:flex;flex-direction:column;gap:.5rem;}
+    .cq-cert-row{display:flex;align-items:center;gap:.55rem;font-size:.74rem;color:rgba(255,255,255,.65);}
+    .cq-cert-dot{width:6px;height:6px;border-radius:50%;background:var(--c-accent);flex-shrink:0;}
+    /* ══ SPLIT SECTIONS ══ */
+    .cq-split{padding:5rem 0;}
+    .cq-split.bg-gray{background:var(--c-gray-50);}
+    .cq-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;}
+    .cq-badge{margin-bottom:.6rem;}
+    .cq-split-grid h2{font-size:clamp(1.4rem,2.8vw,1.9rem);color:var(--c-gray-900);margin:.2rem 0 1rem;line-height:1.28;}
+    .cq-split-grid p{color:var(--c-gray-500);font-size:.95rem;line-height:1.85;margin-bottom:.85rem;}
+    .cq-split-grid p:last-of-type{margin-bottom:0;}
+    .cq-pic{border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(13,55,32,.14),0 4px 14px rgba(0,0,0,.07);line-height:0;}
+    .cq-pic img{width:100%;height:420px;object-fit:cover;object-position:center;display:block;transition:transform .5s cubic-bezier(.22,.61,.36,1);}
+    .cq-pic:hover img{transform:scale(1.04);}
+    /* logos variant — contain, no crop */
+    .cq-pic--logos{background:#fff;border:1px solid var(--c-gray-100);}
+    .cq-pic--logos img{height:auto;min-height:280px;object-fit:contain;padding:2.5rem 2rem;}
+    .cq-pic--logos:hover img{transform:none;}
+    .cq-checks{display:flex;flex-direction:column;gap:.6rem;margin-top:1.2rem;padding:0;list-style:none;}
+    .cq-checks li{display:flex;gap:.65rem;align-items:flex-start;font-size:.88rem;color:var(--c-gray-600);line-height:1.5;}
+    .cq-check-icon{flex-shrink:0;width:18px;height:18px;margin-top:1px;border-radius:50%;background:var(--c-primary-50);border:1.5px solid rgba(26,92,56,.18);display:flex;align-items:center;justify-content:center;}
+    .cq-check-icon svg{width:10px;height:10px;}
+    .cq-steps{display:flex;flex-direction:column;gap:1rem;margin-top:1.4rem;}
+    .cq-step{display:flex;gap:1rem;align-items:flex-start;}
+    .cq-step-n{width:34px;height:34px;border-radius:50%;background:var(--c-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;}
+    .cq-step-body strong{display:block;font-size:.88rem;font-weight:700;color:var(--c-gray-900);margin-bottom:.18rem;}
+    .cq-step-body span{font-size:.8rem;color:var(--c-gray-500);line-height:1.5;}
+    .cq-tag-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem;}
+    .cq-tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;font-weight:600;color:var(--c-primary-dark);background:var(--c-primary-50);border:1px solid rgba(26,92,56,.14);border-radius:9999px;padding:.32rem .9rem;}
+    /* ══ INOCUIDAD DARK ══ */
+    .cq-dark{position:relative;padding:5rem 0;background:var(--c-primary-dark);overflow:hidden;}
+    .cq-dark-bg{position:absolute;inset:0;z-index:0;}
+    .cq-dark-bg img{width:100%;height:100%;object-fit:cover;opacity:.18;filter:saturate(.5) brightness(.7);display:block;}
+    .cq-dark-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,28,15,.96) 0%,rgba(10,45,25,.84) 50%,rgba(10,45,25,.55) 100%);}
+    .cq-dark .container{position:relative;z-index:1;}
+    .cq-dark-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4.5rem;align-items:center;}
+    .cq-dark-text h2{font-size:clamp(1.4rem,2.8vw,1.9rem);color:#fff;margin:.2rem 0 1rem;line-height:1.28;}
+    .cq-dark-text p{color:rgba(255,255,255,.68);font-size:.95rem;line-height:1.85;margin-bottom:.85rem;}
+    .cq-dark-text p:last-of-type{margin-bottom:1.5rem;}
+    .cq-dark-text .cq-checks li{color:rgba(255,255,255,.72);}
+    .cq-dark-text .cq-check-icon{background:rgba(200,169,81,.15);border-color:rgba(200,169,81,.3);}
+    .cq-dark-text .cq-check-icon svg{stroke:var(--c-accent-light);}
+    .cq-panel{background:rgba(255,255,255,.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:2rem 1.75rem;}
+    .cq-panel-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem;}
+    .cq-panel-label::after{content:'';flex:1;height:1px;background:rgba(200,169,81,.25);}
+    .cq-panel img{width:100%;height:auto;display:block;filter:brightness(0) invert(1);opacity:.82;}
+    .cq-panel-badges{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.4rem;}
+    .cq-panel-badge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:.75rem .85rem;display:flex;align-items:center;gap:.6rem;}
+    .cq-panel-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--c-accent);flex-shrink:0;}
+    .cq-panel-badge span{font-size:.73rem;font-weight:600;color:rgba(255,255,255,.72);line-height:1.3;}
+    .cq-cta-row{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.75rem;}
+    /* ══ ORGÁNICO ══ */
+    .cq-organic{padding:5rem 0;background:var(--c-gray-50);}
+    .cq-organic-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;margin-bottom:3.5rem;}
+    .cq-organic-grid h2{font-size:clamp(1.4rem,2.8vw,1.9rem);color:var(--c-gray-900);margin:.2rem 0 1rem;}
+    .cq-organic-grid p{color:var(--c-gray-500);font-size:.95rem;line-height:1.85;margin-bottom:.85rem;}
+    .cq-organic-grid p:last-of-type{margin-bottom:0;}
+    .cq-org-pic{border-radius:22px;overflow:hidden;line-height:0;box-shadow:0 20px 60px rgba(13,55,32,.12);position:relative;}
+    .cq-org-pic img{width:100%;height:380px;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,.61,.36,1);}
+    .cq-org-pic:hover img{transform:scale(1.04);}
+    .cq-org-badge{position:absolute;bottom:1.1rem;left:1.1rem;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(26,92,56,.12);border-radius:13px;padding:.6rem 1rem;display:flex;align-items:center;gap:.5rem;}
+    .cq-org-badge span{font-size:.76rem;font-weight:700;color:var(--c-primary-dark);}
+    /* ══ CERT CARDS ══ */
+    .cq-cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
+    .cq-cert-card{background:#fff;border:1px solid var(--c-gray-100);border-radius:20px;padding:1.85rem 1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:box-shadow .25s,transform .25s;position:relative;overflow:hidden;}
+    .cq-cert-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));opacity:0;transition:opacity .25s;}
+    .cq-cert-card:hover{box-shadow:0 14px 44px rgba(13,55,32,.12);transform:translateY(-5px);}
+    .cq-cert-card:hover::before{opacity:1;}
+    .cq-cert-logo{height:76px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;}
+    .cq-cert-logo img{max-height:68px;max-width:130px;width:auto;object-fit:contain;display:block;}
+    .cq-cert-card h3{font-size:.88rem;font-weight:700;color:var(--c-gray-900);margin:0 0 .45rem;line-height:1.3;}
+    .cq-cert-card p{font-size:.78rem;color:var(--c-gray-500);line-height:1.65;margin:0 0 .9rem;}
+    .cq-cert-ctag{display:inline-flex;align-items:center;gap:.3rem;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--c-primary-dark);background:var(--c-primary-50);border:1px solid rgba(26,92,56,.12);border-radius:9999px;padding:.28rem .8rem;margin-top:auto;}
+    /* ══ PILLARS ══ */
+    .cq-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem;}
+    /* ══ ANIMATIONS — own observer, no dependency on app.js ══ */
+    .ani{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);}
+    .ani.from-left{transform:translateX(-30px);}
+    .ani.from-right{transform:translateX(30px);}
+    .ani.visible{opacity:1 !important;transform:translate(0,0) !important;}
+    .ani-d1{transition-delay:.1s;}.ani-d2{transition-delay:.2s;}.ani-d3{transition-delay:.3s;}.ani-d4{transition-delay:.4s;}
+    /* ══ RESPONSIVE ══ */
+    @media(max-width:1024px){.cq-cert-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:900px){
+      .cq-hero-grid,.cq-split-grid,.cq-dark-grid,.cq-organic-grid{grid-template-columns:1fr;gap:2.4rem;}
+      .cq-hero-card{display:none;}
+      .cq-stats{max-width:100%;}
+      .cq-pic img{height:280px;}
+      .cq-org-pic img{height:260px;}
+      .cq-split,.cq-dark,.cq-organic{padding:3rem 0;}
+      .cq-pillars{grid-template-columns:1fr 1fr;}
+      .cq-panel-badges{grid-template-columns:1fr;}
+      .cq-pic img,.cq-org-pic img{height:260px;}
+      .cq-pic--logos{background:var(--c-gray-50);border:1px solid var(--c-gray-100);}
+      .cq-pic--logos img{height:auto;min-height:180px;object-fit:contain;padding:2rem;}
+    }
+    @media(max-width:640px){
+      .cq-hero{min-height:480px;padding:4rem 0 3rem;}
+      .cq-stats{flex-wrap:wrap;}
+      .cq-stat{flex:1 1 calc(50% - 1px);border-bottom:1px solid rgba(255,255,255,.1);}
+      .cq-stat:nth-child(3),.cq-stat:nth-child(4){border-bottom:none;}
+      .cq-pillars{grid-template-columns:1fr;}
+      .cq-cert-grid{grid-template-columns:1fr 1fr;gap:1rem;}
+      .cq-cta-row{flex-direction:column;}
+      .cq-pic img,.cq-org-pic img{height:220px;}
+      .cq-pic--logos img{height:auto;min-height:140px;padding:1.25rem;}
+      .cq-split-grid h2{font-size:1.3rem;}
+    }
+    @media(max-width:420px){
+      .cq-cert-grid{grid-template-columns:1fr;}
+      .cq-pic img,.cq-org-pic img{height:190px;}
+      .cq-pic--logos img{min-height:110px;padding:1rem;}
+    }
+    /* ══ PANEL CERT LOGO GRID ══ */
+    .cq-panel-logo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin-bottom:.95rem;}
+    .cq-panel-logo-item{position:relative;background:linear-gradient(150deg,rgba(255,255,255,.11),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:.72rem .55rem .65rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.42rem;min-height:116px;transition:border-color var(--t-fast),background var(--t-fast),transform var(--t-fast),box-shadow var(--t-fast);overflow:hidden;}
+    .cq-panel-logo-item::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(200,169,81,.16),rgba(200,169,81,0) 50%);opacity:0;transition:opacity var(--t-fast);pointer-events:none;}
+    .cq-panel-logo-item:hover{background:linear-gradient(150deg,rgba(255,255,255,.18),rgba(255,255,255,.08));border-color:rgba(200,169,81,.4);transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.18);}
+    .cq-panel-logo-item:hover::before{opacity:1;}
+    .cq-panel-logo-item img{height:54px;width:auto;max-width:98px;object-fit:contain;display:block;opacity:.98;filter:drop-shadow(0 3px 6px rgba(0,0,0,.16));}
+    .cq-panel-logo-item span{font-size:.63rem;font-weight:800;letter-spacing:.045em;text-transform:uppercase;color:rgba(255,255,255,.87);text-align:center;line-height:1.2;}
+    .cq-panel-logo-item small{font-size:.56rem;font-weight:600;color:rgba(255,255,255,.56);line-height:1.2;text-align:center;}
+    .cq-panel-note{font-size:.66rem;line-height:1.55;color:rgba(255,255,255,.62);border-top:1px solid rgba(255,255,255,.12);padding-top:.7rem;}
+    /* ══ POLICY BANNER ══ */
+    .cq-policy-banner{background:linear-gradient(105deg,var(--c-primary-dark) 0%,#1e7044 100%);padding:1.85rem 0;position:relative;overflow:hidden;}
+    .cq-policy-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.055) 1px,transparent 0);background-size:26px 26px;}
+    .cq-policy-banner-inner{position:relative;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+    .cq-policy-banner-icon{width:54px;height:54px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .cq-policy-banner-text{flex:1;min-width:200px;}
+    .cq-policy-banner-eyebrow{font-size:.62rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--c-accent);margin-bottom:.25rem;}
+    .cq-policy-banner-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 .3rem;line-height:1.2;}
+    .cq-policy-banner-meta{font-size:.76rem;color:rgba(255,255,255,.48);margin:0;}
+    .cq-policy-banner-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:.5rem;}
+    @media(max-width:600px){
+      .cq-policy-banner-icon{display:none;}
+      .cq-policy-banner-btn{width:100%;justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+<div id="top-bar-slot"></div>
+<div id="nav-slot"></div>
+
+<!-- ══ HERO ══ -->
+<section class="cq-hero">
+  <div class="container">
+    <div class="cq-hero-grid">
+      <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><polyline points="9 18 15 12 9 6"/></svg>
+          <span data-i18n="nav-quality">Calidad e Inocuidad</span>
+        </nav>
+        <span class="badge badge-accent">Calidad e Inocuidad</span>
+        <h1>Inocuidad en cada etapa,<br>calidad en cada fruto</h1>
+        <p class="cq-hero-lead">Nuestros productos cumplen los más estrictos estándares internacionales de calidad e inocuidad alimentaria en toda la cadena de suministro.</p>
+        <div class="cq-stats">
+          <div class="cq-stat"><strong>100%</strong><span>Productores certificados</span></div>
+          <div class="cq-stat"><strong>GFSI</strong><span>Estándar reconocido</span></div>
+          <div class="cq-stat"><strong>ISO</strong><span>17025 labs</span></div>
+          <div class="cq-stat"><strong>4</strong><span>Cert. orgánicas</span></div>
+        </div>
+      </div>
+      <div class="cq-hero-card">
+        <div class="cq-hero-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h4>Certificaciones activas</h4>
+        <p>Instalaciones y productores con certificaciones vigentes en los principales estándares globales.</p>
+        <hr />
+        <div class="cq-cert-list">
+          <div class="cq-cert-row"><span class="cq-cert-dot"></span>Primus GFS</div>
+          <div class="cq-cert-row"><span class="cq-cert-dot"></span>Global G.A.P.</div>
+          <div class="cq-cert-row"><span class="cq-cert-dot"></span>USDA NOP Organic</div>
+          <div class="cq-cert-row"><span class="cq-cert-dot"></span>COR — Canada Organic</div>
+          <div class="cq-cert-row"><span class="cq-cert-dot"></span>LPO — México</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BANNER POLÍTICA ══ -->
+<section class="cq-policy-banner">
+  <div class="container">
+    <div class="cq-policy-banner-inner">
+      <div class="cq-policy-banner-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div class="cq-policy-banner-text">
+        <div class="cq-policy-banner-eyebrow">Documento oficial</div>
+        <h3 class="cq-policy-banner-title" data-i18n="modal-badge">Política de Calidad &amp; Inocuidad</h3>
+        <p class="cq-policy-banner-meta">Meridian Fruits SPR de RL de CV &mdash; Versión 3 &mdash; 2026</p>
+      </div>
+      <button class="btn btn-white cq-policy-banner-btn" data-modal="quality">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span data-i18n="footer-link-quality">Ver política completa</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3 PILARES ══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered ani">
+      <span class="badge">Proceso de calidad</span>
+      <h2 style="margin-top:.7rem">Tres líneas de control</h2>
+      <p style="margin:.5rem auto 0;max-width:580px;">Supervisamos la calidad e inocuidad en campo, durante el almacenamiento y a lo largo de toda la cadena de suministro.</p>
+    </div>
+    <div class="cq-pillars">
+      <div class="stat-card ani ani-d1">
+        <div style="width:54px;height:54px;border-radius:var(--r-xl);background:var(--c-primary-50);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 style="font-size:.98rem;font-weight:700;color:var(--c-gray-900);margin-bottom:.7rem;">Calidad en campo</h3>
+        <ul style="display:flex;flex-direction:column;gap:.45rem;padding:0;list-style:none;">
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Alianza directa con productores</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Visitas semanales en temporada</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Identificación temprana de problemas</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Evaluación de riesgos por campo</li>
+        </ul>
+      </div>
+      <div class="stat-card ani ani-d2">
+        <div style="width:54px;height:54px;border-radius:var(--r-xl);background:var(--c-primary-50);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3 style="font-size:.98rem;font-weight:700;color:var(--c-gray-900);margin-bottom:.7rem;">Operaciones en frío</h3>
+        <ul style="display:flex;flex-direction:column;gap:.45rem;padding:0;list-style:none;">
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Inspección de fruta a la entrada</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Muestreo y parametrización de defectos</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Monitoreo continuo de temperatura</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Documentación en cadena de frío</li>
+        </ul>
+      </div>
+      <div class="stat-card ani ani-d3">
+        <div style="width:54px;height:54px;border-radius:var(--r-xl);background:var(--c-primary-50);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 style="font-size:.98rem;font-weight:700;color:var(--c-gray-900);margin-bottom:.7rem;">Inocuidad alimentaria</h3>
+        <ul style="display:flex;flex-direction:column;gap:.45rem;padding:0;list-style:none;">
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Estándares GFSI reconocidos</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Labs ISO 17025 para multirresiduos</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Listas de pesticidas por mercado</li>
+          <li style="font-size:.85rem;color:var(--c-gray-600);display:flex;gap:.5rem;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" style="flex-shrink:0;margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>100% de cumplimiento de productores</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CALIDAD EN CAMPO — texto | wrapper-calidad-01 ══ -->
+<section class="cq-split bg-gray">
+  <div class="container">
+    <div class="cq-split-grid">
+      <div class="ani from-left">
+        <span class="badge cq-badge">Calidad en Campo</span>
+        <h2>Acompañamos a cada productor desde la raíz</h2>
+        <p>Ayudamos a nuestros productores a detectar problemas desde la raíz. Diseñamos programas de soluciones y los acompañamos durante su implementación.</p>
+        <p>En FreshKampo estamos con nuestros productores semana a semana durante toda la temporada, garantizando que la fruta alcance los más altos estándares antes de salir del campo.</p>
+        <ul class="cq-checks">
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Visitas de campo semanales en temporada</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Diseño e implementación de programas de solución</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Retroalimentación continua productor–equipo FK</li>
+        </ul>
+      </div>
+      <div class="cq-pic ani from-right">
+        <img src="assets/img/Calidad (2).png" alt="Calidad en campo — FreshKampo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CALIDAD EN COOLER — wrapper-calidad-02 | texto ══ -->
+<section class="cq-split">
+  <div class="container">
+    <div class="cq-split-grid" style="direction:rtl">
+      <div class="ani from-right" style="direction:ltr">
+        <span class="badge cq-badge">Calidad en Cooler</span>
+        <h2>Sistema de inspección en instalaciones de frío</h2>
+        <p>Toda la fruta que recibimos en nuestros coolers pasa por nuestro sistema de inspección. Con base en un muestreo, identificamos defectos, los parametrizamos y documentamos.</p>
+        <p>Canalizamos esta información a nuestros productores para ayudarlos a mejorar. Solo la fruta que cumple con nuestros altos estándares avanza a la cadena de frío.</p>
+        <p>Monitoreamos constantemente la temperatura durante toda la cadena de suministro para asegurar que nuestra fruta llegue en las mejores condiciones.</p>
+      </div>
+      <div class="cq-pic ani from-left" style="direction:ltr">
+        <img src="assets/img/Calidad (1).png" alt="Calidad en cooler — FreshKampo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INOCUIDAD — sección oscura, wrapper-calidad-03 ══ -->
+<section class="cq-dark">
+  <div class="cq-dark-bg">
+    <img src="assets/img/wrapper-calidad-03.jpg" alt="" aria-hidden="true" />
+  </div>
+  <div class="container">
+    <div class="cq-dark-grid">
+      <div class="cq-dark-text ani from-left">
+        <span class="badge" style="background:rgba(200,169,81,.15);color:var(--c-accent-light);border-color:rgba(200,169,81,.3);">Inocuidad Alimentaria</span>
+        <h2>La seguridad de nuestros consumidores es nuestra máxima prioridad</h2>
+        <p>Nuestros productos son seguros y saludables. Todos nuestros productores están certificados en estándares reconocidos por la Iniciativa Mundial en Seguridad Alimentaria (GFSI).</p>
+        <p>Los asesoramos y apoyamos durante el proceso de certificación, temporada tras temporada, ayudándolos a permanecer certificados y a dar seguimiento puntual a las observaciones de las auditorías.</p>
+        <ul class="cq-checks">
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent-light)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Monitoreo constante de buenas prácticas agrícolas</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent-light)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Seguimiento puntual a observaciones de auditorías</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent-light)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Acompañamiento en cada renovación de certificado</li>
+        </ul>
+        <div class="cq-cta-row">
+          <a href="certificaciones.html" class="btn btn-accent btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            Ver certificaciones
+          </a>
+        </div>
+      </div>
+      <div class="cq-panel ani from-right">
+        <div class="cq-panel-label">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Certificaciones de inocuidad
+        </div>
+        <div class="cq-panel-logo-grid">
+          <div class="cq-panel-logo-item">
+            <img src="assets/img/logo-cert-primus.png" alt="Primus GFS" loading="lazy" />
+            <span>Primus GFS</span>
+            <small>Empaque y cadena de suministro</small>
+          </div>
+          <div class="cq-panel-logo-item">
+            <img src="assets/img/logo-cert-primus-gap.png" alt="Global G.A.P." loading="lazy" />
+            <span>Global G.A.P.</span>
+            <small>Buenas prácticas agrícolas</small>
+          </div>
+          <div class="cq-panel-logo-item">
+            <img src="assets/img/logo-cert-ifs.png" alt="IFS Broker" loading="lazy" />
+            <span>IFS Broker</span>
+            <small>Gestión comercial y trazabilidad</small>
+          </div>
+          <div class="cq-panel-logo-item">
+            <img src="assets/img/logo-cert-iso9001.png" alt="ISO 9001" loading="lazy" />
+            <span>ISO 9001</span>
+            <small>Sistema de gestión de calidad</small>
+          </div>
+        </div>
+        <p class="cq-panel-note">Certificados vigentes con auditorías periódicas y mejora continua en cada proceso de FreshKampo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EVALUACIÓN DE CAMPOS — texto | wrapper-calidad-04 ══ -->
+<section class="cq-split bg-gray">
+  <div class="container">
+    <div class="cq-split-grid">
+      <div class="ani from-left">
+        <span class="badge cq-badge">Evaluación de Campos</span>
+        <h2>Campos óptimos para cosechar fruta segura</h2>
+        <p>Realizamos evaluaciones de riesgos y establecemos medidas de control para asegurar que todos los campos sean óptimos para cosechar fruta.</p>
+        <p>Cada campo es revisado a detalle: condiciones del suelo, cercanía a fuentes de contaminación, infraestructura sanitaria y cumplimiento de buenas prácticas agrícolas.</p>
+        <ul class="cq-checks">
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Evaluación de riesgos documentada por campo</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Medidas de control y planes de acción correctiva</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Verificación periódica de condiciones sanitarias</li>
+        </ul>
+      </div>
+      <div class="cq-pic ani from-right">
+        <img src="assets/img/wrapper-calidad-04.jpg" alt="Evaluación de campos — FreshKampo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PESTICIDAS — wrapper-calidad-05 | texto ══ -->
+<section class="cq-split">
+  <div class="container">
+    <div class="cq-split-grid" style="direction:rtl">
+      <div class="ani from-right" style="direction:ltr">
+        <span class="badge cq-badge">Control de Pesticidas</span>
+        <h2>Solo los pesticidas aprobados para cada mercado destino</h2>
+        <p>Elaboramos listas de productos permitidos de acuerdo con los países destino donde exportamos nuestra fruta. Esas listas son la base para todas las aplicaciones en los campos.</p>
+        <p>A nuestros productores les solicitamos continuamente las bitácoras de aplicación de nutrientes y pesticidas, y les realizamos análisis multiresidual en laboratorios aprobados por la <strong>NORMA ISO 17025</strong>.</p>
+        <ul class="cq-checks">
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Listas diferenciadas por mercado (EU, US, CA, MX)</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Análisis multiresidual en labs certificados ISO 17025</li>
+          <li><span class="cq-check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Bitácoras de aplicación continuas y auditables</li>
+        </ul>
+      </div>
+      <div class="cq-pic ani from-left" style="direction:ltr">
+        <img src="assets/img/Wrapper-calidad-03opc.png" alt="Control de pesticidas — FreshKampo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APROBACIÓN DE PRODUCTORES — texto | wrapper-calidad-06 ══ -->
+<section class="cq-split bg-gray">
+  <div class="container">
+    <div class="cq-split-grid">
+      <div class="ani from-left">
+        <span class="badge cq-badge">Aprobación de Productores</span>
+        <h2>Cumplimiento 100&nbsp;% antes del primer embarque</h2>
+        <p>Contamos con un proceso riguroso de aprobación de proveedores. En FreshKampo solo otorgamos liberaciones de campo a productores que cumplen al 100&nbsp;% con nuestros requisitos de seguridad alimentaria.</p>
+        <div class="cq-steps">
+          <div class="cq-step">
+            <div class="cq-step-n">1</div>
+            <div class="cq-step-body"><strong>Inspección de instalaciones en campo</strong><span>Revisión completa de campos, empaque y áreas de almacenamiento.</span></div>
+          </div>
+          <div class="cq-step">
+            <div class="cq-step-n">2</div>
+            <div class="cq-step-body"><strong>Limpieza y desinfección de instalaciones</strong><span>Verificación de protocolos de higiene y saneamiento activos.</span></div>
+          </div>
+          <div class="cq-step">
+            <div class="cq-step-n">3</div>
+            <div class="cq-step-body"><strong>Análisis microbiológicos y multiresiduales</strong><span>Pruebas de laboratorio ISO 17025 para liberar el campo.</span></div>
+          </div>
+          <div class="cq-step">
+            <div class="cq-step-n">4</div>
+            <div class="cq-step-body"><strong>Auditoría y registro en manual de BPA</strong><span>Auditoría formal con revisión del manual de Buenas Prácticas Agrícolas.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cq-pic ani from-right">
+        <img src="assets/img/Calidad (6).png" alt="Aprobación de productores — FreshKampo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INSTALACIONES — wrapper-calidad-07 | texto ══ -->
+<section class="cq-split">
+  <div class="container">
+    <div class="cq-split-grid" style="direction:rtl">
+      <div class="ani from-right" style="direction:ltr">
+        <span class="badge cq-badge">Instalaciones</span>
+        <h2>Prefrío y conservación con las mejores prácticas</h2>
+        <p>Todas nuestras instalaciones cumplen con las <strong>Buenas Prácticas de Manufactura (BPM)</strong> y están certificadas en los principales estándares de inocuidad y orgánico a nivel internacional.</p>
+        <div class="cq-tag-row">
+          <span class="cq-tag">Buenas Prácticas de Manufactura</span>
+          <span class="cq-tag">Primus GFS</span>
+          <span class="cq-tag">NOP – USDA Organic</span>
+          <span class="cq-tag">COR – Canada Organic</span>
+          <span class="cq-tag">LPO – Orgánico México</span>
+        </div>
+      </div>
+      <div class="cq-pic ani from-left" style="direction:ltr">
+        <img src="assets/img/Calidad (3).png" alt="Instalaciones FreshKampo — Prefrío y conservación" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCTOS ORGÁNICOS ══ -->
+<section class="cq-organic">
+  <div class="container">
+    <div class="cq-organic-grid">
+      <div class="ani from-left">
+        <span class="badge" style="background:#F0FDF4;color:#166534;border-color:rgba(22,101,52,.18);">Productos Orgánicos</span>
+        <h2>Producción orgánica certificada en cuatro mercados</h2>
+        <p>Todos nuestros productos orgánicos cuentan con la certificación que avala que han sido producidos orgánicamente. No usamos aditivos químicos, compuestos sintéticos, semillas genéticamente modificadas, conservadores ni irradiación.</p>
+        <p>A través de estos sistemas de producción fomentamos y mejoramos la salud del agroecosistema, ayudando a reducir o eliminar la contaminación del agua y a preservar el medio ambiente.</p>
+      </div>
+      <div class="cq-org-pic ani from-right">
+        <img src="assets/img/Calidad (4).png" alt="Productos orgánicos FreshKampo" loading="lazy" style="object-position:center 40%;" />
+        <div class="cq-org-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>4 certificaciones orgánicas activas</span>
+        </div>
+      </div>
+    </div>
+    <div class="cq-cert-grid">
+      <div class="cq-cert-card ani ani-d1">
+        <div class="cq-cert-logo"><img src="assets/img/logo-cert-eu.jpg" alt="Equivalencia EU Organic" loading="lazy" /></div>
+        <h3>Certificado de Equivalencia EU</h3>
+        <p>UE Reg. n.&nbsp;834/07 · EU Reg.&nbsp;889/08<br>Acceso al mercado orgánico de la Unión Europea.</p>
+        <span class="cq-cert-ctag">Europa</span>
+      </div>
+      <div class="cq-cert-card ani ani-d2">
+        <div class="cq-cert-logo"><img src="assets/img/logo-cert-usda.jpg" alt="USDA NOP Organic" loading="lazy" /></div>
+        <h3>Certificación NOP</h3>
+        <p>Programa Nacional Orgánico · CFR&nbsp;205<br>Obligatoria para la exportación a Estados Unidos.</p>
+        <span class="cq-cert-ctag">Estados Unidos</span>
+      </div>
+      <div class="cq-cert-card ani ani-d3">
+        <div class="cq-cert-logo"><img src="assets/img/logo-certificado-06.jpg" alt="COR Canada Organic" loading="lazy" /></div>
+        <h3>Certificación COR</h3>
+        <p>Canadian Organic Regime<br>Certificación orgánica oficial para el mercado canadiense.</p>
+        <span class="cq-cert-ctag">Canadá</span>
+      </div>
+      <div class="cq-cert-card ani ani-d4">
+        <div class="cq-cert-logo"><img src="assets/img/logo-certificado-07.jpg" alt="LPO Ley de Productos Orgánicos" loading="lazy" /></div>
+        <h3>Certificación LPO</h3>
+        <p>Ley de Productos Orgánicos<br>Obligatoria para comercializar orgánicos en México.</p>
+        <span class="cq-cert-ctag">México</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>¿Preguntas sobre nuestros estándares?</h2>
+    <p>Nuestro equipo de calidad e inocuidad está disponible para responder todas tus preguntas.</p>
+    <div class="cta-actions">
+      <a href="contacto.html" class="btn btn-white btn-lg">Contáctanos</a>
+      <a href="certificaciones.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);border-radius:9999px;" data-i18n="nav-certifications">Ver certificaciones</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/app.js"></script>
+<!-- Observer propio: observa .ani (no depende de app.js que solo observa .reveal) -->
+<script>
+(function(){
+  var els = document.querySelectorAll('.ani');
+  if (!els.length) return;
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+  els.forEach(function(el){ obs.observe(el); });
+}());
+</script>
+</body>
+</html>
