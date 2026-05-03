@@ -876,8 +876,8 @@ select.form-control{appearance:none;cursor:pointer}
   .top-bar .lang-btn{width:auto;padding:3px 7px;font-size:.63rem}
   .tb-sep{display:none}
 
-  .nav-menu{display:flex;position:fixed;top:var(--nav-h);right:0;bottom:0;left:auto;width:min(90vw,360px);background:var(--nav-drawer-bg);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);padding:12px var(--space-4) var(--space-8);flex-direction:column;align-items:stretch;overflow-y:auto;z-index:1300;border-left:none;gap:0;box-shadow:-22px 0 56px rgba(0,0,0,.2);transform:translateX(110%);opacity:0;pointer-events:none;transition:transform .26s cubic-bezier(.4,0,.2,1),opacity .2s ease}
-  .nav-menu.open{display:flex;transform:translateX(0);opacity:1;pointer-events:auto}
+  .nav-menu{display:flex;position:fixed;top:var(--nav-h);right:0;bottom:0;left:auto;width:min(90vw,360px);background:var(--nav-drawer-bg);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);padding:12px var(--space-4) var(--space-8);flex-direction:column;align-items:stretch;overflow-y:auto;z-index:1300;border-left:none;gap:0;box-shadow:-22px 0 56px rgba(0,0,0,.2);transform:translateX(110%);opacity:0;visibility:hidden;pointer-events:none;will-change:transform,opacity;transition:transform .26s cubic-bezier(.4,0,.2,1),opacity .2s ease,visibility 0s linear .26s}
+  .nav-menu.open{display:flex;transform:translateX(0);opacity:1;visibility:visible;pointer-events:auto;transition:transform .26s cubic-bezier(.4,0,.2,1),opacity .2s ease,visibility 0s}
   .nav-item{width:100%}
   .nav-mobile-cta{display:block;margin:10px auto 8px;width:min(100%,260px)}
   .nav-mobile-cta .nav-link-cta{
@@ -1108,14 +1108,14 @@ a.product-card:focus-visible{outline:3px solid var(--c-primary);outline-offset:2
 @keyframes navItemIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
 
 @media(max-width:768px){
-  /* Panel slide-in */
-  .nav-menu.open{animation:navPanelIn .2s ease-out both}
+  /* Keep transform animation on transition only to avoid first-frame flicker */
+  .nav-menu.open{animation:none}
   .nav-menu.open .nav-item:nth-child(1){animation:navItemIn .15s .03s ease-out both}
   .nav-menu.open .nav-item:nth-child(2){animation:navItemIn .15s .08s ease-out both}
   .nav-menu.open .nav-item:nth-child(3){animation:navItemIn .15s .12s ease-out both}
   .nav-menu.open .nav-item:nth-child(4){animation:navItemIn .15s .15s ease-out both}
   /* Panel slide-out — display:flex keeps it visible while animating */
-  .nav-menu.closing{display:flex!important;animation:navMenuSlideOut .22s cubic-bezier(.4,0,.6,1) both!important;pointer-events:none}
+  .nav-menu.closing{display:flex!important;visibility:visible!important;animation:navMenuSlideOut .22s cubic-bezier(.4,0,.6,1) both!important;pointer-events:none}
   /* Item dividers removed by request */
   .nav-menu .nav-item{border-bottom:none}
   /* Link */
