@@ -16,7 +16,7 @@ The homepage pairs a concise buyer-focused message with a restrained full-bleed 
 
 ## Motion and accessibility
 
-Transitions use short, eased color, shadow, and transform changes. The homepage splash has an explicit skip control, dismisses after about 2.2 seconds, and reveals the hero with a brief fade; it does not lock page scrolling. The homepage background video is muted, inline, and replaced by its poster when reduced motion is requested. Hero depth motion is limited to desktop and respects reduced-motion preferences. Focus-visible styles, responsive navigation controls, and reduced-motion fallbacks are defined in the shared stylesheet and existing scripts.
+Transitions use short, eased color, shadow, and transform changes. The homepage splash is a minimal forest-green screen with the FreshKampo logo, a bilingual “Del campo al mundo” tagline, and a small skip control; the logo and tagline appear with a brief stagger and the screen fades away after about 2.2 seconds without locking page scrolling. The homepage background video is muted, inline, and replaced by its poster when reduced motion is requested. Hero depth motion is limited to desktop and respects reduced-motion preferences. Focus-visible styles, responsive navigation controls, and reduced-motion fallbacks are defined in the shared stylesheet and existing scripts.
 
 ## Shared actions and page chrome
 

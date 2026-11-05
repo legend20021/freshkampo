@@ -1415,16 +1415,14 @@ select:invalid {
   position: fixed;
   inset: 0;
   z-index: 3000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   background: var(--pine);
   color: var(--c-white);
   opacity: 1;
   visibility: visible;
-  transition: opacity 420ms cubic-bezier(.2, .75, .3, 1), visibility 420ms;
+  transition: opacity 360ms cubic-bezier(.2, .75, .3, 1), visibility 360ms;
   pointer-events: none;
 }
 
@@ -1433,28 +1431,43 @@ select:invalid {
   visibility: hidden;
 }
 
+.splash-brand {
+  display: flex;
+  align-items: center;
+  gap: clamp(.85rem, 3vw, 1.4rem);
+  padding-inline: 1.5rem;
+}
+
 .splash-logo {
-  width: clamp(118px, 18vw, 170px);
-  max-height: 64px;
+  width: clamp(100px, 24vw, 132px);
+  height: auto;
+  flex: 0 0 auto;
   object-fit: contain;
 }
 
-#splash > span {
-  padding-left: 1.1rem;
+.splash-tagline {
+  padding-left: clamp(.85rem, 3vw, 1.4rem);
   border-left: 1px solid rgba(255, 254, 250, .28);
-  color: #eadfc7;
+  color: #f0e5cf;
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: -.025em;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .splash-dismiss {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  padding: .5rem .75rem;
-  color: rgba(255, 254, 250, .8);
+  top: max(1.25rem, env(safe-area-inset-top));
+  right: max(1.25rem, env(safe-area-inset-right));
+  min-width: 44px;
+  min-height: 44px;
+  padding: .5rem;
+  color: rgba(255, 254, 250, .82);
   font-size: .8rem;
   pointer-events: auto;
+  transition: color 180ms ease;
 }
 
 .splash-dismiss:hover {
@@ -2060,30 +2073,20 @@ body.language-changing [data-i18n] {
   }
 }
 
-#splash {
-  transition-duration: 620ms;
-}
-
-#splash.hidden {
-  transition-duration: 620ms;
-}
-
 .splash-logo {
-  animation: splash-logo-enter 900ms cubic-bezier(.16, 1, .3, 1) both;
+  animation: splash-logo-enter 680ms cubic-bezier(.16, 1, .3, 1) both;
 }
 
-#splash > span {
-  animation: splash-tagline-enter 680ms 180ms cubic-bezier(.16, 1, .3, 1) both;
+.splash-tagline {
+  animation: splash-tagline-enter 640ms 120ms cubic-bezier(.16, 1, .3, 1) both;
 }
 
 @keyframes splash-logo-enter {
   from {
-    filter: blur(4px);
-    opacity: 0;
-    transform: translateY(8px) scale(.96);
+    opacity: .72;
+    transform: translateY(5px) scale(.98);
   }
   to {
-    filter: blur(0);
     opacity: 1;
     transform: translateY(0) scale(1);
   }
@@ -2092,7 +2095,7 @@ body.language-changing [data-i18n] {
 @keyframes splash-tagline-enter {
   from {
     opacity: 0;
-    transform: translateX(-5px);
+    transform: translateX(7px);
   }
   to {
     opacity: 1;
@@ -2100,22 +2103,36 @@ body.language-changing [data-i18n] {
   }
 }
 
+@media (max-width: 380px) {
+  .splash-brand {
+    gap: .75rem;
+    padding-inline: 1rem;
+  }
+
+  .splash-logo {
+    width: clamp(88px, 25vw, 100px);
+  }
+
+  .splash-tagline {
+    padding-left: .75rem;
+    font-size: clamp(.95rem, 4.2vw, 1.05rem);
+  }
+}
+
 body.splash-revealed .hero--field-layers .hero-content {
-  animation: homepage-content-reveal 780ms cubic-bezier(.16, 1, .3, 1) both;
+  animation: homepage-content-reveal 520ms cubic-bezier(.16, 1, .3, 1) both;
 }
 
 body.splash-revealed .hero--field-layers .hero-visual {
-  animation: homepage-visual-reveal 900ms 70ms cubic-bezier(.16, 1, .3, 1) both;
+  animation: homepage-visual-reveal 620ms 60ms cubic-bezier(.16, 1, .3, 1) both;
 }
 
 @keyframes homepage-content-reveal {
   from {
-    filter: blur(3px);
-    opacity: .62;
-    transform: translateY(10px);
+    opacity: .78;
+    transform: translateY(6px);
   }
   to {
-    filter: blur(0);
     opacity: 1;
     transform: translateY(0);
   }
@@ -2454,7 +2471,7 @@ body.splash-revealed .hero--field-layers .hero-visual {
 
   body.language-changing [data-i18n],
   .splash-logo,
-  #splash > span,
+  .splash-tagline,
   body.splash-revealed .hero--field-layers .hero-content,
   body.splash-revealed .hero--field-layers .hero-visual {
     animation: none;
