@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20261104c" />
+  <link rel="stylesheet" href="css/refresh.css?v=20261105f" />
   <style>
     /* ═══════════════════════════════════════
        PRODUCTS HERO — VIDEO BACKGROUND
@@ -84,6 +85,11 @@
       color: var(--c-gray-600); text-decoration: none;
       white-space: nowrap; transition: all .18s;
       border: 1px solid transparent;
+    }
+    .pnav-thumb {
+      width: 25px; height: 25px; flex: 0 0 auto;
+      border-radius: 50%; object-fit: cover;
+      background: var(--paper); border: 1px solid rgba(25,51,38,.1);
     }
     .pnav-item:hover {
       background: var(--c-primary-50); color: var(--c-primary);
@@ -160,10 +166,10 @@
     .product-info {
       min-width: 0;
       background: rgba(255,255,255,.92);
-      border: 1px solid rgba(13,61,36,.08);
+      border: 1px solid rgba(25,51,38,.08);
       border-radius: 18px;
       padding: 1.15rem 1.1rem;
-      box-shadow: 0 10px 28px rgba(13,61,36,.06);
+      box-shadow: 0 10px 28px rgba(25,51,38,.06);
     }
 
     .product-title-row {
@@ -180,11 +186,11 @@
       letter-spacing: .09em; text-transform: uppercase;
       padding: 3px 11px; border-radius: 9999px;
     }
-    .ptype-conv { background: rgba(13,61,36,.09); color: var(--c-primary); }
-    .ptype-org  { background: rgba(200,169,81,.16); color: var(--c-accent-dark); }
+    .ptype-conv { background: rgba(25,51,38,.09); color: var(--c-primary); }
+    .ptype-org  { background: rgba(214,154,85,.16); color: var(--c-accent-dark); }
 
     .product-scientific {
-      font-size: .82rem; color: var(--c-gray-400);
+      font-size: .82rem; color: var(--c-gray-600);
       font-style: italic; margin-bottom: .875rem;
     }
     .product-desc {
@@ -220,7 +226,7 @@
     }
     .spec-box:hover {
       border-color: var(--c-primary-100);
-      box-shadow: 0 4px 18px rgba(13,61,36,.07);
+      box-shadow: 0 4px 18px rgba(25,51,38,.07);
     }
     .spec-box.full { grid-column: 1 / -1; }
 
@@ -238,8 +244,8 @@
       font-size: .75rem; font-weight: 600;
       padding: 3px 10px; border-radius: 9999px;
     }
-    .sc-v { background: rgba(13,61,36,.08); color: var(--c-primary); }
-    .sc-p { background: rgba(200,169,81,.12); color: var(--c-accent-dark); }
+    .sc-v { background: rgba(25,51,38,.08); color: var(--c-primary); }
+    .sc-p { background: rgba(214,154,85,.12); color: var(--c-accent-dark); }
 
     /* ═══════════════════════════════════════
        AGUACATE — VIDEO EMBED
@@ -247,18 +253,18 @@
     .drive-embed-wrap {
       margin: 1.25rem 0 1.5rem;
       border-radius: 20px; overflow: hidden;
-      box-shadow: 0 16px 56px rgba(13,61,36,.28), 0 0 0 2px rgba(200,169,81,.30);
+      box-shadow: 0 16px 56px rgba(25,51,38,.28), 0 0 0 2px rgba(214,154,85,.30);
       background: #000;
     }
     .drive-embed-header {
-      background: linear-gradient(135deg, #0D3D24 0%, #1A5C38 60%, #1e6e43 100%);
+      background: linear-gradient(135deg, var(--c-primary-dark), var(--c-primary), var(--c-primary-light));
       padding: .65rem 1.1rem;
       display: flex; align-items: center; gap: .65rem;
-      border-bottom: 1px solid rgba(200,169,81,.22);
+      border-bottom: 1px solid rgba(214,154,85,.22);
     }
     .drive-embed-dot {
       width: 8px; height: 8px; border-radius: 50%;
-      background: #4ade80; flex-shrink: 0;
+      background: var(--c-primary-light); flex-shrink: 0;
       box-shadow: 0 0 0 3px rgba(74,222,128,.2);
       animation: pulse-dot 2s ease-in-out infinite;
     }
@@ -270,8 +276,8 @@
       font-size: .56rem; font-weight: 800;
       letter-spacing: .13em; text-transform: uppercase;
       color: var(--c-accent);
-      background: rgba(200,169,81,.12);
-      border: 1px solid rgba(200,169,81,.30);
+      background: rgba(214,154,85,.12);
+      border: 1px solid rgba(214,154,85,.30);
       border-radius: 9999px; padding: 3px 9px;
       white-space: nowrap;
     }
@@ -366,8 +372,8 @@
       .product-visual {
         aspect-ratio: 4 / 3;
         border-radius: 18px;
-        border: 2px solid rgba(200,169,81,.40);
-        box-shadow: 0 0 0 5px rgba(26,92,56,.07), 0 10px 32px rgba(0,0,0,.14);
+        border: 2px solid rgba(214,154,85,.40);
+        box-shadow: 0 0 0 5px rgba(41,77,55,.07), 0 10px 32px rgba(0,0,0,.14);
         margin: 0 auto;
         width: 100%;
         max-height: none;
@@ -383,7 +389,9 @@
         flex-wrap: nowrap; justify-content: flex-start;
         width: max-content; gap: 3px; padding: .35rem .6rem;
       }
-      .pnav-item { padding: 6px 9px; font-size: 1.05rem; gap: 0; }
+      .pnav-item { padding: 6px 9px; font-size: .76rem; gap: 5px; }
+      .pnav-thumb { width: 24px; height: 24px; }
+      .pnav-label { display: inline; }
       .pnav-label { display: none; }
       .product-info {
         border-radius: 14px;
@@ -419,7 +427,7 @@
 </head>
 <body>
 
-<div id="top-bar-slot"></div>
+
 <div id="nav-slot"></div>
 
 <!-- ══════════════════════════════════════
@@ -451,18 +459,18 @@
 ══════════════════════════════════════ -->
 <nav class="products-subnav" aria-label="Navegar por producto">
   <div class="products-subnav-inner">
-    <a href="#fresa"     class="pnav-item">🍓 <span class="pnav-label">Fresa</span></a>
-    <a href="#frambuesa" class="pnav-item">🍒 <span class="pnav-label">Frambuesa</span></a>
-    <a href="#zarzamora" class="pnav-item">🍇 <span class="pnav-label">Zarzamora</span></a>
-    <a href="#arandano"  class="pnav-item">🍇 <span class="pnav-label">Arándano</span></a>
-    <a href="#higo"      class="pnav-item">🍈 <span class="pnav-label">Higo</span></a>
-    <a href="#aguacate"  class="pnav-item">🥑 <span class="pnav-label">Aguacate</span></a>
-    <a href="#esparrago" class="pnav-item">🌿 <span class="pnav-label">Espárrago</span></a>
+    <a href="#fresa" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-fresa-01-min.png" alt=""><span class="pnav-label">Fresa</span></a>
+    <a href="#frambuesa" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-frambuesa-min.png" alt=""><span class="pnav-label">Frambuesa</span></a>
+    <a href="#zarzamora" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-zarzamora-02-min.png" alt=""><span class="pnav-label">Zarzamora</span></a>
+    <a href="#arandano" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-arandano-min.png" alt=""><span class="pnav-label">Arándano</span></a>
+    <a href="#higo" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-higo-min.png" alt=""><span class="pnav-label">Higo</span></a>
+    <a href="#aguacate" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-aguacate-min.png" alt=""><span class="pnav-label">Aguacate</span></a>
+    <a href="#esparrago" class="pnav-item"><img class="pnav-thumb" src="assets/img/imagen-esparrago-min.png" alt=""><span class="pnav-label">Espárrago</span></a>
   </div>
 </nav>
 
 <!-- ══════════════════════════════════════
-     🍓 FRESA
+      FRESA
 ══════════════════════════════════════ -->
 <section id="fresa" class="product-section">
   <div class="container">
@@ -471,20 +479,20 @@
         <img src="assets/img/fresas.png" alt="Fresa FreshKampo" loading="lazy">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🍓 Fresa</h2></div>
+        <div class="product-title-row"><h2> Fresa</h2></div>
         <p class="product-scientific">Fragaria × ananassa</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
-          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
+          <span class="ptype-tag ptype-org"> Orgánico</span>
         </div>
         <p class="product-desc">El color del fruto varía de rojo pálido a intenso; su forma puede ser cónica o de corazón. Su firmeza, jugo y dulce sabor, acompañado de una sutil acidez, la convierten en un festín para el paladar.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Por su delicadeza, cuidamos que durante el trayecto hasta su destino, nuestras fresas lleguen frescas, firmes y libres de daños.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Michoacán · Baja California · Guanajuato · Marruecos</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
@@ -492,14 +500,14 @@
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips">
               <span class="sc sc-v">Festival</span><span class="sc sc-v">Albion</span>
               <span class="sc sc-v">San Andreas</span><span class="sc sc-v">Sayulita</span><span class="sc sc-v">Frontera</span>
             </div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips">
               <span class="sc sc-p">8 × 1 lb</span><span class="sc sc-p">4 × 2 lb</span><span class="sc sc-p">4 × 1 lb Cabos</span>
             </div>
@@ -511,7 +519,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     🍒 FRAMBUESA
+      FRAMBUESA
 ══════════════════════════════════════ -->
 <section id="frambuesa" class="product-section">
   <div class="container">
@@ -520,20 +528,20 @@
         <img src="assets/img/frambuesa.jpg" alt="Frambuesa FreshKampo" loading="lazy">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🍒 Frambuesa</h2></div>
+        <div class="product-title-row"><h2> Frambuesa</h2></div>
         <p class="product-scientific">Rubus idaeus</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
-          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
+          <span class="ptype-tag ptype-org"> Orgánico</span>
         </div>
         <p class="product-desc">Este fruto color rojo intenso y de pulpa jugosa está formado por numerosas drupas pequeñas que se agrupan formando una figura cónica — sabor dulce con un toque ligeramente ácido que tanto nos encanta.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Cada día cultivamos las frambuesas más suculentas, brillantes y firmes. Nos aseguramos de que estén en su punto de maduración ideal para comer al natural.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Jalisco · Michoacán · Baja California · Guanajuato · Nayarit · Marruecos</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
@@ -541,11 +549,11 @@
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips"><span class="sc sc-v">Adelita</span></div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips">
               <span class="sc sc-p">12 × 4.4 oz</span><span class="sc sc-p">12 × 6 oz</span><span class="sc sc-p">6 × 12 oz</span>
             </div>
@@ -557,7 +565,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     🍇 ZARZAMORA
+      ZARZAMORA
 ══════════════════════════════════════ -->
 <section id="zarzamora" class="product-section">
   <div class="container">
@@ -566,20 +574,20 @@
         <img src="assets/img/zarzamora.jpg" alt="Zarzamora FreshKampo" loading="lazy">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🍇 Zarzamora</h2></div>
+        <div class="product-title-row"><h2> Zarzamora</h2></div>
         <p class="product-scientific">Rubus fruticosus</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
-          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
+          <span class="ptype-tag ptype-org"> Orgánico</span>
         </div>
         <p class="product-desc">Es una baya carnosa de tamaño pequeño, compuesta de numerosas drupeolas. Tiende a ser un poco ácida, pero también tiene un sabor muy suave al probarla. Rica en antioxidantes y con gran aceptación en los principales supermercados.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Para garantizar la calidad de nuestras zarzamoras, cuidamos cada paso en nuestro proceso de producción, desde el cultivo hasta la cosecha.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Michoacán · Baja California · Colima · California</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
@@ -587,11 +595,11 @@
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips"><span class="sc sc-v">Sofia</span><span class="sc sc-v">Tupy</span></div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips">
               <span class="sc sc-p">12 × 4.4 oz</span><span class="sc sc-p">12 × 6 oz</span><span class="sc sc-p">8 × 12 oz</span>
             </div>
@@ -603,7 +611,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     🫐 ARÁNDANO
+      ARÁNDANO
 ══════════════════════════════════════ -->
 <section id="arandano" class="product-section">
   <div class="container">
@@ -612,19 +620,19 @@
         <img src="assets/img/arandano.jpg" alt="Arándano FreshKampo" loading="lazy">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🍇 Arándano</h2></div>
+        <div class="product-title-row"><h2> Arándano</h2></div>
         <p class="product-scientific">Vaccinium corymbosum</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
         </div>
         <p class="product-desc">El color de los arándanos cambia según la variedad — suelen ser azul y azul oscuro. Firmes y crujientes con un delicioso sabor ácido. Conocidos mundialmente como "superfood" por su alto contenido en antioxidantes.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Aseguramos la nutrición de tu familia proveyendo los más frescos, maduros, firmes y deliciosos arándanos, con procesos de aseguramiento de calidad e inocuidad.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Jalisco · Michoacán · Guanajuato · Nayarit · Puebla · Perú · Chile · Marruecos</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
@@ -632,11 +640,11 @@
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips"><span class="sc sc-v">Biloxy</span><span class="sc sc-v">Ventura</span><span class="sc sc-v">Victoria</span></div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips">
               <span class="sc sc-p">12 × 4.4 oz</span><span class="sc sc-p">12 × 6 oz</span>
               <span class="sc sc-p">12 × 1 Dry Pint</span><span class="sc sc-p">8 × 18 oz</span>
@@ -649,7 +657,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     🍈 HIGO
+      HIGO
 ══════════════════════════════════════ -->
 <section id="higo" class="product-section">
   <div class="container">
@@ -658,30 +666,30 @@
         <img src="assets/img/higo.jpg" alt="Higo FreshKampo" loading="lazy">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🍈 Higo</h2></div>
+        <div class="product-title-row"><h2> Higo</h2></div>
         <p class="product-scientific">Ficus carica</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
         </div>
         <p class="product-desc">Es un fruto increíblemente fresco y muy jugoso. Cuando están maduros son de color púrpura; su pulpa tiene un color de caramelo natural que hace énfasis en su dulzura — se derriten suave y tiernamente al paladar.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Ofrecemos higos con altos estándares de calidad. Nuestro equipo trabaja todos los días para cumplir con los requerimientos de los clientes más exigentes.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Michoacán · Colima · Jalisco · Sinaloa · Guanajuato · Aguascalientes</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips"><span class="sc sc-v">Black Mission</span></div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips">
               <span class="sc sc-p">12 × 7 oz</span><span class="sc sc-p">8 × 1 lb</span>
               <span class="sc sc-p">Charola 1.5 lb (liner 18, 21, 24)</span>
@@ -695,7 +703,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     🥑 AGUACATE
+      AGUACATE
 ══════════════════════════════════════ -->
 <section id="aguacate" class="product-section">
   <div class="container">
@@ -704,18 +712,18 @@
         <img src="assets/img/Producto aguacate.png" alt="Aguacate FreshKampo" loading="lazy">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🥑 Aguacate</h2></div>
+        <div class="product-title-row"><h2> Aguacate</h2></div>
         <p class="product-scientific">Persea americana — Var. Hass</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
-          <span class="ptype-tag ptype-org">🌱 Orgánico</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
+          <span class="ptype-tag ptype-org"> Orgánico</span>
         </div>
         <!-- Aguacate — Video -->
         <div class="drive-embed-wrap" id="avoc-drive-wrap">
           <div class="drive-embed-header">
             <span class="drive-embed-dot" aria-hidden="true"></span>
             <span class="drive-embed-badge">Video FreshKampo</span>
-            <span class="drive-embed-title">🥑 Aguacate Hass — Del campo a tu mesa</span>
+            <span class="drive-embed-title"> Aguacate Hass — Del campo a tu mesa</span>
           </div>
           <div class="drive-embed-ratio">
             <iframe
@@ -730,23 +738,23 @@
         </div>
         <p class="product-desc">Su cáscara arrugada y leñosa color oscuro esconde una pulpa deliciosa color verde esmeralda. Consistencia muy cremosa, con sabor exquisito y suave, con toques de avellana que permiten su combinación con cualquier alimento.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Cultivamos aguacates siguiendo minuciosamente cada paso en su proceso de producción, para que al llegar a tu mesa, tu familia y tú puedan disfrutar del sabor suave y cremoso de nuestros aguacates.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Michoacán · Jalisco · Nayarit</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips"><span class="sc sc-v">Hass</span></div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips">
               <span class="sc sc-p">Cartón 4 kg</span><span class="sc sc-p">Cartón 6 kg</span>
               <span class="sc sc-p">Cartón 11.3 kg</span><span class="sc sc-p">Cartón 14 kg</span>
@@ -762,7 +770,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     🌿 ESPÁRRAGO
+      ESPÁRRAGO
 ══════════════════════════════════════ -->
 <section id="esparrago" class="product-section">
   <div class="container">
@@ -771,30 +779,30 @@
         <img src="assets/img/imagen-esparrago-min.png" alt="Espárrago FreshKampo" onerror="this.style.display='none'">
       </div>
       <div class="product-info">
-        <div class="product-title-row"><h2>🌿 Espárrago</h2></div>
+        <div class="product-title-row"><h2> Espárrago</h2></div>
         <p class="product-scientific">Asparagus officinalis</p>
         <div class="product-type-tags">
-          <span class="ptype-tag ptype-conv">✓ Convencional</span>
+          <span class="ptype-tag ptype-conv">Convencional</span>
         </div>
         <p class="product-desc">Es apreciado en la cocina por su gran aroma, su textura tierna y carnosa, y por su característico sabor con un toque amargo que resulta fresco y muy sabroso. Aporta minerales como potasio, calcio, fósforo, magnesio y selenio — considerado un alimento gourmet.</p>
         <div class="product-valor">
-          <div class="product-valor-label"><span>💡</span> Nuestro valor</div>
+          <div class="product-valor-label">Nuestro valor</div>
           <p>Contribuimos a la versatilidad de tus platillos favoritos con espárragos ricos, firmes y frescos. Contamos con condiciones impecables para su producción.</p>
         </div>
         <div class="product-specs">
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">📍</span> Zonas de producción</div>
+            <div class="spec-label">Zonas de producción</div>
             <div class="spec-text">Guanajuato</div>
             <div class="origin-flags">
               <span class="oflag"><img src="assets/img/mex.png" alt="México" loading="lazy"> México</span>
             </div>
           </div>
           <div class="spec-box">
-            <div class="spec-label"><span class="spec-emoji">🌱</span> Variedades</div>
+            <div class="spec-label">Variedades</div>
             <div class="spec-chips"><span class="sc sc-v">UC157NuP</span><span class="sc sc-v">Grande</span></div>
           </div>
           <div class="spec-box full">
-            <div class="spec-label"><span class="spec-emoji">📦</span> Presentaciones</div>
+            <div class="spec-label">Presentaciones</div>
             <div class="spec-chips"><span class="sc sc-p">11 lb</span></div>
           </div>
         </div>
@@ -842,9 +850,9 @@
 <div id="footer-slot"></div>
 <div id="modal-slot"></div>
 
-<script src="js/i18n.js"></script>
-<script src="js/nav.js"></script>
-<script src="js/app.js"></script>
+<script src="js/i18n.js?v=20261105f"></script>
+<script src="js/nav.js?v=20261105f"></script>
+<script src="js/app.js?v=20261105f"></script>
 <script src="js/page-i18n-overrides.js"></script>
 <script>
 (function(){

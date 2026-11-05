@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreshKampo — Berries Frescos del Campo al Mundo</title>
-  <meta name="description" content="FreshKampo comercializa berries y productos frescos de alta calidad desde México hacia EE.UU., Europa y Medio Oriente. Certificados internacionalmente." />
+  <title>FreshKampo — Berries mexicanos para mercados internacionales</title>
+  <meta name="description" content="Conectamos productos frescos de México con supermercados y distribuidores en Estados Unidos, Europa y Medio Oriente." />
   <meta name="keywords" content="berries frescos, fresa, frambuesa, zarzamora, arándano, higo, aguacate, espárrago, exportación, México, orgánico, FreshKampo" />
   <meta property="og:title" content="FreshKampo — Del campo al mundo" />
   <meta property="og:description" content="Comercializamos productos frescos de alta calidad, conectando los mejores campos de México con el mundo." />
@@ -13,63 +13,20 @@
   <link rel="canonical" href="https://freshkampo.com/" />
   <!-- Favicon placeholder -->
   <link rel="icon" href="assets/img/faviconV2.png" type="image/png" />
+  <link rel="preload" as="image" href="assets/img/wrapper-integracion-min.jpg" fetchpriority="high" />
   <!-- Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/style.css?v=20260429b" />
+  <link rel="stylesheet" href="css/style.css?v=20261104c" />
+  <link rel="stylesheet" href="css/refresh.css?v=20261105f" />
 </head>
 <body>
 
-<!-- PAGE INTRO — brief entry on return visits -->
-<div id="page-intro" class="hidden" aria-hidden="true">
-  <img id="page-intro-logo" src="assets/img/logo-freshkampo-white.svg" alt="FreshKampo"
-       onerror="this.style.display='none'">
-  <span id="page-intro-tagline">Del campo al mundo</span>
+<div id="splash">
+  <img src="assets/img/logo-freshkampo-white.svg" alt="" class="splash-logo">
+  <span data-i18n="splash-tagline" aria-hidden="true">Del campo al mundo</span>
+  <button class="splash-dismiss" type="button" data-i18n="splash-skip">Omitir</button>
 </div>
-
-<!-- ══════════════════════════════════
-     SPLASH SCREEN — 2026
-══════════════════════════════════ -->
-<div id="splash" role="dialog" aria-modal="true" aria-label="Bienvenido a FreshKampo">
-  <div class="splash-ray" aria-hidden="true"></div>
-  <div class="splash-bg">
-    <img src="assets/img/imagen-home_aguacates.png" alt="" class="splash-bg-img" aria-hidden="true">
-  </div>
-  <div class="splash-particles">
-    <div class="splash-particle"></div>
-    <div class="splash-particle"></div>
-    <div class="splash-particle"></div>
-    <div class="splash-particle"></div>
-    <div class="splash-particle"></div>
-    <div class="splash-particle"></div>
-    <div class="splash-particle"></div>
-  </div>
-  <div class="splash-inner">
-    <div class="splash-logo-wrap">
-      <img src="assets/img/logo-freshkampo-white.svg" alt="FreshKampo" class="splash-logo-img"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <div class="splash-logo-text-fallback" style="display:none">Fresh<span>Kampo</span></div>
-    </div>
-    <div class="splash-card">
-      <span class="splash-card-badge" data-i18n="splash-badge">Política de Calidad e Inocuidad</span>
-      <h3 data-i18n="splash-title">Comprometidos con la excelencia desde el campo</h3>
-      <p data-i18n="splash-text">En MERIDIAN FRUITS SPR DE RL de CV comercializamos productos frescos con el firme compromiso de satisfacer los requerimientos y expectativas de nuestros clientes.</p>
-      <div class="splash-card-meta" data-i18n="splash-version">Versión 3 — 20/mayo/2024</div>
-    </div>
-    <div class="splash-progress">
-      <div class="splash-bar-track"><div class="splash-bar-fill"></div></div>
-    </div>
-    <button class="splash-dismiss" aria-label="Cerrar splash">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      <span data-i18n="splash-skip">Cerrar</span>
-    </button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════
-     TOP BAR
-══════════════════════════════════ -->
-<div id="top-bar-slot"></div>
 
 <!-- ══════════════════════════════════
      NAVIGATION
@@ -79,47 +36,29 @@
 <!-- ══════════════════════════════════
      HERO
 ══════════════════════════════════ -->
-<section class="hero" aria-label="Hero">
-  <div class="hero-bg-img" aria-hidden="true"></div>
+<section class="hero hero--field-layers" aria-labelledby="hero-heading">
   <div class="hero-video-bg" aria-hidden="true">
-    <video autoplay muted loop playsinline preload="metadata">
-      <source src="assets/video/hero.mp4" type="video/mp4" />
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/wrapper-integracion-min.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4">
     </video>
   </div>
   <div class="hero-gradient" aria-hidden="true"></div>
-  <div class="hero-pattern" aria-hidden="true"></div>
-  <div class="hero-blob" aria-hidden="true"></div>
   <div class="container">
     <!-- Left content -->
     <div class="hero-content">
-      <div class="hero-badge" data-i18n="hero-badge">Líder en berries frescos desde 2004</div>
-      <h1>
-        <span data-i18n="hero-h1-line1">Del campo al</span><br>
+      <h1 id="hero-heading">
+        <span data-i18n="hero-h1-line1">Del campo al</span>
         <em data-i18n="hero-h1-line2">mundo</em>
       </h1>
-      <p class="hero-desc" data-i18n="hero-desc">Comercializamos productos frescos de primera calidad, conectando los mejores campos de México con supermercados y distribuidores en Estados Unidos, Europa y Medio Oriente.</p>
+      <p class="hero-desc" data-i18n="hero-desc">Conectamos productores de México con supermercados y distribuidores en Estados Unidos, Europa y Medio Oriente.</p>
       <div class="hero-actions">
-        <a href="productos.html" class="btn btn-white btn-lg" data-i18n="hero-cta1">Conoce nuestros productos</a>
-        <a href="contacto.html" class="btn btn-lg" style="color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25);border-radius:9999px;padding:1rem 2.25rem;" data-i18n="hero-cta2">Contáctanos</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num">230<span>+</span></div>
-          <div class="hero-stat-label" data-i18n="hero-stat1-label">Colaboradores globales</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">30<span>+</span></div>
-          <div class="hero-stat-label" data-i18n="hero-stat2-label">Clientes minoristas</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">20<span>+</span></div>
-          <div class="hero-stat-label" data-i18n="hero-stat3-label">Años de experiencia</div>
-        </div>
+        <a href="productos.html" class="btn btn-primary btn-lg" data-i18n="hero-cta1">Conoce nuestros productos</a>
+        <a href="contacto.html" class="btn btn-outline btn-lg" data-i18n="hero-cta2">Contacto comercial</a>
       </div>
     </div>
 
-    <!-- Right visual -->
-    <div class="hero-visual" aria-hidden="true">
+    <!-- Proof points -->
+    <div class="hero-visual">
       <div class="hero-card-glass">
         <div class="hero-card-title" data-i18n="hero-card-certs">Certificaciones Internacionales</div>
         <div class="hero-cert-grid">
@@ -164,12 +103,12 @@
       <div class="hero-products-mini">
         <div class="hero-products-mini-title" data-i18n="hero-card-products">Productos disponibles</div>
         <div class="hero-chips">
-          <span class="hero-chip">🍓 <span data-i18n="p1-name">Fresa</span></span>
-          <span class="hero-chip">🍓 <span data-i18n="p2-name">Frambuesa</span></span>
-          <span class="hero-chip">🍇 <span data-i18n="p3-name">Zarzamora</span></span>
-          <span class="hero-chip">🍇 <span data-i18n="p4-name">Arándano</span></span>
-          <span class="hero-chip">🥑 <span data-i18n="p6-name">Aguacate</span></span>
-          <span class="hero-chip">🌿 <span data-i18n="p7-name">Espárrago</span></span>
+          <span class="hero-chip"><img class="hero-chip-icon" src="assets/img/imagen-fresa-01-min.png" alt="" aria-hidden="true"><span data-i18n="p1-name">Fresa</span></span>
+          <span class="hero-chip"><img class="hero-chip-icon" src="assets/img/imagen-frambuesa-min.png" alt="" aria-hidden="true"><span data-i18n="p2-name">Frambuesa</span></span>
+          <span class="hero-chip"><img class="hero-chip-icon" src="assets/img/imagen-zarzamora-02-min.png" alt="" aria-hidden="true"><span data-i18n="p3-name">Zarzamora</span></span>
+          <span class="hero-chip"><img class="hero-chip-icon" src="assets/img/imagen-arandano-min.png" alt="" aria-hidden="true"><span data-i18n="p4-name">Arándano</span></span>
+          <span class="hero-chip"><img class="hero-chip-icon" src="assets/img/imagen-aguacate-min.png" alt="" aria-hidden="true"><span data-i18n="p6-name">Aguacate</span></span>
+          <span class="hero-chip"><img class="hero-chip-icon" src="assets/img/imagen-esparrago-min.png" alt="" aria-hidden="true"><span data-i18n="p7-name">Espárrago</span></span>
         </div>
       </div>
     </div>
@@ -269,7 +208,6 @@
       <a href="productos.html#fresa" class="product-card reveal reveal-delay-1">
         <div class="product-card-image product-card-image--clean product-card-image--fresa" aria-hidden="true">
           <img src="assets/img/fresas.png" alt="Fresa FreshKampo" loading="lazy">
-          <span class="product-card-glyph">🍓</span>
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title" data-i18n="p1-name">Fresa</h3>
@@ -288,7 +226,6 @@
       <a href="productos.html#frambuesa" class="product-card reveal reveal-delay-2">
         <div class="product-card-image product-card-image--clean product-card-image--frambuesa" aria-hidden="true">
           <img src="assets/img/frambuesa.jpg" alt="Frambuesa FreshKampo" loading="lazy">
-          <span class="product-card-glyph">🍒</span>
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title" data-i18n="p2-name">Frambuesa</h3>
@@ -307,7 +244,6 @@
       <a href="productos.html#zarzamora" class="product-card reveal reveal-delay-3">
         <div class="product-card-image product-card-image--clean product-card-image--zarzamora" aria-hidden="true">
           <img src="assets/img/zarzamora.jpg" alt="Zarzamora FreshKampo" loading="lazy">
-          <span class="product-card-glyph">🍇</span>
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title" data-i18n="p3-name">Zarzamora</h3>
@@ -326,7 +262,6 @@
       <a href="productos.html#arandano" class="product-card reveal reveal-delay-1">
         <div class="product-card-image product-card-image--clean product-card-image--arandano" aria-hidden="true">
           <img src="assets/img/arandano.jpg" alt="Arándano FreshKampo" loading="lazy">
-          <span class="product-card-glyph">🫐</span>
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title" data-i18n="p4-name">Arándano</h3>
@@ -345,7 +280,6 @@
       <a href="productos.html#aguacate" class="product-card reveal reveal-delay-2">
         <div class="product-card-image product-card-image--clean product-card-image--aguacate" aria-hidden="true">
           <img src="assets/img/aguacate.jpg" alt="Aguacate FreshKampo" loading="lazy">
-          <span class="product-card-glyph">🥑</span>
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title" data-i18n="p6-name">Aguacate</h3>
@@ -364,7 +298,6 @@
       <a href="productos.html#higo" class="product-card reveal reveal-delay-3">
         <div class="product-card-image product-card-image--clean product-card-image--higo" aria-hidden="true">
           <img src="assets/img/higo.jpg" alt="Higo FreshKampo" loading="lazy">
-          <span class="product-card-glyph">🍈</span>
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title" data-i18n="p5-name">Higo</h3>
@@ -412,12 +345,12 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <div class="avail-prev-fruits">
-          <span class="avail-prev-fruit">🍓 Fresa</span>
-          <span class="avail-prev-fruit">🍇 Arándano</span>
-          <span class="avail-prev-fruit">🍇 Zarzamora</span>
-          <span class="avail-prev-fruit">🍈 Frambuesa</span>
-          <span class="avail-prev-fruit">🥑 Aguacate</span>
-          <span class="avail-prev-fruit">🌿 Espárrago</span>
+          <span class="avail-prev-fruit">Fresa</span>
+          <span class="avail-prev-fruit">Arándano</span>
+          <span class="avail-prev-fruit">Zarzamora</span>
+          <span class="avail-prev-fruit">Frambuesa</span>
+          <span class="avail-prev-fruit">Aguacate</span>
+          <span class="avail-prev-fruit">Espárrago</span>
         </div>
       </div>
 
@@ -714,37 +647,37 @@
     <div class="producers-grid">
       <div class="producers-content">
         <span class="badge badge-accent" data-i18n="producers-badge">Socios productores</span>
-        <h2 id="producers-heading" style="color:white;margin-top:.75rem" data-i18n="producers-h2">Crece con nosotros</h2>
-        <p style="color:rgba(255,255,255,.75);margin-top:.75rem" data-i18n="producers-desc">Buscamos agricultores comprometidos con la excelencia que quieran acceder a mercados internacionales con el respaldo de nuestra plataforma.</p>
+        <h2 id="producers-heading" style="margin-top:.75rem" data-i18n="producers-h2">Crece con nosotros</h2>
+        <p data-i18n="producers-desc">Buscamos agricultores comprometidos con la excelencia que quieran acceder a mercados internacionales con el respaldo de nuestra plataforma.</p>
         <div class="producers-pillars">
           <div class="pillar-card"><div class="pillar-num">01</div><div class="pillar-title" data-i18n="pillar1-title">Comercialización</div><div class="pillar-desc" data-i18n="pillar1-desc">Acceso directo a supermercados globales.</div></div>
           <div class="pillar-card"><div class="pillar-num">02</div><div class="pillar-title" data-i18n="pillar2-title">Genética</div><div class="pillar-desc" data-i18n="pillar2-desc">Variedades de alto rendimiento.</div></div>
           <div class="pillar-card"><div class="pillar-num">03</div><div class="pillar-title" data-i18n="pillar3-title">Asesoría</div><div class="pillar-desc" data-i18n="pillar3-desc">Equipo multidisciplinario de apoyo.</div></div>
           <div class="pillar-card"><div class="pillar-num">04</div><div class="pillar-title" data-i18n="pillar4-title">Financiamiento</div><div class="pillar-desc" data-i18n="pillar4-desc">Soluciones de capital y equipo.</div></div>
         </div>
-        <div style="margin-top:2rem;">
+        <div class="producers-action">
           <a href="productores.html" class="btn btn-white btn-lg" data-i18n="producers-cta">Únete como productor</a>
         </div>
       </div>
-      <div aria-hidden="true" style="display:flex;flex-direction:column;gap:1rem;">
-        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2rem;">
-          <div style="font-size:3rem;font-weight:800;color:white;line-height:1;">90<span style="color:#C8A951;">%</span></div>
-          <div style="font-size:.875rem;color:rgba(255,255,255,.6);margin-top:.5rem;">Retención de productores año tras año</div>
-          <div style="margin-top:1.5rem;display:flex;gap:.5rem;align-items:center;">
-            <div style="flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:9999px;overflow:hidden;">
-              <div style="width:90%;height:100%;background:linear-gradient(90deg,#C8A951,#E8C96A);border-radius:9999px;"></div>
+      <div class="producers-stats">
+        <div class="producers-stat-card">
+          <div class="producers-stat-value">90<span>%</span></div>
+          <p class="producers-stat-label" data-i18n="producer-retention-label">Retención de productores año tras año</p>
+          <div class="producers-stat-meter" aria-hidden="true">
+            <div class="producers-stat-meter-track">
+              <span></span>
             </div>
-            <span style="font-size:.75rem;color:#E8C96A;font-weight:700;">90%</span>
+            <span class="producers-stat-meter-label">90%</span>
           </div>
         </div>
-        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2rem;">
-          <div style="font-size:3rem;font-weight:800;color:white;line-height:1;">50<span style="color:#C8A951;">+</span></div>
-          <div style="font-size:.875rem;color:rgba(255,255,255,.6);margin-top:.5rem;">Hectáreas mínimas para programa completo</div>
+        <div class="producers-stat-card">
+          <div class="producers-stat-value">50<span>+</span></div>
+          <p class="producers-stat-label" data-i18n="producer-hectares-label">Hectáreas mínimas para programa completo</p>
         </div>
-        <div style="background:rgba(200,169,81,.12);border:1px solid rgba(200,169,81,.25);border-radius:20px;padding:2rem;">
-          <div style="font-size:3rem;font-weight:800;color:white;line-height:1;">20<span style="color:#C8A951;">+</span></div>
-          <div style="font-size:.875rem;color:rgba(255,255,255,.6);margin-top:.5rem;">Años conectando productores con el mundo</div>
-          <div style="margin-top:1rem;font-size:.7rem;color:#E8C96A;font-weight:600;letter-spacing:.06em;text-transform:uppercase;">Desde 2003 — Michoacán, México</div>
+        <div class="producers-stat-card producers-stat-card--origin">
+          <div class="producers-stat-value">20<span>+</span></div>
+          <p class="producers-stat-label" data-i18n="producer-years-label">Años conectando productores con el mundo</p>
+          <div class="producers-stat-origin" data-i18n="producer-since">Desde 2003 — Michoacán, México</div>
         </div>
       </div>
     </div>
@@ -813,195 +746,12 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     FOOTER
-══════════════════════════════════ -->
-<footer role="contentinfo">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img src="assets/img/logo-footer.svg" alt="FreshKampo" style="height:40px;width:auto;filter:brightness(0) invert(1)"
-               onerror="this.outerHTML='<span>Fresh<span style=\'color:var(--c-accent)\'>Kampo</span></span>'">
-        </div>
-        <p class="footer-desc" data-i18n="footer-desc">Comercializamos productos frescos de alta calidad, conectando los mejores campos de México con el mundo.</p>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/company/freshkampo/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://www.facebook.com/FreshKampo" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/freshkampo" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <div class="footer-col-title" data-i18n="footer-col1">Productos</div>
-        <nav class="footer-links" aria-label="Products navigation">
-          <a href="productos.html" class="footer-link" data-i18n="footer-link-fruit">Fruta fresca</a>
-          <a href="disponibilidad.html" class="footer-link" data-i18n="footer-link-availability">Disponibilidad</a>
-        </nav>
-      </div>
-
-      <div>
-        <div class="footer-col-title" data-i18n="footer-col2">Empresa</div>
-        <nav class="footer-links" aria-label="Company navigation">
-          <a href="integracion-vertical.html" class="footer-link" data-i18n="footer-link-integration">Integración Vertical</a>
-          <a href="certificaciones.html" class="footer-link" data-i18n="footer-link-certs">Certificaciones</a>
-          <a href="historia.html" class="footer-link" data-i18n="footer-link-history">Historia</a>
-          <a href="productores.html" class="footer-link" data-i18n="footer-link-producers">Productores</a>
-          <a href="carreras.html" class="footer-link" data-i18n="footer-link-careers">Carreras</a>
-          <a href="contacto.html" class="footer-link" data-i18n="footer-link-contact">Contacto</a>
-        </nav>
-      </div>
-
-      <div>
-        <div class="footer-col-title" data-i18n="footer-col3">Legal</div>
-        <nav class="footer-links" aria-label="Legal navigation">
-          <a href="aviso-privacidad.html" class="footer-link" data-i18n="footer-link-privacy">Aviso de Privacidad</a>
-          <a href="#" class="footer-link" data-modal="quality" data-i18n="footer-link-quality">Política de Calidad</a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span data-i18n="footer-copy">© 2026 FreshKampo — Meridian Fruits SPR de RL de CV. Todos los derechos reservados.</span>
-      <div class="footer-bottom-links">
-        <a href="aviso-privacidad.html" data-i18n="footer-link-privacy">Aviso de Privacidad</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- ══════════════════════════════════
-     QUALITY POLICY MODAL
-══════════════════════════════════ -->
-<div id="qualityModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <div class="modal modal-policy">
-    <div class="modal-header">
-      <div class="modal-header-top">
-        <span class="modal-badge" data-i18n="modal-badge">Política de Calidad &amp; Inocuidad</span>
-        <button class="modal-close" aria-label="Cerrar">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="modal-header-identity">
-        <div class="modal-header-shield">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
-        <div>
-          <h2 id="modal-title" class="modal-title" data-i18n="modal-title">FreshKampo</h2>
-          <p class="modal-subtitle" data-i18n="modal-subtitle">Meridian Fruits SPR de RL de CV</p>
-        </div>
-      </div>
-      <div class="modal-header-meta" aria-hidden="true">
-        <span class="modal-header-pill">Certificaciones vigentes</span>
-        <span class="modal-header-pill">Gestión integral de riesgos</span>
-      </div>
-    </div>
-
-    <div class="modal-body">
-      <div class="modal-intro-card">
-        <p data-i18n="modal-intro">En MERIDIAN FRUITS SPR DE RL de CV, comercializamos productos frescos para el deleite de nuestros clientes y consumidores con nuestro firme compromiso de satisfacer sus requerimientos y expectativas. Comprometidos con la calidad e inocuidad de nuestros productos en toda la cadena de suministro y con la mejora continua basados en los siguientes principios:</p>
-      </div>
-
-      <div class="modal-block">
-        <div class="modal-section-head">
-          <span class="modal-section-eyebrow">Principios rectores</span>
-        </div>
-        <div class="modal-principles">
-          <div class="principle-item">
-            <div class="principle-num">1</div>
-            <div class="principle-body">
-              <strong class="principle-title">Desarrollo de productores</strong>
-              <p class="principle-text" data-i18n="principle1">Desarrollamos productores confiables, brindando acompañamiento todo el ciclo de producción.</p>
-            </div>
-          </div>
-          <div class="principle-item">
-            <div class="principle-num">2</div>
-            <div class="principle-body">
-              <strong class="principle-title">Libertad de operar</strong>
-              <p class="principle-text" data-i18n="principle2">Asegurar la libertad de operar a través del cumplimiento de la normativa aplicable y de la excelencia de nuestros sistemas de calidad para mantener la confianza con nuestros clientes.</p>
-            </div>
-          </div>
-          <div class="principle-item">
-            <div class="principle-num">3</div>
-            <div class="principle-body">
-              <strong class="principle-title">Cadena de suministro eficiente</strong>
-              <p class="principle-text" data-i18n="principle3">Comprometidos con una cadena de suministros eficiente a través de una gestión efectiva de nuestros procesos operativos y evaluando riesgos de manera constante.</p>
-            </div>
-          </div>
-          <div class="principle-item">
-            <div class="principle-num">4</div>
-            <div class="principle-body">
-              <strong class="principle-title">Seguridad de la información</strong>
-              <p class="principle-text" data-i18n="principle4">Implementamos políticas y controles de seguridad en nuestros procesos, con un buen uso de herramientas tecnológicas disponibles que respaldan la integridad, confidencialidad y disponibilidad de la información.</p>
-            </div>
-          </div>
-          <div class="principle-item">
-            <div class="principle-num">5</div>
-            <div class="principle-body">
-              <strong class="principle-title">Ambiente laboral</strong>
-              <p class="principle-text" data-i18n="principle5">Promovemos un ambiente positivo y espacio laboral seguro.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-block">
-        <div class="modal-section-head">
-          <span class="modal-section-eyebrow">Certificaciones vigentes</span>
-        </div>
-        <div class="modal-cert-grid">
-          <div class="modal-cert-item">
-            <img src="assets/img/logo-cert-primus.png" alt="Primus GFS" loading="lazy">
-            <span>Primus GFS</span>
-          </div>
-          <div class="modal-cert-item">
-            <img src="assets/img/logo-cert-primus-gap.png" alt="Global G.A.P." loading="lazy">
-            <span>Global G.A.P.</span>
-          </div>
-          <div class="modal-cert-item">
-            <img src="assets/img/logo-cert-ifs.png" alt="IFS Broker" loading="lazy">
-            <span>IFS Broker</span>
-          </div>
-          <div class="modal-cert-item">
-            <img src="assets/img/logo-cert-iso9001.png" alt="ISO 9001" loading="lazy">
-            <span>ISO 9001</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-meta-bar">
-        <div class="modal-meta-item">
-          <span class="modal-meta-label">Fecha de emisión</span>
-          <strong class="modal-meta-value" data-i18n="modal-date">20 de mayo de 2026</strong>
-        </div>
-        <div class="modal-meta-sep"></div>
-        <div class="modal-meta-item">
-          <span class="modal-meta-label">Versión</span>
-          <strong class="modal-meta-value" data-i18n="modal-version">Versión 3</strong>
-        </div>
-        <div class="modal-meta-sep"></div>
-        <div class="modal-meta-item">
-          <span class="modal-meta-label">Empresa</span>
-          <strong class="modal-meta-value">Meridian Fruits SPR de RL de CV</strong>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-actions">
-      <button class="btn btn-primary modal-action-close" style="width:100%;justify-content:center;gap:.6rem;" data-i18n="modal-close-btn">Cerrar</button>
-    </div>
-  </div>
-</div>
+<div id="footer-slot"></div>
+<div id="modal-slot"></div>
 
 <!-- Scripts -->
-<script src="js/i18n.js?v=20260429b"></script>
-<script src="js/nav.js?v=20260429b"></script>
-<script src="js/app.js?v=20260429b"></script>
+<script src="js/i18n.js?v=20261105f"></script>
+<script src="js/nav.js?v=20261105f"></script>
+<script src="js/app.js?v=20261105f"></script>
 </body>
 </html>
